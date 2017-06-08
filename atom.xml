@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>LarrySong</title>
+  <subtitle>write more, take on less</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://songlairui.github.io/"/>
+  <updated>2017-06-08T07:06:27.000Z</updated>
+  <id>http://songlairui.github.io/</id>
+  
+  <author>
+    <name>Songlairui</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>远在逡五前</title>
+    <link href="http://songlairui.github.io/2017/06/08/hello-world/"/>
+    <id>http://songlairui.github.io/2017/06/08/hello-world/</id>
+    <published>2017-06-08T05:36:25.000Z</published>
+    <updated>2017-06-08T07:06:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Pure Writing</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Pure Writing&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
