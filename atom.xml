@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://songlairui.github.io/"/>
-  <updated>2017-06-22T08:22:13.000Z</updated>
+  <updated>2017-06-22T08:43:28.000Z</updated>
   <id>http://songlairui.github.io/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://songlairui.github.io/2017/06/22/vue-ssr-step-2/"/>
     <id>http://songlairui.github.io/2017/06/22/vue-ssr-step-2/</id>
     <published>2017-06-22T05:12:43.000Z</published>
-    <updated>2017-06-22T08:22:13.000Z</updated>
+    <updated>2017-06-22T08:43:28.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>写完上一篇<a href="/2017/06/21/vue-ssr-step-1/" title="Vue SSR 官方文档实践·一：从零到粗暴混合前后端">Vue SSR 官方文档实践·一：从零到粗暴混合前后端</a>之后，思路厘清了不少。今天中午再读完 <a href="http://ssr.vuejs.org/en/build-config.html" target="_blank" rel="external">Build Configuration</a> 章节，比较轻松的运行了示例代码。<br>不过多加了几个webpack选项，混合起来变得更加简单。大神铺路铺得就是好。。  </p>
+<p>上一篇<a href="/2017/06/21/vue-ssr-step-1/" title="Vue SSR 官方文档实践·一：从零到粗暴混合前后端">Vue SSR 官方文档实践·一：从零到粗暴混合前后端</a>之后，运行<a href="http://ssr.vuejs.org/en/build-config.html" target="_blank" rel="external">Build Configuration</a> 章节示例代码，比较快了。<br>不过多加了几个webpack选项，混合起来变得更加简单。大神铺路铺得就是好。。  </p>
 </blockquote>
 <p><strong>实践Target:</strong> <a href="http://ssr.vuejs.org/en/build-config.html" target="_blank" rel="external">Build Configuration</a><br><a id="more"></a></p>
 <h3 id="Server端-启用vue-ssr-plugin"><a href="#Server端-启用vue-ssr-plugin" class="headerlink" title="Server端 启用vue-ssr plugin"></a>Server端 启用vue-ssr plugin</h3><table>
@@ -130,7 +130,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;写完上一篇&lt;a href=&quot;/2017/06/21/vue-ssr-step-1/&quot; title=&quot;Vue SSR 官方文档实践·一：从零到粗暴混合前后端&quot;&gt;Vue SSR 官方文档实践·一：从零到粗暴混合前后端&lt;/a&gt;之后，思路厘清了不少。今天中午再读完 &lt;a href=&quot;http://ssr.vuejs.org/en/build-config.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Build Configuration&lt;/a&gt; 章节，比较轻松的运行了示例代码。&lt;br&gt;不过多加了几个webpack选项，混合起来变得更加简单。大神铺路铺得就是好。。  &lt;/p&gt;
+&lt;p&gt;上一篇&lt;a href=&quot;/2017/06/21/vue-ssr-step-1/&quot; title=&quot;Vue SSR 官方文档实践·一：从零到粗暴混合前后端&quot;&gt;Vue SSR 官方文档实践·一：从零到粗暴混合前后端&lt;/a&gt;之后，运行&lt;a href=&quot;http://ssr.vuejs.org/en/build-config.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Build Configuration&lt;/a&gt; 章节示例代码，比较快了。&lt;br&gt;不过多加了几个webpack选项，混合起来变得更加简单。大神铺路铺得就是好。。  &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;实践Target:&lt;/strong&gt; &lt;a href=&quot;http://ssr.vuejs.org/en/build-config.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Build Configuration&lt;/a&gt;&lt;br&gt;
     
@@ -236,12 +236,12 @@
     <link href="http://songlairui.github.io/2017/06/18/learn-webpack/"/>
     <id>http://songlairui.github.io/2017/06/18/learn-webpack/</id>
     <published>2017-06-18T05:58:32.000Z</published>
-    <updated>2017-06-21T06:15:48.000Z</updated>
+    <updated>2017-06-22T08:24:23.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p> 我想要从零开始构建自己的应用，比如使用ssr-vue。而官方vue-cli没有类似原有template的ssr版。<br> 看来，我需要学会webpack了  </p>
 </blockquote>
-<h4 id="已有的学习经历"><a href="#已有的学习经历" class="headerlink" title="已有的学习经历"></a>已有的学习经历</h4><p>vue-cli自带的webpack配置，看过好几次。自己添加一些chunk，自动生成多个页面，觉得自己做了很大一件事情，而客观上并不大。<br>webpack文档尝试看了好几次，从来觉得太长没看完。  </p>
+<h4 id="已有的学习经历"><a href="#已有的学习经历" class="headerlink" title="已有的学习经历"></a>已有的学习经历</h4><p>vue-cli自带的webpack配置，看过好几次。自己添加一些chunk，自动生成多个页面，觉得自己做了很大一件事情，而客观上并不大。<br>webpack文档尝试看了好几次，从来觉得太长没看完。<br><a id="more"></a></p>
 <h3 id="Current"><a href="#Current" class="headerlink" title="Current"></a>Current</h3><p>链接地址：  <a href="http://www.css88.com/doc/webpack2/concepts/module-resolution/" target="_blank" rel="external">http://www.css88.com/doc/webpack2/concepts/module-resolution/</a><br>我还是从头开始看了入口文件，配置方法。<br>目前看来，概念部分，应该是一口气看完的。然后再在指南不烦，联系代码片段。<br>这儿，我联想到了vimtutor中的练习方式。</p>
 <h3 id="基本配置文件"><a href="#基本配置文件" class="headerlink" title="基本配置文件"></a>基本配置文件</h3><blockquote>
 <p>啃了webpack文档后，能快速手打webpack的最简单配置文件。所有的配置都在此基础上添加。  </p>
@@ -280,7 +280,7 @@
       &lt;blockquote&gt;
 &lt;p&gt; 我想要从零开始构建自己的应用，比如使用ssr-vue。而官方vue-cli没有类似原有template的ssr版。&lt;br&gt; 看来，我需要学会webpack了  &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&quot;已有的学习经历&quot;&gt;&lt;a href
+&lt;h4 id=&quot;已有的学习经历&quot;&gt;&lt;a href=&quot;#已有的学习经历&quot; class=&quot;headerlink&quot; title=&quot;已有的学习经历&quot;&gt;&lt;/a&gt;已有的学习经历&lt;/h4&gt;&lt;p&gt;vue-cli自带的webpack配置，看过好几次。自己添加一些chunk，自动生成多个页面，觉得自己做了很大一件事情，而客观上并不大。&lt;br&gt;webpack文档尝试看了好几次，从来觉得太长没看完。&lt;br&gt;
     
     </summary>
     

@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://songlairui.github.io/2017/06/21/vue-ssr-step-1/</loc>
-    
-    <lastmod>2017-06-22T08:22:17.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://songlairui.github.io/2017/06/22/vue-ssr-step-2/</loc>
     
-    <lastmod>2017-06-22T08:22:13.000Z</lastmod>
+    <lastmod>2017-06-22T08:43:28.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://songlairui.github.io/2017/06/18/learn-webpack/</loc>
     
-    <lastmod>2017-06-21T06:15:48.000Z</lastmod>
+    <lastmod>2017-06-22T08:24:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://songlairui.github.io/2017/06/21/vue-ssr-step-1/</loc>
+    
+    <lastmod>2017-06-22T08:22:17.000Z</lastmod>
     
   </url>
   
