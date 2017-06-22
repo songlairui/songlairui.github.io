@@ -163,4 +163,6 @@ app.use(function(req,res,next){
 
 ## END  
 按照个人理解，成功使用了下服务端渲染的结果。  
-过程虽然很粗糙，也是使出了浑身解数的。  
+过程虽然很粗糙，也是使出了浑身解数。  
+
+第二篇实践：{% post_link vue-ssr-step-2 %}
