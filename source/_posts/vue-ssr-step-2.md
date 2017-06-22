@@ -3,11 +3,11 @@ title: Vue SSR 官方文档实践·二：前后端混合从粗暴到正常
 date: 2017-06-22 13:12:43
 tags:
 ---
-> 写完上一篇{% post_link vue-ssr-step-1 %}之后，思路厘清了不少。今天中午再读完 [Build Configuration](http://ssr.vuejs.org/en/build-config.html) 章节，比较轻松的运行了示例代码。  
+> 上一篇{% post_link vue-ssr-step-1 %}之后，运行[Build Configuration](http://ssr.vuejs.org/en/build-config.html) 章节示例代码，比较快了。  
 > 不过多加了几个webpack选项，混合起来变得更加简单。大神铺路铺得就是好。。  
 
 **实践Target:** [Build Configuration](http://ssr.vuejs.org/en/build-config.html)
-
+<!--more-->
 ### Server端 启用vue-ssr plugin  
 
 | 启用前| - | 启用后 |
@@ -73,6 +73,14 @@ output:{
 自动注入的script.src 都指向 dist 目录下文件，server.js中强制redirect的中间件逻辑可以删除了。
 
 
-## END🔚   
+## END  
 
 回顾一下，完成服务端渲染的配置，大部分靠webpack的熟练度。  
+
+代码地址： [songlairui/vue-playground/demo/chapter5](https://github.com/songlairui/vue-playground/tree/master/demo/chapter5)  
+```shell
+├── webpack.base.conf.js     # 创建baseConfig，方便使用webpack-merge
+├── webpack.client2.conf.js  # 启用vue-ssr-client-bundle 插件，这是个子插件。启用manifest插件。
+├── webpack.server2.conf.js  # 启用vue-ssr-server-plugin 插件，这是个子插件。打包只出一个文件。
+├── server2.js               # 简化 server.js 逻辑。去掉强制redirect逻辑。
+``` 

@@ -7,7 +7,7 @@ tags:
 现在我终于把其中的代码片段运行起来了。  
 
 Github Repo: [https://github.com/songlairui/vue-playground](https://github.com/songlairui/vue-playground)
-
+<!--more-->
 ## 1. 尝试 `vue-server-renderer`  
 实现使用 `console.log(html)` 将渲染过后的html打印到屏幕上。  
 即，将 new Vue({...}) 变成输出结果。跳过从浏览器获得结果。  

@@ -10,7 +10,7 @@ tags:
 #### 已有的学习经历   
 vue-cli自带的webpack配置，看过好几次。自己添加一些chunk，自动生成多个页面，觉得自己做了很大一件事情，而客观上并不大。  
 webpack文档尝试看了好几次，从来觉得太长没看完。  
-
+<!--more-->
 ### Current  
 
 链接地址：  [http://www.css88.com/doc/webpack2/concepts/module-resolution/](http://www.css88.com/doc/webpack2/concepts/module-resolution/)  
