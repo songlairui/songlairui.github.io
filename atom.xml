@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://songlairui.github.io/"/>
-  <updated>2017-06-22T06:43:07.000Z</updated>
+  <updated>2017-06-22T07:55:05.000Z</updated>
   <id>http://songlairui.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://songlairui.github.io/2017/06/22/vue-ssr-step-2/"/>
     <id>http://songlairui.github.io/2017/06/22/vue-ssr-step-2/</id>
     <published>2017-06-22T05:12:43.000Z</published>
-    <updated>2017-06-22T06:43:07.000Z</updated>
+    <updated>2017-06-22T07:55:05.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>写完上一篇<a href="/2017/06/21/vue-ssr-step-1/" title="Vue SSR 官方文档实践·一：从零到粗暴混合前后端">Vue SSR 官方文档实践·一：从零到粗暴混合前后端</a>之后，思路厘清了不少。今天中午再读完 <a href="http://ssr.vuejs.org/en/build-config.html" target="_blank" rel="external">Build Configuration</a> 章节，比较轻松的运行了示例代码。<br>不过多加了几个webpack选项，混合起来变得更加简单。大神铺路铺得就是好。。  </p>
@@ -72,7 +72,54 @@
 </tbody>
 </table>
 <p>启用前，在页面注入JS，需要手动在 index.template.html 作如下添加<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--vue-ssr-outlet--&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./dist/bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> <span class="comment">&lt;!-- 手动添加，启用后不需要添加这一行--&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h2 id="修改server-js"><a href="#修改server-js" class="headerlink" title="修改server.js"></a>修改server.js</h2>]]></content>
+<h2 id="修改server-js"><a href="#修改server-js" class="headerlink" title="修改server.js"></a>修改server.js</h2><p><strong>1. 更改renderer</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>前</th>
+<th>-</th>
+<th>后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://ooo.0o0.ooo/2017/06/22/594b6c340b19b.png" alt="render1.png"></td>
+<td>-</td>
+<td><img src="https://ooo.0o0.ooo/2017/06/22/594b6c375263e.png" alt="render2.png"></td>
+</tr>
+<tr>
+<td>createRender</td>
+<td>-</td>
+<td>更改为 createBundleRenderer，并由打包生成的单文件创建</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. 更改express配置</strong> </p>
+<table>
+<thead>
+<tr>
+<th>前</th>
+<th>-</th>
+<th>后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://ooo.0o0.ooo/2017/06/22/594b6e36a7ecf.png" alt="app1.png"></td>
+<td>-</td>
+<td><img src="https://ooo.0o0.ooo/2017/06/22/594b6e3622523.png" alt="app2.png"></td>
+</tr>
+<tr>
+<td>从打包得到的文件引入createApp</td>
+<td>-</td>
+<td>render中自动包含app内容，不需要引入。只需要传入context</td>
+</tr>
+</tbody>
+</table>
+<h2 id="更改路径，撤销粗暴"><a href="#更改路径，撤销粗暴" class="headerlink" title="更改路径，撤销粗暴"></a>更改路径，撤销粗暴</h2><p><strong>添加webpack关键配置</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">output:&#123;</div><div class="line">  <span class="attr">publicPath</span>: <span class="string">'/dist/'</span>,</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>自动注入的script.src 都指向 dist 目录下文件，server.js中强制redirect的中间件逻辑可以删除了。</p>
+<h2 id="END🔚"><a href="#END🔚" class="headerlink" title="END🔚"></a>END🔚</h2><p>回顾一下，完成服务端渲染的配置，大部分靠webpack的熟练度。  </p>
+]]></content>
     
     <summary type="html">
     
@@ -89,7 +136,7 @@
     <link href="http://songlairui.github.io/2017/06/21/vue-ssr-step-1/"/>
     <id>http://songlairui.github.io/2017/06/21/vue-ssr-step-1/</id>
     <published>2017-06-21T04:22:34.000Z</published>
-    <updated>2017-06-21T09:09:14.000Z</updated>
+    <updated>2017-06-22T07:52:51.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>Vue 2.3 发布很久了，距离第一次打开<a href="http://ssr.vuejs.org/en/" target="_blank" rel="external">ssr.vuejs</a>也很久了。<br>现在我终于把其中的代码片段运行起来了。  </p>
@@ -160,7 +207,8 @@
 </ol>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">req,res,next</span>)</span>&#123;</div><div class="line">  <span class="comment">// 使用bunlde懒加载0.js时，引用路径是不正确的，我不知道怎么配置，这儿强行改一下</span></div><div class="line">  <span class="keyword">if</span>(<span class="regexp">/\.js$/</span>.test(req.url))&#123;</div><div class="line">    res.redirect(<span class="string">'/dist'</span> + req.url)</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    next()</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>代码示例： <a href="https://github.com/songlairui/vue-playground/tree/master/demo/chapter5" target="_blank" rel="external">songlairui/vue-playground/demo/chapter5</a>  </p>
-<h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2><p>按照个人理解，成功使用了下服务端渲染的结果。<br>过程虽然很粗糙，也是使出了浑身解数的。  </p>
+<h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2><p>按照个人理解，成功使用了下服务端渲染的结果。<br>过程虽然很粗糙，也是使出了浑身解数。  </p>
+<p>第二篇实践：<a href="/2017/06/22/vue-ssr-step-2/" title="Vue SSR 官方文档实践·二：前后端混合从粗暴到正常">Vue SSR 官方文档实践·二：前后端混合从粗暴到正常</a></p>
 ]]></content>
     
     <summary type="html">

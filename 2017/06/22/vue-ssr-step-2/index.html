@@ -48,4 +48,51 @@
 </tbody>
 </table>
 <p>启用前，在页面注入JS，需要手动在 index.template.html 作如下添加<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--vue-ssr-outlet--&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./dist/bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> <span class="comment">&lt;!-- 手动添加，启用后不需要添加这一行--&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h2 id="修改server-js"><a href="#修改server-js" class="headerlink" title="修改server.js"></a>修改server.js</h2></div></article></div></main><footer><div class="paginator"><a href="/2017/06/21/vue-ssr-step-1/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2017 <a href="http://songlairui.github.io">Songlairui</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-29076352-3",'auto');ga('send','pageview');</script></body></html>
+<h2 id="修改server-js"><a href="#修改server-js" class="headerlink" title="修改server.js"></a>修改server.js</h2><p><strong>1. 更改renderer</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>前</th>
+<th>-</th>
+<th>后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://ooo.0o0.ooo/2017/06/22/594b6c340b19b.png" alt="render1.png"></td>
+<td>-</td>
+<td><img src="https://ooo.0o0.ooo/2017/06/22/594b6c375263e.png" alt="render2.png"></td>
+</tr>
+<tr>
+<td>createRender</td>
+<td>-</td>
+<td>更改为 createBundleRenderer，并由打包生成的单文件创建</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. 更改express配置</strong> </p>
+<table>
+<thead>
+<tr>
+<th>前</th>
+<th>-</th>
+<th>后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://ooo.0o0.ooo/2017/06/22/594b6e36a7ecf.png" alt="app1.png"></td>
+<td>-</td>
+<td><img src="https://ooo.0o0.ooo/2017/06/22/594b6e3622523.png" alt="app2.png"></td>
+</tr>
+<tr>
+<td>从打包得到的文件引入createApp</td>
+<td>-</td>
+<td>render中自动包含app内容，不需要引入。只需要传入context</td>
+</tr>
+</tbody>
+</table>
+<h2 id="更改路径，撤销粗暴"><a href="#更改路径，撤销粗暴" class="headerlink" title="更改路径，撤销粗暴"></a>更改路径，撤销粗暴</h2><p><strong>添加webpack关键配置</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">output:&#123;</div><div class="line">  <span class="attr">publicPath</span>: <span class="string">'/dist/'</span>,</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>自动注入的script.src 都指向 dist 目录下文件，server.js中强制redirect的中间件逻辑可以删除了。</p>
+<h2 id="END🔚"><a href="#END🔚" class="headerlink" title="END🔚"></a>END🔚</h2><p>回顾一下，完成服务端渲染的配置，大部分靠webpack的熟练度。  </p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/06/21/vue-ssr-step-1/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2017 <a href="http://songlairui.github.io">Songlairui</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-29076352-3",'auto');ga('send','pageview');</script></body></html>
