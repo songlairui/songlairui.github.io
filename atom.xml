@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://songlairui.github.io/"/>
-  <updated>2017-06-22T08:02:53.000Z</updated>
+  <updated>2017-06-22T08:22:13.000Z</updated>
   <id>http://songlairui.github.io/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="http://songlairui.github.io/2017/06/22/vue-ssr-step-2/"/>
     <id>http://songlairui.github.io/2017/06/22/vue-ssr-step-2/</id>
     <published>2017-06-22T05:12:43.000Z</published>
-    <updated>2017-06-22T08:02:53.000Z</updated>
+    <updated>2017-06-22T08:22:13.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>写完上一篇<a href="/2017/06/21/vue-ssr-step-1/" title="Vue SSR 官方文档实践·一：从零到粗暴混合前后端">Vue SSR 官方文档实践·一：从零到粗暴混合前后端</a>之后，思路厘清了不少。今天中午再读完 <a href="http://ssr.vuejs.org/en/build-config.html" target="_blank" rel="external">Build Configuration</a> 章节，比较轻松的运行了示例代码。<br>不过多加了几个webpack选项，混合起来变得更加简单。大神铺路铺得就是好。。  </p>
 </blockquote>
-<p><strong>实践Target:</strong> <a href="http://ssr.vuejs.org/en/build-config.html" target="_blank" rel="external">Build Configuration</a></p>
+<p><strong>实践Target:</strong> <a href="http://ssr.vuejs.org/en/build-config.html" target="_blank" rel="external">Build Configuration</a><br><a id="more"></a></p>
 <h3 id="Server端-启用vue-ssr-plugin"><a href="#Server端-启用vue-ssr-plugin" class="headerlink" title="Server端 启用vue-ssr plugin"></a>Server端 启用vue-ssr plugin</h3><table>
 <thead>
 <tr>
@@ -118,7 +118,7 @@
 </table>
 <h2 id="更改路径，撤销粗暴"><a href="#更改路径，撤销粗暴" class="headerlink" title="更改路径，撤销粗暴"></a>更改路径，撤销粗暴</h2><p><strong>添加webpack关键配置</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">output:&#123;</div><div class="line">  <span class="attr">publicPath</span>: <span class="string">'/dist/'</span>,</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>自动注入的script.src 都指向 dist 目录下文件，server.js中强制redirect的中间件逻辑可以删除了。</p>
-<h2 id="END🔚"><a href="#END🔚" class="headerlink" title="END🔚"></a>END🔚</h2><p>回顾一下，完成服务端渲染的配置，大部分靠webpack的熟练度。  </p>
+<h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2><p>回顾一下，完成服务端渲染的配置，大部分靠webpack的熟练度。  </p>
 <p>代码地址： <a href="https://github.com/songlairui/vue-playground/tree/master/demo/chapter5" target="_blank" rel="external">songlairui/vue-playground/demo/chapter5</a>  </p>
 <pre><code class="shell">├── webpack.base.conf.js     # 创建baseConfig，方便使用webpack-merge
 ├── webpack.client2.conf.js  # 启用vue-ssr-client-bundle 插件，这是个子插件。启用manifest插件。
@@ -130,7 +130,9 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;写完上一篇&lt;a href=&quot;/2017/06/21/vue-ssr-step-1/&quot; title=&quot;Vue SSR 官方文档实践·一：从零到粗暴混合前后端&quot;&gt;Vue SSR 官方文档实践·一：从零到粗暴混合前后端&lt;/a&gt;之后，思路厘清了不少。今天中
+&lt;p&gt;写完上一篇&lt;a href=&quot;/2017/06/21/vue-ssr-step-1/&quot; title=&quot;Vue SSR 官方文档实践·一：从零到粗暴混合前后端&quot;&gt;Vue SSR 官方文档实践·一：从零到粗暴混合前后端&lt;/a&gt;之后，思路厘清了不少。今天中午再读完 &lt;a href=&quot;http://ssr.vuejs.org/en/build-config.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Build Configuration&lt;/a&gt; 章节，比较轻松的运行了示例代码。&lt;br&gt;不过多加了几个webpack选项，混合起来变得更加简单。大神铺路铺得就是好。。  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;实践Target:&lt;/strong&gt; &lt;a href=&quot;http://ssr.vuejs.org/en/build-config.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Build Configuration&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
@@ -142,12 +144,12 @@
     <link href="http://songlairui.github.io/2017/06/21/vue-ssr-step-1/"/>
     <id>http://songlairui.github.io/2017/06/21/vue-ssr-step-1/</id>
     <published>2017-06-21T04:22:34.000Z</published>
-    <updated>2017-06-22T07:52:51.000Z</updated>
+    <updated>2017-06-22T08:22:17.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>Vue 2.3 发布很久了，距离第一次打开<a href="http://ssr.vuejs.org/en/" target="_blank" rel="external">ssr.vuejs</a>也很久了。<br>现在我终于把其中的代码片段运行起来了。  </p>
 </blockquote>
-<p>Github Repo: <a href="https://github.com/songlairui/vue-playground" target="_blank" rel="external">https://github.com/songlairui/vue-playground</a></p>
+<p>Github Repo: <a href="https://github.com/songlairui/vue-playground" target="_blank" rel="external">https://github.com/songlairui/vue-playground</a><br><a id="more"></a></p>
 <h2 id="1-尝试-vue-server-renderer"><a href="#1-尝试-vue-server-renderer" class="headerlink" title="1. 尝试 vue-server-renderer"></a>1. 尝试 <code>vue-server-renderer</code></h2><p>实现使用 <code>console.log(html)</code> 将渲染过后的html打印到屏幕上。<br>即，将 new Vue({…}) 变成输出结果。跳过从浏览器获得结果。  </p>
 <h2 id="2-使用-import-、-export-关键字"><a href="#2-使用-import-、-export-关键字" class="headerlink" title="2. 使用 import 、 export 关键字"></a>2. 使用 import 、 export 关键字</h2><p>文档第四章<a href="http://ssr.vuejs.org/en/structure.html" target="_blank" rel="external">Source Code Structure</a> 出现了目录结构，而且js文件中有了import关键字。<br>这里无法像前面的代码片段一样，直接在node里粘贴代码可执行。这里需要使用webpack。  </p>
 <blockquote>
@@ -220,7 +222,9 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;Vue 2.3 发布很久了，距离第一次打开&lt;a href=&quot;http://ssr.vuejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ssr.vuejs&lt;/a&gt;也很久了。&lt;br&gt;现在我终于把其中的代码片段运行
+&lt;p&gt;Vue 2.3 发布很久了，距离第一次打开&lt;a href=&quot;http://ssr.vuejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ssr.vuejs&lt;/a&gt;也很久了。&lt;br&gt;现在我终于把其中的代码片段运行起来了。  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Github Repo: &lt;a href=&quot;https://github.com/songlairui/vue-playground&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/songlairui/vue-playground&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
