@@ -2,9 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://songlairui.github.io/2017/06/22/vue-ssr-step-2/</loc>
+    
+    <lastmod>2017-06-22T06:43:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://songlairui.github.io/2017/06/21/vue-ssr-step-1/</loc>
+    
+    <lastmod>2017-06-21T09:09:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://songlairui.github.io/2017/06/18/learn-webpack/</loc>
+    
+    <lastmod>2017-06-21T06:15:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://songlairui.github.io/2017/06/08/hello-world/</loc>
     
-    <lastmod>2017-06-08T07:06:27.000Z</lastmod>
+    <lastmod>2017-06-21T04:49:55.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://songlairui.github.io/aspiration/index.html</loc>
+    
+    <lastmod>2017-06-18T05:57:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://songlairui.github.io/2017/06/10/CSS-Animation-Controlling/</loc>
+    
+    <lastmod>2017-06-11T15:27:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://songlairui.github.io/Deal-with-on/index.html</loc>
+    
+    <lastmod>2017-06-09T06:05:28.000Z</lastmod>
     
   </url>
   

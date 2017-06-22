@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Vue SSR 官方文档实践·二：前后端混合从粗暴到正常 · LarrySong</title><meta name="description" content="Vue SSR 官方文档实践·二：前后端混合从粗暴到正常 - Songlairui"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://songlairui.github.io/atom.xml" title="LarrySong"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/idozii" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/songlairui" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Vue SSR 官方文档实践·二：前后端混合从粗暴到正常</h1><div class="post-info">2017年6月22日</div><div class="post-content"><blockquote>
+<p>写完上一篇<a href="/2017/06/21/vue-ssr-step-1/" title="Vue SSR 官方文档实践·一：从零到粗暴混合前后端">Vue SSR 官方文档实践·一：从零到粗暴混合前后端</a>之后，思路厘清了不少。今天中午再读完 <a href="http://ssr.vuejs.org/en/build-config.html" target="_blank" rel="external">Build Configuration</a> 章节，比较轻松的运行了示例代码。<br>不过多加了几个webpack选项，混合起来变得更加简单。大神铺路铺得就是好。。  </p>
+</blockquote>
+<p><strong>实践Target:</strong> <a href="http://ssr.vuejs.org/en/build-config.html" target="_blank" rel="external">Build Configuration</a></p>
+<h3 id="Server端-启用vue-ssr-plugin"><a href="#Server端-启用vue-ssr-plugin" class="headerlink" title="Server端 启用vue-ssr plugin"></a>Server端 启用vue-ssr plugin</h3><table>
+<thead>
+<tr>
+<th>启用前</th>
+<th>-</th>
+<th>启用后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://ooo.0o0.ooo/2017/06/22/594b584a3e1e8.png" alt="server1.png"></td>
+<td>-</td>
+<td><img src="https://ooo.0o0.ooo/2017/06/22/594b5849e0aad.png" alt="server2.png"></td>
+</tr>
+<tr>
+<td>启用前，异步加载的组件，被分割开来</td>
+<td>-</td>
+<td>启用后Server端打包不再进行分割，只输出一个文件</td>
+</tr>
+</tbody>
+</table>
+<p>客户端打包，对文件分割实现懒加载，可以令浏览器只加载需要的内容，有体验提升。<br>但服务端打包的文件，给后端程序使用，不通过网络请求获取，分割代码意义不大甚至降低性能，所以打包成一个文件更好。</p>
+<h3 id="Client端-启用-manifest，启用vue-ssr-plugin"><a href="#Client端-启用-manifest，启用vue-ssr-plugin" class="headerlink" title="Client端 启用 manifest，启用vue-ssr plugin"></a>Client端 启用 manifest，启用vue-ssr plugin</h3><p><strong>相关配置文件</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">plugins: [</div><div class="line">    <span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(&#123;</div><div class="line">      <span class="attr">name</span>: <span class="string">'mainfest'</span>,</div><div class="line">      <span class="attr">minChunks</span>: <span class="literal">Infinity</span></div><div class="line">    &#125;),</div><div class="line">    <span class="keyword">new</span> VueSSRClientPlugin()</div><div class="line">  ]</div></pre></td></tr></table></figure></p>
+<p><strong>对比</strong> </p>
+<table>
+<thead>
+<tr>
+<th>启用前</th>
+<th>-</th>
+<th>启用后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://ooo.0o0.ooo/2017/06/22/594b5c09924cb.png" alt="client1.png"></td>
+<td>-</td>
+<td><img src="https://ooo.0o0.ooo/2017/06/22/594b5c0a7353b.png" alt="client2.png"></td>
+</tr>
+<tr>
+<td>启用前，前后端输出文件名称一致，会造成覆盖</td>
+<td>-</td>
+<td>启用后，生成 manifest, 可以使用vue-ssr插件自动注入js</td>
+</tr>
+</tbody>
+</table>
+<p>启用前，在页面注入JS，需要手动在 index.template.html 作如下添加<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--vue-ssr-outlet--&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./dist/bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> <span class="comment">&lt;!-- 手动添加，启用后不需要添加这一行--&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="修改server-js"><a href="#修改server-js" class="headerlink" title="修改server.js"></a>修改server.js</h2></div></article></div></main><footer><div class="paginator"><a href="/2017/06/21/vue-ssr-step-1/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2017 <a href="http://songlairui.github.io">Songlairui</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-29076352-3",'auto');ga('send','pageview');</script></body></html>

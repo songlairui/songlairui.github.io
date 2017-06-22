@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Vue SSR 官方文档实践·一：从零到粗暴混合前后端 · LarrySong</title><meta name="description" content="Vue SSR 官方文档实践·一：从零到粗暴混合前后端 - Songlairui"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://songlairui.github.io/atom.xml" title="LarrySong"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/idozii" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/songlairui" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Vue SSR 官方文档实践·一：从零到粗暴混合前后端</h1><div class="post-info">2017年6月21日</div><div class="post-content"><blockquote>
+<p>Vue 2.3 发布很久了，距离第一次打开<a href="http://ssr.vuejs.org/en/" target="_blank" rel="external">ssr.vuejs</a>也很久了。<br>现在我终于把其中的代码片段运行起来了。  </p>
+</blockquote>
+<p>Github Repo: <a href="https://github.com/songlairui/vue-playground" target="_blank" rel="external">https://github.com/songlairui/vue-playground</a></p>
+<h2 id="1-尝试-vue-server-renderer"><a href="#1-尝试-vue-server-renderer" class="headerlink" title="1. 尝试 vue-server-renderer"></a>1. 尝试 <code>vue-server-renderer</code></h2><p>实现使用 <code>console.log(html)</code> 将渲染过后的html打印到屏幕上。<br>即，将 new Vue({…}) 变成输出结果。跳过从浏览器获得结果。  </p>
+<h2 id="2-使用-import-、-export-关键字"><a href="#2-使用-import-、-export-关键字" class="headerlink" title="2. 使用 import 、 export 关键字"></a>2. 使用 import 、 export 关键字</h2><p>文档第四章<a href="http://ssr.vuejs.org/en/structure.html" target="_blank" rel="external">Source Code Structure</a> 出现了目录结构，而且js文件中有了import关键字。<br>这里无法像前面的代码片段一样，直接在node里粘贴代码可执行。这里需要使用webpack。  </p>
+<blockquote>
+<p>这时的我：使用vue-cli创建vue项目脚手架是唯一的webpack使用经验。<br>然后我去 <a href="/2017/06/18/learn-webpack/" title="学习webpack">学习webpack</a></p>
+</blockquote>
+<p>代码示例： <a href="https://github.com/songlairui/vue-playground/tree/master/demo/chapter4" target="_blank" rel="external">songlairui/vue-playground/demo/chapter4</a>  </p>
+<p><strong>目标:</strong> 让这样的目录能够执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">src</div><div class="line">├── components</div><div class="line">│   ├── Foo.vue</div><div class="line">│   ├── Bar.vue</div><div class="line">│   └── Baz.vue</div><div class="line">├── App.vue</div><div class="line">├── main.js # universal entry 我在实践时换了个名字</div><div class="line">├── entry-client.js # runs in browser only</div><div class="line">└── entry-server.js # runs on server only</div></pre></td></tr></table></figure>
+<p>main.js、entry-client.js、entry-server.js 代码从文档中复制来。<br>*.vue 文件内容自己补充。</p>
+<p>这里需要webpack的概念： 入口文件、输出文件、模块、插件、打包目标平台。  </p>
+<h4 id="创建webpack配置文件"><a href="#创建webpack配置文件" class="headerlink" title="创建webpack配置文件"></a>创建webpack配置文件</h4><blockquote>
+<p>啃了webpack文档后 <a href="/2017/06/18/learn-webpack/#基本配置文件">[跳转…]</a>  </p>
+</blockquote>
+<p><strong>deal with 新出现的 import</strong></p>
+<p>在基本的配置文件上增加<code>babel-loader</code>配置即可将import转译为node和浏览器可以支持引入方式了。<br>这里需要将 <code>import</code> 转译为 <code>commonjs</code>方式，设置babel-loader的query为<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">... <span class="comment">// 假装其他代码</span></div><div class="line"><span class="built_in">module</span>: &#123;</div><div class="line">  <span class="attr">rules</span>:[</div><div class="line">    &#123;</div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</div><div class="line">      <span class="attr">loader</span>: <span class="string">'babel-loader'</span>,</div><div class="line">      <span class="attr">query</span>: [</div><div class="line">        <span class="string">"presets"</span>: [</div><div class="line">          <span class="string">"env"</span>, &#123; <span class="string">"modules"</span>: <span class="string">"commonjs"</span> &#125;</div><div class="line">        ]</div><div class="line">      ]</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125; </div><div class="line">... <span class="comment">// 假装其他代码</span></div></pre></td></tr></table></figure></p>
+<p>modules 默认为commonjs，可以省略。其他可选umd,amd等。  </p>
+<blockquote>
+<p>// TODO 如果可能，会写一篇初试requirejs，commonjs.</p>
+</blockquote>
+<p><strong>deal with vue单文件组件</strong>  </p>
+<p><code>*.vue</code>单文件组件通过import引入，为其添加<code>vue-loader</code>,即可正确引入。</p>
+<p><strong>module.target</strong>  </p>
+<p>webpack module默认的target是 web，为服务端代码进行打包时，需要设置target为 node 或 aysnc-node。  </p>
+<h2 id="3-使用-VueRouter"><a href="#3-使用-VueRouter" class="headerlink" title="3. 使用 VueRouter"></a>3. 使用 VueRouter</h2><blockquote>
+<p>我已有的vue使用经验中，在router中，使用ensure即可轻松实现懒加载。  </p>
+</blockquote>
+<p>动态引入模块，可以完成懒加载文件的打包<br><strong>改写router.js</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// import About from './About.vue'</span></div><div class="line"><span class="keyword">const</span> About = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./About.vue'</span>)</div></pre></td></tr></table></figure></p>
+<p>使用vscode中js formatter插件保存时自动格式化代码时，会将import的格式强行换行。可以停用自动格式化。  </p>
+<p><strong>启用动态加载</strong><br>webpack配置rules中，为babel-loader启用动态引入插件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">&#123;</div><div class="line">  <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</div><div class="line">  <span class="attr">loader</span>: <span class="string">'babel-loader'</span>,</div><div class="line">  <span class="attr">query</span>: &#123;</div><div class="line">    <span class="attr">presets</span>: [</div><div class="line">      [<span class="string">'env'</span>, &#123; <span class="attr">modules</span>: <span class="literal">false</span> &#125;]</div><div class="line">    ],</div><div class="line">    <span class="attr">plugins</span>: [</div><div class="line">      <span class="string">"syntax-dynamic-import"</span></div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">...</div></pre></td></tr></table></figure></p>
+<p>dist目录下打包结果如下：  </p>
+<table>
+<thead>
+<tr>
+<th>client.conf</th>
+<th>-</th>
+<th>server.conf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.js</td>
+<td>-</td>
+<td>0.js</td>
+</tr>
+<tr>
+<td>client.bundle.js</td>
+<td>-</td>
+<td>server.bundle.js</td>
+</tr>
+</tbody>
+</table>
+<p>client和server配置文件都会生成0.js,1.js….<br>在未使用manifest情况下，两个配置文件生成内容不一样（server配置文件中 module.target为’node‘）。<br>如果同时使用，需要调整输出位置，避免代码覆盖。</p>
+<h2 id="4-粗暴的融合前后端"><a href="#4-粗暴的融合前后端" class="headerlink" title="4. 粗暴的融合前后端"></a>4. 粗暴的融合前后端</h2><p>我对需求服务端渲染的理解是，使用爬虫获取指定url时，得到的是该url渲染好的html内容。<br>在浏览器上第一次打开此页面时，请求到的html内容是已渲染好的。<br>在浏览器上进行后续的交互时，用的是vue框架的交互逻辑，而不重新发起url请求。  </p>
+<p><strong>客户端使用场景</strong>：<br>客户端build之后，使用方式是在一个body只包含<code>div#app</code>元素的index.html底部注入<code>script:src</code>引入build好的client.bundle.js。<br>然后使用http server提供对这个index.html的访问。</p>
+<p><strong>服务端使用场景</strong>：<br>在server.js中 配置express，并require 打包好的entry-server.js，填充逻辑。<br>然后运行<code>node server.js</code>, 就能像使用nginx 托管静态html文件夹那样按照url访问指定html页面。</p>
+<p>现在，在App.vue文件中根元素上添加 <code>id=&#39;app&#39;</code>, 渲染的到的html中包含此 <code>id=&#39;app&#39;</code>. 对此#app挂载Vue即常规的Vue使用方法。<br>在2.3版本中对服务端渲染进行了支持，会自动辨识服务端渲染好的dom。  </p>
+<p>使用服务端生成的内容，替换客户端使用场景中index.html 就是简易的融合前后端。<br>即，在服务端所使用的index.template.html页面中，添加 <code>script:src</code> 引入客户端build的client.bundle.js。</p>
+<p><strong>融合细节</strong>：  </p>
+<ol>
+<li>区分服务端与客户端打包代码<br>为 server.conf, client.conf  设置不同的output.path  </li>
+<li>修改index.template.html<br>添加 <code>&lt;script src=&quot;./dist/bundle.js&quot;&gt;&lt;/script&gt;</code>  </li>
+<li>server.js中为express添加中间件处理逻辑<br>请求0.js时，会直接请求根目录，这里redirect一下，让它取到正确的0.js  </li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">req,res,next</span>)</span>&#123;</div><div class="line">  <span class="comment">// 使用bunlde懒加载0.js时，引用路径是不正确的，我不知道怎么配置，这儿强行改一下</span></div><div class="line">  <span class="keyword">if</span>(<span class="regexp">/\.js$/</span>.test(req.url))&#123;</div><div class="line">    res.redirect(<span class="string">'/dist'</span> + req.url)</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    next()</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>代码示例： <a href="https://github.com/songlairui/vue-playground/tree/master/demo/chapter5" target="_blank" rel="external">songlairui/vue-playground/demo/chapter5</a>  </p>
+<h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2><p>按照个人理解，成功使用了下服务端渲染的结果。<br>过程虽然很粗糙，也是使出了浑身解数的。  </p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/06/22/vue-ssr-step-2/" class="prev">PREV</a><a href="/2017/06/18/learn-webpack/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2017 <a href="http://songlairui.github.io">Songlairui</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-29076352-3",'auto');ga('send','pageview');</script></body></html>

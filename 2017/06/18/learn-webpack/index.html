@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Webpack 学习记录 · LarrySong</title><meta name="description" content="Webpack 学习记录 - Songlairui"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://songlairui.github.io/atom.xml" title="LarrySong"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/idozii" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/songlairui" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Webpack 学习记录</h1><div class="post-info">2017年6月18日</div><div class="post-content"><blockquote>
+<p> 我想要从零开始构建自己的应用，比如使用ssr-vue。而官方vue-cli没有类似原有template的ssr版。<br> 看来，我需要学会webpack了  </p>
+</blockquote>
+<h4 id="已有的学习经历"><a href="#已有的学习经历" class="headerlink" title="已有的学习经历"></a>已有的学习经历</h4><p>vue-cli自带的webpack配置，看过好几次。自己添加一些chunk，自动生成多个页面，觉得自己做了很大一件事情，而客观上并不大。<br>webpack文档尝试看了好几次，从来觉得太长没看完。  </p>
+<h3 id="Current"><a href="#Current" class="headerlink" title="Current"></a>Current</h3><p>链接地址：  <a href="http://www.css88.com/doc/webpack2/concepts/module-resolution/" target="_blank" rel="external">http://www.css88.com/doc/webpack2/concepts/module-resolution/</a><br>我还是从头开始看了入口文件，配置方法。<br>目前看来，概念部分，应该是一口气看完的。然后再在指南不烦，联系代码片段。<br>这儿，我联想到了vimtutor中的练习方式。</p>
+<h3 id="基本配置文件"><a href="#基本配置文件" class="headerlink" title="基本配置文件"></a>基本配置文件</h3><blockquote>
+<p>啃了webpack文档后，能快速手打webpack的最简单配置文件。所有的配置都在此基础上添加。  </p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: <span class="string">'/path/to/entry/file'</span>,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'output.js'</span>,</div><div class="line">    <span class="attr">path</span>: __dirname</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">module</span>:&#123;</div><div class="line">    <span class="attr">rules</span>:[</div><div class="line">      ...</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>常见选项</strong>  </p>
+<ol>
+<li>resolve<br>webpack 解析。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">resolve: &#123;</div><div class="line">    <span class="attr">alias</span>: &#123;</div><div class="line">      <span class="string">'vue'</span>: <span class="string">'vue/dist/vue.common.js'</span></div><div class="line">    &#125;</div><div class="line">    <span class="comment">// extensions: ['.ts', '.vue', '.js']</span></div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>默认逻辑不够准确时，需要手动添加alias。<br>需要为vue使用 vue.esm.js时，可以通过添加alias更改。  </p>
+<ol>
+<li>devtool  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">devtool: <span class="string">'source-map'</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>用来生成source-map文件  </p>
+<ol>
+<li><p>entry<br>可由基本的 值 变成 键-值。  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">entry: &#123;</div><div class="line">  <span class="attr">main</span>: <span class="string">'./main.js'</span>,</div><div class="line">  <span class="attr">server</span>: <span class="string">'./server.js'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>output  </p>
+<pre><code class="javascript">output: {
+<span class="attr">filename</span>: <span class="string">'[chunk].bundle.js'</span>,
+<span class="attr">path</span>: path.resolve(__dirname, <span class="string">'dist'</span>)
+}
+</code></pre>
+<p>需要先 <code>const path = require(&#39;path&#39;)</code>, 这里path属性的写法即使用兼容全平台的方式指定当前目录下的dist目录为输出目录。<br><code>filename</code>属性的<code>[chunk]</code>能让entry中的main.js 输出为 main.bundle.js ，类似的还有<code>[name]</code>、<code>[chunkhash]</code>、<code>[hash]</code>。  </p>
+</li>
+<li><p>rules<br>指定loader。webpack2兼容webpack1等loader写法。</p>
+</li>
+</ol>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/06/21/vue-ssr-step-1/" class="prev">PREV</a><a href="/2017/06/10/CSS-Animation-Controlling/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2017 <a href="http://songlairui.github.io">Songlairui</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-29076352-3",'auto');ga('send','pageview');</script></body></html>
