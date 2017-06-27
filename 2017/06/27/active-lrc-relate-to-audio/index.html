@@ -78,7 +78,7 @@
 <h2 id="Step-2-更多需求-每个歌词都生效"><a href="#Step-2-更多需求-每个歌词都生效" class="headerlink" title="Step 2 更多需求: 每个歌词都生效"></a>Step 2 更多需求: 每个歌词都生效</h2><blockquote>
 <p>使用ontimeupdate，依赖audio元素自身事件的机制。如果ontimeupdate的频率太慢，两个事件间隔之间，更新了多个歌词的情况下，歌词的激活就会出现skip。  可以使用30倍速播放音乐，查看ontimeupdate方法等表现。  </p>
 </blockquote>
-<p><strong>30倍速播放</strong> <a href="https://songlairui.github.io/NeteaseMusic/static]">DEMO</a>    </p>
+<p><strong>30倍速播放</strong> <a href="https://songlairui.github.io/NeteaseMusic/static">DEMO</a>    </p>
 <table>
 <thead>
 <tr>
@@ -130,7 +130,7 @@
 <li>// 别设置<code>audio.playbackRate</code>为‘负’值，就gg了。。</li>
 <li>// 每次遍历读取DOM，需要优化吗？</li>
 </ul>
-<h2 id="伪END"><a href="#伪END" class="headerlink" title="伪END"></a>伪END</h2><p>好快就说完了，记得做的时候，来回调了特别多遍。<br>DEMO地址： <a href="https://songlairui.github.io/NeteaseMusic/static]">https://songlairui.github.io/NeteaseMusic/static</a>  </p>
+<h2 id="伪END"><a href="#伪END" class="headerlink" title="伪END"></a>伪END</h2><p>好快就说完了，记得做的时候，来回调了特别多遍。<br>DEMO地址： <a href="https://songlairui.github.io/NeteaseMusic/static">https://songlairui.github.io/NeteaseMusic/static</a>  </p>
 <h2 id="附加"><a href="#附加" class="headerlink" title="附加"></a>附加</h2><p>上述两方法实现过程，还有很枝外细节，写在最后。</p>
 <h3 id="【缓存变量】激活歌词时，需要遍历去除其他歌词DOM上的激活状态"><a href="#【缓存变量】激活歌词时，需要遍历去除其他歌词DOM上的激活状态" class="headerlink" title="【缓存变量】激活歌词时，需要遍历去除其他歌词DOM上的激活状态"></a><strong>【缓存变量】激活歌词时，需要遍历去除其他歌词DOM上的激活状态</strong></h3><p>准备全局变量:  </p>
 <pre><code class="javascript"><span class="keyword">let</span> activedLrcEl = <span class="keyword">new</span> <span class="built_in">Set</span>() <span class="comment">// cache for 激活的歌词</span>
@@ -209,7 +209,7 @@
 </code></pre>
 <p>根据audio的当前时间，使用reduce取得当前歌词和下一条歌词。<br>最初没有使用缓存变量时，简单的把上一条歌词取消激活用到了这个方法。虽然这种取消非常不严谨。但这个reduce写起来很爽。</p>
 <h2 id="真·END"><a href="#真·END" class="headerlink" title="真·END"></a>真·END</h2><p>支持方法的切换，通过增加wrap函数和多处使用3元运算符，逗号运算符完成。//有点丧心病狂，就不截图了</p>
-</div></article></div></main><footer><div class="paginator"><a href="/2017/06/22/vue-ssr-step-2/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'arysong';
+</div></article></div></main><footer><div class="paginator"><a href="/2017/06/22/vue-ssr-step-2/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'arysong';
 var disqus_identifier = '2017/06/27/active-lrc-relate-to-audio/';
 var disqus_title = '细致显示歌词';
 var disqus_url = 'http://songlairui.github.io/2017/06/27/active-lrc-relate-to-audio/';
