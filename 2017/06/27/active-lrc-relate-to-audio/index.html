@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 细致显示歌词 · LarrySong</title><meta name="description" content="细致显示歌词 - Songlairui"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://songlairui.github.io/atom.xml" title="LarrySong"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/idozii" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/songlairui" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">细致显示歌词</h1><div class="post-info">2017年6月27日</div><div class="post-content"><blockquote>
+<p>仿照网易云音乐播放界面的一个页面： <a href="https://songlairui.github.io/NeteaseMusic/static]">https://songlairui.github.io/NeteaseMusic/static</a><br>跟随音乐显示歌词，用了两种方式实现：ontimeupdate事件、循环调用setTimeout。<br><strong>有gif，流量党慎点。</strong>   </p>
+</blockquote>
+<a id="more"></a>
+<h2 id="Step-0-前期操作"><a href="#Step-0-前期操作" class="headerlink" title="Step 0 前期操作"></a>Step 0 前期操作</h2><ul>
+<li>页面使用了动态REM，js代码中用了反引号（不支持UC）。</li>
+<li>图片素材取自网易云音乐手机版页面。  </li>
+<li>布局使用flex。</li>
+<li>旋转动画的暂停与播放使用animation-play-state属性控制。</li>
+<li>歌词存放在json中，使用fetch获取，并split成数组，然后遍历生成DOM并插入页面（使用-了document.createDocumentFragment小小优化）。</li>
+</ul>
+<p><strong>生成的歌词DOM结构</strong>  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"lyric"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">style</span>=<span class="string">"transform: translateY(1px);"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:01.36"</span> <span class="attr">class</span>=<span class="string">"current"</span>&gt;</span>野子 (Live) - 苏运莹<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:02.787"</span>&gt;</span>词：苏运莹<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:04.86"</span>&gt;</span>曲：苏运莹<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:10.31"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:14.31"</span>&gt;</span>怎么大风越狠<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:17.31"</span>&gt;</span>我心越荡<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:20.231"</span>&gt;</span>幻如一丝尘土<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">...</div><div class="line">- .lyric 包裹ul，并且设置`overflow:hidden`，可显示区域容纳5行歌词</div><div class="line">- 前两个li是手动添加的空li，用于占位</div><div class="line">- 每一个li包裹一句歌词</div><div class="line">- data-stamp 是歌词中的时间</div><div class="line">- ul包裹所有的li</div></pre></td></tr></table></figure>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>基本需求：跟随歌曲播放显示歌词<br>更多需求：歌词严格跟随播放进度</p>
+<h2 id="Step-1-完成基本需求"><a href="#Step-1-完成基本需求" class="headerlink" title="Step 1 完成基本需求"></a>Step 1 完成基本需求</h2><p>1<strong>. 歌词激活-样式逻辑</strong><br>当指定歌词激活后，为其添加标识样式 ‘.current’,CSS中为此样式设定显著的颜色和阴影。<br>计算当前歌词的相对父元素的高度，调节translateY使其在第三行位置（歌词显示区域中间位置）。<br><em>关键代码:</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// target 是获取的需要激活的歌词</span></div><div class="line"><span class="comment">// lrcEl 是包裹每一句歌词`li`的`ul`</span></div><div class="line">target.classList.add(<span class="string">'current'</span>)</div><div class="line"><span class="comment">// 令激活的歌词，位于第三行位置</span></div><div class="line">lrcEl.style.transform = <span class="string">`translateY(<span class="subst">$&#123;- target.offsetTop + <span class="number">2</span> * target.offsetHeight&#125;</span>px)`</span></div></pre></td></tr></table></figure></p>
+<p><em>显示效果:</em><br><img src="https://of87cyikt.qnssl.com/blog/hexo/activeLrcItem.gif" alt="激活指定歌词"></p>
+<p>2<strong>. 使用进度条常用方法</strong><br>为HTMLMediaElement制作自定义进度条时，会用到 timeupdate 事件。<a href="">//TODO:MDN</a></p>
+<table>
+<thead>
+<tr>
+<th>ontimeupdate</th>
+<th>-</th>
+<th>控制台</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://of87cyikt.qnssl.com/blog/hexo/ontimeupdate-1.png" alt="代码"></td>
+<td>-</td>
+<td><img src="https://of87cyikt.qnssl.com/blog/hexo/ontimeupdate.gif" alt="效果"></td>
+</tr>
+<tr>
+<td>为audio设置事件</td>
+<td>-</td>
+<td>点击播放后，控制台会按照audio的频率打印当前播放时间</td>
+</tr>
+</tbody>
+</table>
+<p>3<strong>. 筛选出当前应该激活的歌词</strong></p>
+<p>在updateLrc方法中，筛选出来当前激活的歌词。  </p>
+<p>updateLrc 代码1:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">updateLrc</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">//获取当前audio播放的时间</span></div><div class="line">  <span class="keyword">let</span> currentStamp = audio.currentTime</div><div class="line">  <span class="keyword">let</span> lastLrc = lrc.filter(<span class="function"><span class="params">v</span> =&gt;</span> v[<span class="number">0</span>]) <span class="comment">// 清空掉没有时间参数的歌词</span></div><div class="line">    .filter(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">let</span> tmp = v[<span class="number">0</span>].split(<span class="string">':'</span>)</div><div class="line">        <span class="comment">// 修复计算错误，添加括号，优先进行隐式类型转换</span></div><div class="line">      <span class="keyword">let</span> stamp = <span class="number">60</span> * (+tmp[<span class="number">0</span>]) + (+tmp[<span class="number">1</span>])</div><div class="line">      <span class="keyword">return</span> stamp &gt; currentStamp</div><div class="line">    &#125;)[<span class="number">0</span>]</div><div class="line">  <span class="built_in">console</span>.info(<span class="string">'当前要激活的歌词:'</span>, lastLrc)</div><div class="line">    <span class="comment">// 如果找到了指定歌词，就激活它</span></div><div class="line">  <span class="keyword">if</span> (lastLrc) activeLrcItem(lastLrc[<span class="number">0</span>])</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>显示效果:  </p>
+<table>
+<thead>
+<tr>
+<th>页面</th>
+<th>-</th>
+<th>控制台</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://of87cyikt.qnssl.com/blog/hexo/updateLrc-r1-1.gif" alt="歌词激活"></td>
+<td>-</td>
+<td><img src="https://of87cyikt.qnssl.com/blog/hexo/updateLrc-r1.gif" alt="控制台信息"></td>
+</tr>
+<tr>
+<td>选取到指定歌词，然后激活</td>
+<td>-</td>
+<td>控制台输出，每出发一次timeupdate，都更新一下要激活的歌词。</td>
+</tr>
+</tbody>
+</table>
+<p>这儿配合声音听的话，歌词早了一句，代码先修正，再分析。   </p>
+<p>updateLrc 代码2:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">updateLrc</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> currentStamp = audio.currentTime</div><div class="line">  <span class="keyword">let</span> lastLrc = lrc.filter(<span class="function"><span class="params">v</span> =&gt;</span> v[<span class="number">0</span>])  </div><div class="line">    .reverse()                        <span class="comment">// 这儿添加一行反向</span></div><div class="line">    .filter(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">let</span> tmp = v[<span class="number">0</span>].split(<span class="string">':'</span>)</div><div class="line">      <span class="keyword">let</span> stamp = <span class="number">60</span> * (+tmp[<span class="number">0</span>]) + (+tmp[<span class="number">1</span>])</div><div class="line">      <span class="keyword">return</span> stamp &lt; currentStamp     <span class="comment">// 这儿大于号变小于号</span></div><div class="line">    &#125;)[<span class="number">0</span>]</div><div class="line">  <span class="built_in">console</span>.info(<span class="string">'当前要激活的歌词:'</span>, lastLrc)</div><div class="line">  <span class="keyword">if</span> (lastLrc) activeLrcItem(lastLrc[<span class="number">0</span>])</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>当前激活的歌词，应该是已经激活过的最后一句歌词。</li>
+<li>添加了一行 reverse，更改了下filter中的对比条件。  </li>
+<li>逻辑从原来都取得第一个比当前时间大的歌词，变成了取最后一个比当前时间晚的歌词。  </li>
+<li>代码中，<code>filter</code>返回的是一个二维数组，末尾加<code>[0]</code>即取第一个值。  <ul>
+<li>末尾如果添加<code>[0][0]</code>，则在下边判<code>null</code>的时候，会报错。  </li>
+</ul>
+</li>
+<li><code>activeLrcItem</code> 设计这样的传参用法，能同时兼容另一种歌词策略。  </li>
+</ul>
+<p>updateLrc 代码3 【添加新方法，增加可读性】:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">updateLrc</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> currentStamp = audio.currentTime</div><div class="line">  <span class="keyword">let</span> lastLrc = lrc.filter(<span class="function"><span class="params">v</span> =&gt;</span> v[<span class="number">0</span>])</div><div class="line">    .reverse()</div><div class="line">    .filter(<span class="function"><span class="params">v</span> =&gt;</span> lrcTime2Second(v[<span class="number">0</span>]) &lt; currentStamp)[<span class="number">0</span>]</div><div class="line">  <span class="keyword">if</span> (lastLrc) activeLrcItem(lastLrc[<span class="number">0</span>])</div><div class="line">&#125;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * 【辅助函数】根据歌词中的时间戳，返回秒数</div><div class="line"> * @param &#123;lrc 歌词中的时间戳&#125; lrcTime </div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">lrcTime2Second</span>(<span class="params">lrcTime</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> tmp = lrcTime.split(<span class="string">':'</span>)</div><div class="line">    <span class="comment">// 修复计算错误，添加括号，优先进行隐式类型转换</span></div><div class="line">  <span class="keyword">return</span> <span class="number">60</span> * (+tmp[<span class="number">0</span>]) + (+tmp[<span class="number">1</span>])</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在<code>filter</code>写了三行的代码逻辑被简化了。<br>为其创建额外方法之后，将<code>filter</code>变成了简写状态，私以为代码可读性提高了。</p>
+<h2 id="Step-2-更多需求-每个歌词都生效"><a href="#Step-2-更多需求-每个歌词都生效" class="headerlink" title="Step 2 更多需求: 每个歌词都生效"></a>Step 2 更多需求: 每个歌词都生效</h2><blockquote>
+<p>使用ontimeupdate，依赖audio元素自身事件的机制。如果ontimeupdate的频率太慢，两个事件间隔之间，更新了多个歌词的情况下，歌词的激活就会出现skip。  可以使用30倍速播放音乐，查看ontimeupdate方法等表现。  </p>
+</blockquote>
+<p><strong>30倍速播放</strong> <a href="https://songlairui.github.io/NeteaseMusic/static]">DEMO</a>    </p>
+<table>
+<thead>
+<tr>
+<th>Step 1 方法</th>
+<th>-</th>
+<th>新方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://of87cyikt.qnssl.com/blog/hexo/ontimeupdatex30.gif" alt="timeupdate x30"></td>
+<td>-</td>
+<td><img src="https://of87cyikt.qnssl.com/blog/hexo/settimeoutx30.gif" alt="no-skip"></td>
+</tr>
+<tr>
+<td>会出现跳词</td>
+<td>-</td>
+<td>每句歌词都被激活</td>
+</tr>
+</tbody>
+</table>
+<p>另一个细节是，歌词中空行和下一句歌词的时间间隔很小。使用ontimeupdate方法，激活空行（令其显示在中间位置）的概率很小（是个概率事件）。<br>而使用settimeout方法，激活空行，是必然事件。  </p>
+<p><strong>实现细节:</strong>  </p>
+<p>准备全局变量(未进行组件化，粗鲁的使用全局变量了):<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> timer = <span class="literal">null</span> <span class="comment">// settimeout需要使用的timer</span></div></pre></td></tr></table></figure></p>
+<p>开始播放时，执行一个方法操作歌词:  </p>
+<pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">playLrc</span>(<span class="params"></span>) </span>{
+  <span class="keyword">if</span> (timer) <span class="keyword">return</span>
+  <span class="keyword">let</span> currentStamp = audio.currentTime
+  <span class="comment">// 获取当前激活的歌词，和下一个要激活的歌词， 此处正向获取。因为下一个歌词还没有播放，等待setTimeout延迟激活，</span>
+  <span class="keyword">let</span> nextLrc = lrc
+    .filter(<span class="function"><span class="params">v</span> =&gt;</span> v[<span class="number">0</span>]) <span class="comment">// 清空掉没有时间参数的歌词</span>
+    .filter(<span class="function"><span class="params">v</span> =&gt;</span> lrcTime2Second(v[<span class="number">0</span>]) &gt; currentStamp)[<span class="number">0</span>]
+  <span class="keyword">if</span> (nextLrc) {
+    <span class="built_in">console</span>.info(<span class="string">`下一歌词:<span class="subst">${nextLrc}</span>`</span>)
+    timer = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+      clearTimeout(timer), timer = <span class="literal">null</span>
+      activeLrcItem(nextLrc[<span class="number">0</span>])
+      playLrc() <span class="comment">// 尾调用自身</span>
+    }, (lrcTime2Second(nextLrc[<span class="number">0</span>]) - (+currentStamp)) * <span class="number">1000</span> / audio.playbackRate)
+  }
+}
+</code></pre>
+<ul>
+<li>取得需要歌词的逻辑，跟上一种实现方式中updateLrc类似。不过，playLrc自身实际操作是在setTimeout超时后，所以，传入的歌词参数应该是未来的一个歌词。恰好使用第一次想到的filter逻辑。  </li>
+<li>得到nextLrc之后，设置<code>timer</code>,并在setTimeout中函数真正执行时，clear掉，并置null。然后在尾部调用自身。  </li>
+<li>这样的setTimeout是一个套路，没什么可说的。 其中实际执行的是 <code>activeLrcItem(nextLrc[0])</code> 这句。  </li>
+<li>setTimeout 的超时时间，根据未来一句歌词，和音乐当前播放的时间求出。所以，每次setTimeout都是新鲜计算的，不会累计时间误差。  </li>
+<li>超时时间 除以 <code>audio.playbackRate</code>, 匹配不同播放速度下切换行为。  </li>
+<li>// 别设置<code>audio.playbackRate</code>为‘负’值，就gg了。。</li>
+<li>// 每次遍历读取DOM，需要优化吗？</li>
+</ul>
+<h2 id="伪END"><a href="#伪END" class="headerlink" title="伪END"></a>伪END</h2><p>好快就说完了，记得做的时候，来回调了特别多遍。<br>DEMO地址： <a href="https://songlairui.github.io/NeteaseMusic/static]">https://songlairui.github.io/NeteaseMusic/static</a>  </p>
+<h2 id="附加"><a href="#附加" class="headerlink" title="附加"></a>附加</h2><p>上述两方法实现过程，还有很枝外细节，写在最后。</p>
+<h3 id="【缓存变量】激活歌词时，需要遍历去除其他歌词DOM上的激活状态"><a href="#【缓存变量】激活歌词时，需要遍历去除其他歌词DOM上的激活状态" class="headerlink" title="【缓存变量】激活歌词时，需要遍历去除其他歌词DOM上的激活状态"></a><strong>【缓存变量】激活歌词时，需要遍历去除其他歌词DOM上的激活状态</strong></h3><p>准备全局变量:  </p>
+<pre><code class="javascript"><span class="keyword">let</span> activedLrcEl = <span class="keyword">new</span> <span class="built_in">Set</span>() <span class="comment">// cache for 激活的歌词</span>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>未使用缓存变量</th>
+<th>-</th>
+<th>使用了缓存变量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://of87cyikt.qnssl.com/blog/hexo/activeItemWithoutCache.png" alt="withoutCacheVar"></td>
+<td>-</td>
+<td><img src="https://of87cyikt.qnssl.com/blog/hexo/activeItemWithCacheVar.png" alt="WithCacheVar"></td>
+</tr>
+<tr>
+<td>使用filter方法对DOM遍历读取</td>
+<td>-</td>
+<td>每次激活li，都把其放到Set中，并在取消激活时删除掉</td>
+</tr>
+</tbody>
+</table>
+<p>使用缓存变量之后，很起来很骚的长行代码去掉了。<br>为什么用Set？因为不用考虑去重了。</p>
+<table>
+<thead>
+<tr>
+<th><strong>使用效果:</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://of87cyikt.qnssl.com/blog/hexo/withCache.png" alt="cache效果"></td>
+</tr>
+<tr>
+<td><strong>settimeout方法下，使用30倍速度播放，查看控制台。此时因为setTimeout的误差，造成超时时间取得过短，playLrc方法执行频次远超实际需要，造成额外尝试操作DOM。缓存变量的使用，会使得其在需要操作DOM时，真正去执行。</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="【CSS动画控制】-播放结束歌词处理"><a href="#【CSS动画控制】-播放结束歌词处理" class="headerlink" title="【CSS动画控制】 播放结束歌词处理"></a><strong>【CSS动画控制】 播放结束歌词处理</strong></h3><p>歌词播放完之后，想让它跳回头部，而不是滚回头部。<br>这样处理的想法时，歌曲结束之后，.3s的时间滚回头部，如果看到觉得太黏腻，不利落。<br>这儿用到void el.clientWidth。算是一种黑魔法？</p>
+<table>
+<thead>
+<tr>
+<th>切换 visibility</th>
+<th>-</th>
+<th>切换 display</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://of87cyikt.qnssl.com/blog/hexo/onended1.png" alt="viaVisibility"></td>
+<td>-</td>
+<td><img src="https://of87cyikt.qnssl.com/blog/hexo/onended2.png" alt="viaDisplay"></td>
+</tr>
+<tr>
+<td>无效</td>
+<td>-</td>
+<td>生效</td>
+</tr>
+</tbody>
+</table>
+<p>使用display:none会达到想要的效果。猜测跟浏览器绘制过程有关。</p>
+<h3 id="【CSS】歌词空行的处理"><a href="#【CSS】歌词空行的处理" class="headerlink" title="【CSS】歌词空行的处理"></a><strong>【CSS】歌词空行的处理</strong></h3><p>默认情况，空的一行会有一个小的height，因为字体高度为0。<br>让空的一行也显示有内容，就可以获得正常的高度。为每个歌词添加伪元素，并设置<code>content: &#39; &#39;</code>,可令每一行都最少有一个空格。<br>如果有强迫症，可以前后各加一个空格，让歌词居中。<br><img src="https://of87cyikt.qnssl.com/blog/hexo/lrc-style.png" alt="歌词::after"></p>
+<h3 id="【reduce】-获取当前播放的歌词，和下一个歌词"><a href="#【reduce】-获取当前播放的歌词，和下一个歌词" class="headerlink" title="【reduce】 获取当前播放的歌词，和下一个歌词"></a><strong>【reduce】 获取当前播放的歌词，和下一个歌词</strong></h3><p>这是个人觉得正确使用reduce的一次了，虽然最后注释掉了。</p>
+<pre><code class="javascript"><span class="comment">//写的时候挺费脑子的，不舍得删，注释掉吧。</span>
+<span class="keyword">let</span> currentStamp = audio.currentTime
+<span class="keyword">let</span> { currentLrc, nextLrc } = lrc.filter(<span class="function"><span class="params">v</span> =&gt;</span> v[<span class="number">0</span>]).reduce(<span class="function">(<span class="params">prev, current</span>) =&gt;</span> {
+  <span class="comment">// 如果传入的值有了nextLrc，说明取到了想要的值</span>
+  <span class="comment">// console.info(`reduce 得到的上一个的返回值：${JSON.stringify(prev)}`)</span>
+  <span class="keyword">let</span> { currentLrc, nextLrc } = prev
+  <span class="keyword">if</span> (nextLrc) <span class="keyword">return</span> prev
+  <span class="keyword">return</span> lrcTime2Second(current[<span class="number">0</span>]) &gt; currentStamp ? { currentLrc, <span class="attr">nextLrc</span>: current[<span class="number">0</span>] } : { <span class="attr">currentLrc</span>: current[<span class="number">0</span>], <span class="attr">nextLrc</span>: <span class="string">''</span> }
+}, { <span class="attr">currentLrc</span>: <span class="string">''</span>, <span class="attr">nextLrc</span>: <span class="string">''</span> })
+</code></pre>
+<p>根据audio的当前时间，使用reduce取得当前歌词和下一条歌词。<br>最初没有使用缓存变量时，简单的把上一条歌词取消激活用到了这个方法。虽然这种取消非常不严谨。但这个reduce写起来很爽。</p>
+<h2 id="真·END"><a href="#真·END" class="headerlink" title="真·END"></a>真·END</h2><p>支持方法的切换，通过增加wrap函数和多处使用3元运算符，逗号运算符完成。//有点丧心病狂，就不截图了</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/06/22/vue-ssr-step-2/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'arysong';
+var disqus_identifier = '2017/06/27/active-lrc-relate-to-audio/';
+var disqus_title = '细致显示歌词';
+var disqus_url = 'http://songlairui.github.io/2017/06/27/active-lrc-relate-to-audio/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//arysong.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2017 <a href="http://songlairui.github.io">Songlairui</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-29076352-3",'auto');ga('send','pageview');</script></body></html>
