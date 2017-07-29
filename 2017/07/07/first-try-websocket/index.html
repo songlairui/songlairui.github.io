@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 初尝试WebSocket · LarrySong</title><meta name="description" content="初尝试WebSocket - Songlairui"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://songlairui.github.io/atom.xml" title="LarrySong"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/idozii" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/songlairui" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">初尝试WebSocket</h1><div class="post-info">2017年7月7日</div><div class="post-content"><blockquote>
+<p>尝试Socket，使用之中有很多问题。  </p>
+</blockquote>
+<p>首先，在图解HTTP一书中，知道http头部有个connection，能够用来将http协议升级到websocet。<br>然后，在node环境下，使用http模块启动web server，让能够直接处理http头部。    </p>
+<p>现在，要使用websocket了，那么，是不是将要接触将http 升级到 websocket的细节了？<br>不，倾向于使用下载量超级多的npm包。这些包之中，应该做了升级协议的细节。  </p>
+<a id="more"></a>
+<h2 id="‘君子性非异也，善假于物也’"><a href="#‘君子性非异也，善假于物也’" class="headerlink" title="‘君子性非异也，善假于物也’"></a>‘君子性非异也，善假于物也’</h2><p>筛选到的包有 <code>ws</code>,<code>faye-websocket</code>。 这两个包的下载量最多。<br>浏览了下包的首页介绍，其中前者可以像浏览器中一样，使用现成的WebSocket API。<br>后者，在web-dev-server中的hmr相关代码中发现有依赖到。浏览器介绍，能看出是在http模块上进行处理。  </p>
+<h2 id="ws-的-express-例子"><a href="#ws-的-express-例子" class="headerlink" title="ws 的 express 例子"></a><code>ws</code> 的 express 例子</h2><p>README中的express例子简短的展示了与express结合使用的基本法。<br>未能演示如何使用拿到的ws。<br>在github repo中的example中，<a href="https://github.com/websockets/ws/tree/master/examples/serverstats" target="_blank" rel="external">服务器状态</a> 这个例子，展示了前后端使用websokcet通讯的使用。</p>
+<h2 id="使用-ws-从前端发送指令，到后端执行"><a href="#使用-ws-从前端发送指令，到后端执行" class="headerlink" title="使用 ws 从前端发送指令，到后端执行"></a>使用 <code>ws</code> 从前端发送指令，到后端执行</h2><p>代码: <a href="https://github.com/songlairui/amarscfpack" target="_blank" rel="external">https://github.com/songlairui/amarscfpack</a>  中的 server.js (node后端) 与 static(前端)  </p>
+<p>前端先使用 (<code>connectWS</code> 方法)[<a href="https://github.com/songlairui/amarscfpack/blob/master/static/websocket.part.js]建立websokcet连接" target="_blank" rel="external">https://github.com/songlairui/amarscfpack/blob/master/static/websocket.part.js]建立websokcet连接</a>, 并做了断线重连的操作  </p>
+<p>然后使用 <code>sendCmd</code> 方法，按照格式发送JSON.stringify处理完成的指令。 </p>
+<pre><code class="javascript">...
+  ws.send(<span class="built_in">JSON</span>.stringify(<span class="built_in">Object</span>.assign(command, { taskid })))
+...
+</code></pre>
+<p>后端接受后，使用JSON.parse解析的到指令内容，进行判断并执行相应指令  </p>
+<pre><code class="javascript">...
+  ws.on(<span class="string">'message'</span>, <span class="function"><span class="keyword">function</span> <span class="title">incomint</span>(<span class="params">message</span>) </span>{
+    <span class="built_in">console</span>.info(<span class="string">`received: <span class="subst">${message}</span> `</span>)
+    dealWithMsg(ws, message)
+  })
+...
+</code></pre>
+<h3 id="其他细节"><a href="#其他细节" class="headerlink" title="其他细节"></a>其他细节</h3><p>发送数据时，添加任务id，异步事件处理完成后，通知前端时加上此标示id，执行前端回掉函数。<br>详细: <a href="/2017/07/29/js-promise-transform/" title="想了一下，Promise可以这样写">想了一下，Promise可以这样写</a></p>
+<p>前端通过<code>ws</code>发送String简便易行，在后端拿到buffer更为方便。后端往前端传输buffer时，想带上额外的标示信息怎么办？<br>使用了一种将buffer stringify，然后放在 {} 中再stringify以传输。降低了效率，完成了传输。<br>如果直接传输buffer，没有标示信息，需要在前端添加机制，约定好buffer的位置。这种机制未尝试，但尝试了前后端传输 buffer 的细节处理<br>详细: <a href="/2017/07/29/transfer-buffer-with-ws/" title="通过ws包前后端相互传输ArrayBuffer/Buffer">通过ws包前后端相互传输ArrayBuffer/Buffer</a></p>
+<h2 id="TO-LEARN"><a href="#TO-LEARN" class="headerlink" title="TO LEARN"></a>TO LEARN</h2><p>需要了解http请求头的字段，在websocket中解析的使用方式。</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/07/29/SQL-Parser/" class="prev">PREV</a><a href="/2017/06/27/active-lrc-relate-to-audio/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'arysong';
+var disqus_identifier = '2017/07/07/first-try-websocket/';
+var disqus_title = '初尝试WebSocket';
+var disqus_url = 'http://songlairui.github.io/2017/07/07/first-try-websocket/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//arysong.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2017 <a href="http://songlairui.github.io">Songlairui</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-29076352-3",'auto');ga('send','pageview');</script></body></html>

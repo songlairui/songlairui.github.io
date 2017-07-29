@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://songlairui.github.io/2017/07/29/SQL-Parser/</loc>
+    
+    <lastmod>2017-07-29T06:05:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://songlairui.github.io/2017/07/07/first-try-websocket/</loc>
+    
+    <lastmod>2017-07-29T05:38:13.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://songlairui.github.io/2017/07/29/transfer-buffer-with-ws/</loc>
+    
+    <lastmod>2017-07-29T05:35:11.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://songlairui.github.io/2017/07/29/js-promise-transform/</loc>
+    
+    <lastmod>2017-07-29T05:22:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://songlairui.github.io/2017/06/27/active-lrc-relate-to-audio/</loc>
     
     <lastmod>2017-06-27T06:23:56.000Z</lastmod>

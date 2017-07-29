@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://songlairui.github.io/"/>
-  <updated>2017-06-27T06:23:56.000Z</updated>
+  <updated>2017-07-29T05:35:11.000Z</updated>
   <id>http://songlairui.github.io/</id>
   
   <author>
@@ -14,6 +14,143 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>通过ws包前后端相互传输ArrayBuffer/Buffer</title>
+    <link href="http://songlairui.github.io/2017/07/29/transfer-buffer-with-ws/"/>
+    <id>http://songlairui.github.io/2017/07/29/transfer-buffer-with-ws/</id>
+    <published>2017-07-29T05:16:54.000Z</published>
+    <updated>2017-07-29T05:35:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>在node中，使用 child_process.spawn 或 fs.readFile 直接拿到的是 Buffer。<br>使用ws直接传输buffer想来会更高效率。  </p>
+</blockquote>
+<a id="more"></a>
+<p><strong>占坑</strong> </p>
+<h1 id="后端-node"><a href="#后端-node" class="headerlink" title="后端 node"></a>后端 node</h1><h2 id="Buffer的读取"><a href="#Buffer的读取" class="headerlink" title="Buffer的读取"></a>Buffer的读取</h2><p>node读取到buffer后，设定缺省编码 ‘utf8’.<br>一般的api中可以手动设定为 ‘binary’ 以二进制方式读取buffer。  </p>
+<p>读取到的 buffer 有大小。一般的，api中能够设置buffer的单元大小。比如 highWaterMark  </p>
+<h2 id="Buffer的基本格式"><a href="#Buffer的基本格式" class="headerlink" title="Buffer的基本格式"></a>Buffer的基本格式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Buffer([<span class="number">0xdf</span>,<span class="number">0xea</span>])</div></pre></td></tr></table></figure>
+<p>拿到buffer之后，其在内存中的存储就像这样  </p>
+<h2 id="Buffer的-Stringify"><a href="#Buffer的-Stringify" class="headerlink" title="Buffer的 Stringify"></a>Buffer的 Stringify</h2><p>使用JSON.stringify() 将buffer转换为字符串，再使用JSON.parse() 解析，会得到格式如 <code>{ type: &#39;buffer&#39;, buffer: [...]}</code> 的对象。<br>根据Buffer的基本格式，可以重塑该Buffer </p>
+<h2 id="Buffer的拼接"><a href="#Buffer的拼接" class="headerlink" title="Buffer的拼接"></a>Buffer的拼接</h2><h2 id="Buffer的编码"><a href="#Buffer的编码" class="headerlink" title="Buffer的编码"></a>Buffer的编码</h2><h1 id="前端-chrome"><a href="#前端-chrome" class="headerlink" title="前端 chrome"></a>前端 chrome</h1><p>Chrome中没有Buffer对象，有ArrayBuffer </p>
+<h2 id="操作ArrayBuffer"><a href="#操作ArrayBuffer" class="headerlink" title="操作ArrayBuffer"></a>操作ArrayBuffer</h2><p>new Uint8Array</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;在node中，使用 child_process.spawn 或 fs.readFile 直接拿到的是 Buffer。&lt;br&gt;使用ws直接传输buffer想来会更高效率。  &lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>想了一下，Promise可以这样写</title>
+    <link href="http://songlairui.github.io/2017/07/29/js-promise-transform/"/>
+    <id>http://songlairui.github.io/2017/07/29/js-promise-transform/</id>
+    <published>2017-07-29T05:16:34.000Z</published>
+    <updated>2017-07-29T05:22:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p> Promise 变体。<br>代码示例脱胎于 <a href="https://github.com/songlairui/amarscfpack/blob/master/static/index.js#L75" target="_blank" rel="external">execSequence</a>  方法 与 <a href="https://github.com/songlairui/amarscfpack/blob/master/static/TaskSequence.component.js#L20" target="_blank" rel="external">TaskSequence.prototype.executeOne</a> 方法。<br>与常见的promise相比，变化的地方在于，then(Function) 的参数中的 resolve 被存到了数组中。<br><a id="more"></a></p>
+<h2 id="占坑"><a href="#占坑" class="headerlink" title="占坑"></a>占坑</h2></blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt; Promise 变体。&lt;br&gt;代码示例脱胎于 &lt;a href=&quot;https://github.com/songlairui/amarscfpack/blob/master/static/index.js#L75&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;execSequence&lt;/a&gt;  方法 与 &lt;a href=&quot;https://github.com/songlairui/amarscfpack/blob/master/static/TaskSequence.component.js#L20&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;TaskSequence.prototype.executeOne&lt;/a&gt; 方法。&lt;br&gt;与常见的promise相比，变化的地方在于，then(Function) 的参数中的 resolve 被存到了数组中。&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mocha 小试，解析 INSERT VALUES</title>
+    <link href="http://songlairui.github.io/2017/07/29/SQL-Parser/"/>
+    <id>http://songlairui.github.io/2017/07/29/SQL-Parser/</id>
+    <published>2017-07-29T02:44:35.000Z</published>
+    <updated>2017-07-29T06:05:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>项目使用DB2数据库，上线时要将更新的SQL打包。统计SQL时，同样的数据两次INSERT会提示主键冲突。于是，尝试写一个分析SQL语句的功能，用来替代或简便手工检查。<br>从npmjs.org上，找其他包时，发现其包内的单元测试。决定尝试一些这样的套路。<br><a id="more"></a></p>
+<h1 id="解析-VALUES"><a href="#解析-VALUES" class="headerlink" title="解析 VALUES"></a>解析 VALUES</h1><p>在 npmjs.org 上选了若干包安装尝试解析项目中的SQL语句，遇到了问题：VALUES中含有单引号转义时，解析不成功，或者拿到结果需要再解析一遍单引号转义。  </p>
+</blockquote>
+<p>观察VALUES的结构，手动解析逻辑比较简单。  </p>
+<h2 id="TRY-1-尝试使用正则"><a href="#TRY-1-尝试使用正则" class="headerlink" title="TRY 1. 尝试使用正则"></a>TRY 1. 尝试使用正则</h2><p>VALUES中划分每个字段的标示是逗号，当value中有逗号时，一行正则无法区分是value中的逗号，还是外部的逗号。<br>将划分标示扩展为 ` ‘ , ‘` 依然会遇到标识在value中出现的可能。<br>尝试先解析转移的单引号 ，未能区分value两侧的单引号，还是转义的单引号。<br>尝试写了一些正则，代码没成功，丢弃了。  </p>
+<h2 id="TRY-2-逐个字符分析"><a href="#TRY-2-逐个字符分析" class="headerlink" title="TRY 2. 逐个字符分析"></a>TRY 2. 逐个字符分析</h2><p>分析按照大脑识别的过程，当遇到单引号时，根据之前的状态，是准备取字段，还是正在取字段中的值确定单引号用来结束或开始转义，还是结束或开始取值。  </p>
+<p>于是,<strong>约定状态</strong>  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> mode = &#123;</div><div class="line">  <span class="attr">WILLINGCOLLECT</span>: <span class="number">1</span>, <span class="comment">// 准备收集value，默认起点。遇到null或者</span></div><div class="line">  COLLECTING: <span class="number">2</span>, <span class="comment">// 正在收集数据，</span></div><div class="line">  PREPARETOCHANGE: <span class="number">3</span>, <span class="comment">// 收集数据中，遇到了单引号，准备发生变化</span></div><div class="line">  WILLINGSPLIT: <span class="number">4</span> <span class="comment">// 准备遇到分割符</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在不同状态下，读到的特殊符号，完成转义或结束取值行为，并更改到新状态。<br>状态发生变化时，是在后一个字符确定的，所有识别到变化时候，需要 i– 或者手动补上上一位的操作。</p>
+<p>然后,<strong>收集错误</strong>  </p>
+<p>解析完毕之后，临时取值池中的值应该为undefined，如果不为空，则判定为异常停止<br>遇到不预期的字符，可以跳出for循环，设置标示变量，ifBreakFor，用来在switch中跳出外部for  </p>
+<h1 id="使用-mocha-chai"><a href="#使用-mocha-chai" class="headerlink" title="使用 mocha + chai"></a>使用 mocha + chai</h1><p>代码： <a href="https://github.com/songlairui/js-sql-parser-test/blob/master/test/VALUES.spec.js#L17" target="_blank" rel="external">mocha 测试 VALUES 解析</a>  </p>
+<p>直接阅读mocha文档，不觉得有什么用途。<br>当写了这个解决其他包不能够的痛点时，用mocha让测试意图非常清晰+固定。  </p>
+<p>执行结果<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">  err RETURN</div><div class="line">    ✓ should <span class="built_in">return</span> null <span class="keyword">in</span> result.err, and values <span class="keyword">in</span> values</div><div class="line"></div><div class="line">  VALUES <span class="keyword">in</span> some conditions</div><div class="line">    一般的VALUES : VALUES(<span class="string">'value1'</span>)</div><div class="line">      ✓ should <span class="built_in">return</span> `value1`</div><div class="line">    VALUES为null : VALUES(null)</div><div class="line">      ✓ should <span class="built_in">return</span> `null`</div><div class="line">    中间含有一个单引号转义: VALUES(<span class="string">'_'</span><span class="string">'_'</span>)</div><div class="line">      ✓ should <span class="built_in">return</span> `_<span class="string">'_`</span></div><div class="line">    开头含有一个单引号转义: VALUES('<span class="string">''</span>_<span class="string">')</span></div><div class="line">      ✓ should return `'_`</div><div class="line">    结尾含有一个单引号转义: VALUES(<span class="string">'_'</span><span class="string">''</span>)</div><div class="line">      ✓ should <span class="built_in">return</span> `_<span class="string">'`</span></div><div class="line">    结尾含有多个单引号转义: VALUES('<span class="string">''</span><span class="string">''</span>_<span class="string">''</span><span class="string">''</span><span class="string">')</span></div><div class="line">      ✓ should return `'<span class="string">'_'</span><span class="string">'`</span></div><div class="line">    有单引号转义，且含形如 ' , <span class="string">' 的字符片段: VALUES('</span><span class="string">''</span> , <span class="string">''</span><span class="string">')</span></div><div class="line"> 此种情况正则难以区分</div><div class="line">      ✓ should return `' , <span class="string">'`</span></div><div class="line">    有单引号转义，且含形如  ' ,null , <span class="string">' 的字符片段: VALUES('</span><span class="string">''</span> , null , <span class="string">''</span><span class="string">')</span></div><div class="line">此种情况正则难以区分</div><div class="line">      ✓ should return `' , null , <span class="string">'`</span></div><div class="line">    单引号转义前后有空格: VALUES('<span class="string">''</span> a <span class="string">''</span><span class="string">')</span></div><div class="line">      ✓ should return `' a <span class="string">'`</span></div><div class="line">  10 passing (10ms)</div></pre></td></tr></table></figure></p>
+<p>这是一个感受到mocha必要的地方。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;项目使用DB2数据库，上线时要将更新的SQL打包。统计SQL时，同样的数据两次INSERT会提示主键冲突。于是，尝试写一个分析SQL语句的功能，用来替代或简便手工检查。&lt;br&gt;从npmjs.org上，找其他包时，发现其包内的单元测试。决定尝试一些这样的套路。&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>初尝试WebSocket</title>
+    <link href="http://songlairui.github.io/2017/07/07/first-try-websocket/"/>
+    <id>http://songlairui.github.io/2017/07/07/first-try-websocket/</id>
+    <published>2017-07-07T13:16:41.000Z</published>
+    <updated>2017-07-29T05:38:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>尝试Socket，使用之中有很多问题。  </p>
+</blockquote>
+<p>首先，在图解HTTP一书中，知道http头部有个connection，能够用来将http协议升级到websocet。<br>然后，在node环境下，使用http模块启动web server，让能够直接处理http头部。    </p>
+<p>现在，要使用websocket了，那么，是不是将要接触将http 升级到 websocket的细节了？<br>不，倾向于使用下载量超级多的npm包。这些包之中，应该做了升级协议的细节。  </p>
+<a id="more"></a>
+<h2 id="‘君子性非异也，善假于物也’"><a href="#‘君子性非异也，善假于物也’" class="headerlink" title="‘君子性非异也，善假于物也’"></a>‘君子性非异也，善假于物也’</h2><p>筛选到的包有 <code>ws</code>,<code>faye-websocket</code>。 这两个包的下载量最多。<br>浏览了下包的首页介绍，其中前者可以像浏览器中一样，使用现成的WebSocket API。<br>后者，在web-dev-server中的hmr相关代码中发现有依赖到。浏览器介绍，能看出是在http模块上进行处理。  </p>
+<h2 id="ws-的-express-例子"><a href="#ws-的-express-例子" class="headerlink" title="ws 的 express 例子"></a><code>ws</code> 的 express 例子</h2><p>README中的express例子简短的展示了与express结合使用的基本法。<br>未能演示如何使用拿到的ws。<br>在github repo中的example中，<a href="https://github.com/websockets/ws/tree/master/examples/serverstats" target="_blank" rel="external">服务器状态</a> 这个例子，展示了前后端使用websokcet通讯的使用。</p>
+<h2 id="使用-ws-从前端发送指令，到后端执行"><a href="#使用-ws-从前端发送指令，到后端执行" class="headerlink" title="使用 ws 从前端发送指令，到后端执行"></a>使用 <code>ws</code> 从前端发送指令，到后端执行</h2><p>代码: <a href="https://github.com/songlairui/amarscfpack" target="_blank" rel="external">https://github.com/songlairui/amarscfpack</a>  中的 server.js (node后端) 与 static(前端)  </p>
+<p>前端先使用 (<code>connectWS</code> 方法)[<a href="https://github.com/songlairui/amarscfpack/blob/master/static/websocket.part.js]建立websokcet连接" target="_blank" rel="external">https://github.com/songlairui/amarscfpack/blob/master/static/websocket.part.js]建立websokcet连接</a>, 并做了断线重连的操作  </p>
+<p>然后使用 <code>sendCmd</code> 方法，按照格式发送JSON.stringify处理完成的指令。 </p>
+<pre><code class="javascript">...
+  ws.send(<span class="built_in">JSON</span>.stringify(<span class="built_in">Object</span>.assign(command, { taskid })))
+...
+</code></pre>
+<p>后端接受后，使用JSON.parse解析的到指令内容，进行判断并执行相应指令  </p>
+<pre><code class="javascript">...
+  ws.on(<span class="string">'message'</span>, <span class="function"><span class="keyword">function</span> <span class="title">incomint</span>(<span class="params">message</span>) </span>{
+    <span class="built_in">console</span>.info(<span class="string">`received: <span class="subst">${message}</span> `</span>)
+    dealWithMsg(ws, message)
+  })
+...
+</code></pre>
+<h3 id="其他细节"><a href="#其他细节" class="headerlink" title="其他细节"></a>其他细节</h3><p>发送数据时，添加任务id，异步事件处理完成后，通知前端时加上此标示id，执行前端回掉函数。<br>详细: <a href="/2017/07/29/js-promise-transform/" title="想了一下，Promise可以这样写">想了一下，Promise可以这样写</a></p>
+<p>前端通过<code>ws</code>发送String简便易行，在后端拿到buffer更为方便。后端往前端传输buffer时，想带上额外的标示信息怎么办？<br>使用了一种将buffer stringify，然后放在 {} 中再stringify以传输。降低了效率，完成了传输。<br>如果直接传输buffer，没有标示信息，需要在前端添加机制，约定好buffer的位置。这种机制未尝试，但尝试了前后端传输 buffer 的细节处理<br>详细: <a href="/2017/07/29/transfer-buffer-with-ws/" title="通过ws包前后端相互传输ArrayBuffer/Buffer">通过ws包前后端相互传输ArrayBuffer/Buffer</a></p>
+<h2 id="TO-LEARN"><a href="#TO-LEARN" class="headerlink" title="TO LEARN"></a>TO LEARN</h2><p>需要了解http请求头的字段，在websocket中解析的使用方式。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;尝试Socket，使用之中有很多问题。  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;首先，在图解HTTP一书中，知道http头部有个connection，能够用来将http协议升级到websocet。&lt;br&gt;然后，在node环境下，使用http模块启动web server，让能够直接处理http头部。    &lt;/p&gt;
+&lt;p&gt;现在，要使用websocket了，那么，是不是将要接触将http 升级到 websocket的细节了？&lt;br&gt;不，倾向于使用下载量超级多的npm包。这些包之中，应该做了升级协议的细节。  &lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>细致显示歌词</title>
