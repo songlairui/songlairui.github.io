@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>LarrySong</title>
+  
   <subtitle>write more, take on less</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://songlairui.github.io/"/>
-  <updated>2017-07-29T05:35:11.000Z</updated>
+  <updated>2017-12-09T16:13:21.095Z</updated>
   <id>http://songlairui.github.io/</id>
   
   <author>
@@ -16,25 +17,145 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>画蛇添足不添足</title>
+    <link href="http://songlairui.github.io/2017/12/10/drawing-snack-adding-foot/"/>
+    <id>http://songlairui.github.io/2017/12/10/drawing-snack-adding-foot/</id>
+    <published>2017-12-09T16:09:51.000Z</published>
+    <updated>2017-12-09T16:13:21.095Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>连续加班1个月，感觉很久没玩js了。碰到群里同学问前端题，我就写了一下。没想到花了1h时间。<br><strong>时间怎么使用的？就是这样的时间用掉的</strong>  </p></blockquote><p>题目：<br>…… QQ 收藏<br>看到这样的题目，我自己也能够出很多类似的题目。比如生成随机华容道图形。  </p><p>data数据如下：<br>奴隶社会,非洲,古埃及文明,金字塔<br>,亚洲,两河流域文明,汉谟拉比法典<br>,,古印度,种姓制度<br>,,,佛教的创立<br>,欧洲,希腊,希腊城邦<br>,,,雅典民主<br>,,罗马,城邦<br>,,,帝国的征服与扩展<br>,,希腊罗马古典文化,建筑艺术<br>,,,公历</p><p>初版本： <a href="http://js.jirengu.com/cohur/1" target="_blank" rel="noopener">http://js.jirengu.com/cohur/1</a></p><p>优化版本：<a href="http://js.jirengu.com/cohur/4" target="_blank" rel="noopener">http://js.jirengu.com/cohur/4</a></p><p>优化版本，添加了正则，让结果看起来跟题目想更像一些。<br>后者是不是添足了？</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;连续加班1个月，感觉很久没玩js了。碰到群里同学问前端题，我就写了一下。没想到花了1h时间。&lt;br&gt;&lt;strong&gt;时间怎么使用的？就是这样的时间用掉的&lt;/strong&gt;  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;题目：&lt;br&gt;…… QQ 收藏
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>常规前端</title>
+    <link href="http://songlairui.github.io/2017/11/28/traditional-web-front/"/>
+    <id>http://songlairui.github.io/2017/11/28/traditional-web-front/</id>
+    <published>2017-11-27T16:23:57.000Z</published>
+    <updated>2017-11-27T16:28:12.512Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>当前在山东第一家民营银行做外包，到了压力巨大的时候。<br>客户提出要更新页面UI，从来没有适配过IE的我，招了一大堆UI。<br>今天，不，半个小时之前的昨天，我看到juejin chrome tab页面中推的layui。<br>看到之后觉得挺合适的。最主要的是，看起来不需要自己配置requireJs等。 </p></blockquote><h2 id="1-UMD、AMD"><a href="#1-UMD、AMD" class="headerlink" title="1. UMD、AMD"></a>1. UMD、AMD</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;当前在山东第一家民营银行做外包，到了压力巨大的时候。&lt;br&gt;客户提出要更新页面UI，从来没有适配过IE的我，招了一大堆UI。&lt;br&gt;今天，不，半个小时之前的昨天，我看到juejin chrome tab页面中推的layui。&lt;br&gt;看到之后觉得挺合
+      
+    
+    </summary>
+    
+    
+      <category term="traditional" scheme="http://songlairui.github.io/tags/traditional/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在 Vue 中操作DOM</title>
+    <link href="http://songlairui.github.io/2017/10/18/operating-dom-in-vue/"/>
+    <id>http://songlairui.github.io/2017/10/18/operating-dom-in-vue/</id>
+    <published>2017-10-18T06:09:43.000Z</published>
+    <updated>2017-10-18T06:11:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>在vue中一般不需要直接操作DOM，当我看到自定义指令这章时…  </p></blockquote><h1 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;在vue中一般不需要直接操作DOM，当我看到自定义指令这章时…  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;Canvas&quot;&gt;&lt;a href=&quot;#Canvas&quot; class=&quot;headerlink&quot; title=&quot;Canvas&quot;&gt;&lt;/a&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="operating" scheme="http://songlairui.github.io/tags/operating/"/>
+    
+      <category term="dom" scheme="http://songlairui.github.io/tags/dom/"/>
+    
+      <category term="in" scheme="http://songlairui.github.io/tags/in/"/>
+    
+      <category term="vue" scheme="http://songlairui.github.io/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>node-stream</title>
+    <link href="http://songlairui.github.io/2017/10/18/node-stream/"/>
+    <id>http://songlairui.github.io/2017/10/18/node-stream/</id>
+    <published>2017-10-18T04:08:09.000Z</published>
+    <updated>2017-10-18T04:11:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>参考　<a href="https://github.com/jabez128/stream-handbook" target="_blank" rel="noopener">https://github.com/jabez128/stream-handbook</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;参考　&lt;a href=&quot;https://github.com/jabez128/stream-handbook&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/jabez128/stream-h
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Stream-with-for-loop-with-async</title>
+    <link href="http://songlairui.github.io/2017/10/16/for-loop-with-async/"/>
+    <id>http://songlairui.github.io/2017/10/16/for-loop-with-async/</id>
+    <published>2017-10-16T05:42:45.000Z</published>
+    <updated>2017-10-18T06:11:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>我在写一个server端， 【github repo】<br>  当我向socket读取数据时，希望降低频率。  </p></blockquote><h3 id="一个什么样的Socket？"><a href="#一个什么样的Socket？" class="headerlink" title="一个什么样的Socket？"></a>一个什么样的Socket？</h3><p>在android shell中运行minicap「github repo」 ，得到的屏幕刷新数据流。<br>android 设备屏幕一旦有刷新，minicap就会将屏幕显示的完整画面，通过socket传输。  </p><p>与常见socket的区别：<br>  和fs.readStream对比，这个socket的读取不是一次性读完的，而是持续产生并输出的。</p><p>这个socket的用法，通过websocket Server转发这里的socket，实现通过浏览器显示手机屏幕。</p><h2 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">tryRead</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> chunk; (chunk = stream.read()); ) &#123;</div><div class="line">    <span class="comment">// 省略</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>我想控制这里for循环的fps。<br>这里<code>stream.read()</code>将会一直读取socket，如果没有返回则会等待返回，一旦完成，则继续下一个。<br>于是，<code>for</code>的大括号里的代码，无法影响到for循环的进程。</p><h2 id="改动方式一，不理想"><a href="#改动方式一，不理想" class="headerlink" title="改动方式一，不理想"></a>改动方式一，不理想</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">tryRead</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  </div><div class="line">  <span class="keyword">let</span> lastStamp = <span class="literal">null</span></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> chunk; (chunk = stream.read()); ) &#123;</div><div class="line">    <span class="keyword">let</span> currentStamp = + <span class="keyword">new</span> <span class="built_in">Date</span>()</div><div class="line">    <span class="keyword">if</span>(lastStamp)&#123;</div><div class="line">      <span class="keyword">if</span>(currentStamp - lastStamp &lt; <span class="number">100</span>) <span class="keyword">return</span></div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      lastStamp = currentStamp</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 省略</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><h2 id="可能成功的改动"><a href="#可能成功的改动" class="headerlink" title="可能成功的改动"></a>可能成功的改动</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;我在写一个server端， 【github repo】&lt;br&gt;  当我向socket读取数据时，希望降低频率。  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;一个什么样的Socket？&quot;&gt;&lt;a href=&quot;#一个什么样的Socket？&quot; 
+      
+    
+    </summary>
+    
+    
+      <category term="async" scheme="http://songlairui.github.io/tags/async/"/>
+    
+      <category term="for" scheme="http://songlairui.github.io/tags/for/"/>
+    
+      <category term="javascript" scheme="http://songlairui.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>通过ws包前后端相互传输ArrayBuffer/Buffer</title>
     <link href="http://songlairui.github.io/2017/07/29/transfer-buffer-with-ws/"/>
     <id>http://songlairui.github.io/2017/07/29/transfer-buffer-with-ws/</id>
     <published>2017-07-29T05:16:54.000Z</published>
     <updated>2017-07-29T05:35:11.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
-<p>在node中，使用 child_process.spawn 或 fs.readFile 直接拿到的是 Buffer。<br>使用ws直接传输buffer想来会更高效率。  </p>
-</blockquote>
-<a id="more"></a>
-<p><strong>占坑</strong> </p>
-<h1 id="后端-node"><a href="#后端-node" class="headerlink" title="后端 node"></a>后端 node</h1><h2 id="Buffer的读取"><a href="#Buffer的读取" class="headerlink" title="Buffer的读取"></a>Buffer的读取</h2><p>node读取到buffer后，设定缺省编码 ‘utf8’.<br>一般的api中可以手动设定为 ‘binary’ 以二进制方式读取buffer。  </p>
-<p>读取到的 buffer 有大小。一般的，api中能够设置buffer的单元大小。比如 highWaterMark  </p>
-<h2 id="Buffer的基本格式"><a href="#Buffer的基本格式" class="headerlink" title="Buffer的基本格式"></a>Buffer的基本格式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Buffer([<span class="number">0xdf</span>,<span class="number">0xea</span>])</div></pre></td></tr></table></figure>
-<p>拿到buffer之后，其在内存中的存储就像这样  </p>
-<h2 id="Buffer的-Stringify"><a href="#Buffer的-Stringify" class="headerlink" title="Buffer的 Stringify"></a>Buffer的 Stringify</h2><p>使用JSON.stringify() 将buffer转换为字符串，再使用JSON.parse() 解析，会得到格式如 <code>{ type: &#39;buffer&#39;, buffer: [...]}</code> 的对象。<br>根据Buffer的基本格式，可以重塑该Buffer </p>
-<h2 id="Buffer的拼接"><a href="#Buffer的拼接" class="headerlink" title="Buffer的拼接"></a>Buffer的拼接</h2><h2 id="Buffer的编码"><a href="#Buffer的编码" class="headerlink" title="Buffer的编码"></a>Buffer的编码</h2><h1 id="前端-chrome"><a href="#前端-chrome" class="headerlink" title="前端 chrome"></a>前端 chrome</h1><p>Chrome中没有Buffer对象，有ArrayBuffer </p>
-<h2 id="操作ArrayBuffer"><a href="#操作ArrayBuffer" class="headerlink" title="操作ArrayBuffer"></a>操作ArrayBuffer</h2><p>new Uint8Array</p>
-]]></content>
+    <content type="html"><![CDATA[<blockquote><p>在node中，使用 child_process.spawn 或 fs.readFile 直接拿到的是 Buffer。<br>使用ws直接传输buffer想来会更高效率。  </p></blockquote><a id="more"></a><p><strong>占坑</strong> </p><h1 id="后端-node"><a href="#后端-node" class="headerlink" title="后端 node"></a>后端 node</h1><h2 id="Buffer的读取"><a href="#Buffer的读取" class="headerlink" title="Buffer的读取"></a>Buffer的读取</h2><p>node读取到buffer后，设定缺省编码 ‘utf8’.<br>一般的api中可以手动设定为 ‘binary’ 以二进制方式读取buffer。  </p><p>读取到的 buffer 有大小。一般的，api中能够设置buffer的单元大小。比如 highWaterMark  </p><h2 id="Buffer的基本格式"><a href="#Buffer的基本格式" class="headerlink" title="Buffer的基本格式"></a>Buffer的基本格式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Buffer([<span class="number">0xdf</span>,<span class="number">0xea</span>])</div></pre></td></tr></table></figure><p>拿到buffer之后，其在内存中的存储就像这样  </p><h2 id="Buffer的-Stringify"><a href="#Buffer的-Stringify" class="headerlink" title="Buffer的 Stringify"></a>Buffer的 Stringify</h2><p>使用JSON.stringify() 将buffer转换为字符串，再使用JSON.parse() 解析，会得到格式如 <code>{ type: &#39;buffer&#39;, buffer: [...]}</code> 的对象。<br>根据Buffer的基本格式，可以重塑该Buffer </p><h2 id="Buffer的拼接"><a href="#Buffer的拼接" class="headerlink" title="Buffer的拼接"></a>Buffer的拼接</h2><h2 id="Buffer的编码"><a href="#Buffer的编码" class="headerlink" title="Buffer的编码"></a>Buffer的编码</h2><h1 id="前端-chrome"><a href="#前端-chrome" class="headerlink" title="前端 chrome"></a>前端 chrome</h1><p>Chrome中没有Buffer对象，有ArrayBuffer </p><h2 id="操作ArrayBuffer"><a href="#操作ArrayBuffer" class="headerlink" title="操作ArrayBuffer"></a>操作ArrayBuffer</h2><p>new Uint8Array</p>]]></content>
     
     <summary type="html">
     
@@ -54,15 +175,12 @@
     <published>2017-07-29T05:16:34.000Z</published>
     <updated>2017-07-29T05:22:34.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
-<p> Promise 变体。<br>代码示例脱胎于 <a href="https://github.com/songlairui/amarscfpack/blob/master/static/index.js#L75" target="_blank" rel="external">execSequence</a>  方法 与 <a href="https://github.com/songlairui/amarscfpack/blob/master/static/TaskSequence.component.js#L20" target="_blank" rel="external">TaskSequence.prototype.executeOne</a> 方法。<br>与常见的promise相比，变化的地方在于，then(Function) 的参数中的 resolve 被存到了数组中。<br><a id="more"></a></p>
-<h2 id="占坑"><a href="#占坑" class="headerlink" title="占坑"></a>占坑</h2></blockquote>
-]]></content>
+    <content type="html"><![CDATA[<blockquote><p> Promise 变体。<br>代码示例脱胎于 <a href="https://github.com/songlairui/amarscfpack/blob/master/static/index.js#L75" target="_blank" rel="noopener">execSequence</a>  方法 与 <a href="https://github.com/songlairui/amarscfpack/blob/master/static/TaskSequence.component.js#L20" target="_blank" rel="noopener">TaskSequence.prototype.executeOne</a> 方法。<br>与常见的promise相比，变化的地方在于，then(Function) 的参数中的 resolve 被存到了数组中。<br><a id="more"></a></p><h2 id="占坑"><a href="#占坑" class="headerlink" title="占坑"></a>占坑</h2></blockquote>]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt; Promise 变体。&lt;br&gt;代码示例脱胎于 &lt;a href=&quot;https://github.com/songlairui/amarscfpack/blob/master/static/index.js#L75&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;execSequence&lt;/a&gt;  方法 与 &lt;a href=&quot;https://github.com/songlairui/amarscfpack/blob/master/static/TaskSequence.component.js#L20&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;TaskSequence.prototype.executeOne&lt;/a&gt; 方法。&lt;br&gt;与常见的promise相比，变化的地方在于，then(Function) 的参数中的 resolve 被存到了数组中。&lt;br&gt;
+&lt;p&gt; Promise 变体。&lt;br&gt;代码示例脱胎于 &lt;a href=&quot;https://github.com/songlairui/amarscfpack/blob/master/static/index.js#L75&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;execSequence&lt;/a&gt;  方法 与 &lt;a href=&quot;https://github.com/songlairui/amarscfpack/blob/master/static/TaskSequence.component.js#L20&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;TaskSequence.prototype.executeOne&lt;/a&gt; 方法。&lt;br&gt;与常见的promise相比，变化的地方在于，then(Function) 的参数中的 resolve 被存到了数组中。&lt;br&gt;
     
     </summary>
     
@@ -76,23 +194,7 @@
     <published>2017-07-29T02:44:35.000Z</published>
     <updated>2017-07-29T06:05:49.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
-<p>项目使用DB2数据库，上线时要将更新的SQL打包。统计SQL时，同样的数据两次INSERT会提示主键冲突。于是，尝试写一个分析SQL语句的功能，用来替代或简便手工检查。<br>从npmjs.org上，找其他包时，发现其包内的单元测试。决定尝试一些这样的套路。<br><a id="more"></a></p>
-<h1 id="解析-VALUES"><a href="#解析-VALUES" class="headerlink" title="解析 VALUES"></a>解析 VALUES</h1><p>在 npmjs.org 上选了若干包安装尝试解析项目中的SQL语句，遇到了问题：VALUES中含有单引号转义时，解析不成功，或者拿到结果需要再解析一遍单引号转义。  </p>
-</blockquote>
-<p>观察VALUES的结构，手动解析逻辑比较简单。  </p>
-<h2 id="TRY-1-尝试使用正则"><a href="#TRY-1-尝试使用正则" class="headerlink" title="TRY 1. 尝试使用正则"></a>TRY 1. 尝试使用正则</h2><p>VALUES中划分每个字段的标示是逗号，当value中有逗号时，一行正则无法区分是value中的逗号，还是外部的逗号。<br>将划分标示扩展为 ` ‘ , ‘` 依然会遇到标识在value中出现的可能。<br>尝试先解析转移的单引号 ，未能区分value两侧的单引号，还是转义的单引号。<br>尝试写了一些正则，代码没成功，丢弃了。  </p>
-<h2 id="TRY-2-逐个字符分析"><a href="#TRY-2-逐个字符分析" class="headerlink" title="TRY 2. 逐个字符分析"></a>TRY 2. 逐个字符分析</h2><p>分析按照大脑识别的过程，当遇到单引号时，根据之前的状态，是准备取字段，还是正在取字段中的值确定单引号用来结束或开始转义，还是结束或开始取值。  </p>
-<p>于是,<strong>约定状态</strong>  </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> mode = &#123;</div><div class="line">  <span class="attr">WILLINGCOLLECT</span>: <span class="number">1</span>, <span class="comment">// 准备收集value，默认起点。遇到null或者</span></div><div class="line">  COLLECTING: <span class="number">2</span>, <span class="comment">// 正在收集数据，</span></div><div class="line">  PREPARETOCHANGE: <span class="number">3</span>, <span class="comment">// 收集数据中，遇到了单引号，准备发生变化</span></div><div class="line">  WILLINGSPLIT: <span class="number">4</span> <span class="comment">// 准备遇到分割符</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>在不同状态下，读到的特殊符号，完成转义或结束取值行为，并更改到新状态。<br>状态发生变化时，是在后一个字符确定的，所有识别到变化时候，需要 i– 或者手动补上上一位的操作。</p>
-<p>然后,<strong>收集错误</strong>  </p>
-<p>解析完毕之后，临时取值池中的值应该为undefined，如果不为空，则判定为异常停止<br>遇到不预期的字符，可以跳出for循环，设置标示变量，ifBreakFor，用来在switch中跳出外部for  </p>
-<h1 id="使用-mocha-chai"><a href="#使用-mocha-chai" class="headerlink" title="使用 mocha + chai"></a>使用 mocha + chai</h1><p>代码： <a href="https://github.com/songlairui/js-sql-parser-test/blob/master/test/VALUES.spec.js#L17" target="_blank" rel="external">mocha 测试 VALUES 解析</a>  </p>
-<p>直接阅读mocha文档，不觉得有什么用途。<br>当写了这个解决其他包不能够的痛点时，用mocha让测试意图非常清晰+固定。  </p>
-<p>执行结果<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">  err RETURN</div><div class="line">    ✓ should <span class="built_in">return</span> null <span class="keyword">in</span> result.err, and values <span class="keyword">in</span> values</div><div class="line"></div><div class="line">  VALUES <span class="keyword">in</span> some conditions</div><div class="line">    一般的VALUES : VALUES(<span class="string">'value1'</span>)</div><div class="line">      ✓ should <span class="built_in">return</span> `value1`</div><div class="line">    VALUES为null : VALUES(null)</div><div class="line">      ✓ should <span class="built_in">return</span> `null`</div><div class="line">    中间含有一个单引号转义: VALUES(<span class="string">'_'</span><span class="string">'_'</span>)</div><div class="line">      ✓ should <span class="built_in">return</span> `_<span class="string">'_`</span></div><div class="line">    开头含有一个单引号转义: VALUES('<span class="string">''</span>_<span class="string">')</span></div><div class="line">      ✓ should return `'_`</div><div class="line">    结尾含有一个单引号转义: VALUES(<span class="string">'_'</span><span class="string">''</span>)</div><div class="line">      ✓ should <span class="built_in">return</span> `_<span class="string">'`</span></div><div class="line">    结尾含有多个单引号转义: VALUES('<span class="string">''</span><span class="string">''</span>_<span class="string">''</span><span class="string">''</span><span class="string">')</span></div><div class="line">      ✓ should return `'<span class="string">'_'</span><span class="string">'`</span></div><div class="line">    有单引号转义，且含形如 ' , <span class="string">' 的字符片段: VALUES('</span><span class="string">''</span> , <span class="string">''</span><span class="string">')</span></div><div class="line"> 此种情况正则难以区分</div><div class="line">      ✓ should return `' , <span class="string">'`</span></div><div class="line">    有单引号转义，且含形如  ' ,null , <span class="string">' 的字符片段: VALUES('</span><span class="string">''</span> , null , <span class="string">''</span><span class="string">')</span></div><div class="line">此种情况正则难以区分</div><div class="line">      ✓ should return `' , null , <span class="string">'`</span></div><div class="line">    单引号转义前后有空格: VALUES('<span class="string">''</span> a <span class="string">''</span><span class="string">')</span></div><div class="line">      ✓ should return `' a <span class="string">'`</span></div><div class="line">  10 passing (10ms)</div></pre></td></tr></table></figure></p>
-<p>这是一个感受到mocha必要的地方。</p>
-]]></content>
+    <content type="html"><![CDATA[<blockquote><p>项目使用DB2数据库，上线时要将更新的SQL打包。统计SQL时，同样的数据两次INSERT会提示主键冲突。于是，尝试写一个分析SQL语句的功能，用来替代或简便手工检查。<br>从npmjs.org上，找其他包时，发现其包内的单元测试。决定尝试一些这样的套路。<br><a id="more"></a></p><h1 id="解析-VALUES"><a href="#解析-VALUES" class="headerlink" title="解析 VALUES"></a>解析 VALUES</h1><p>在 npmjs.org 上选了若干包安装尝试解析项目中的SQL语句，遇到了问题：VALUES中含有单引号转义时，解析不成功，或者拿到结果需要再解析一遍单引号转义。  </p></blockquote><p>观察VALUES的结构，手动解析逻辑比较简单。  </p><h2 id="TRY-1-尝试使用正则"><a href="#TRY-1-尝试使用正则" class="headerlink" title="TRY 1. 尝试使用正则"></a>TRY 1. 尝试使用正则</h2><p>VALUES中划分每个字段的标示是逗号，当value中有逗号时，一行正则无法区分是value中的逗号，还是外部的逗号。<br>将划分标示扩展为 ` ‘ , ‘` 依然会遇到标识在value中出现的可能。<br>尝试先解析转移的单引号 ，未能区分value两侧的单引号，还是转义的单引号。<br>尝试写了一些正则，代码没成功，丢弃了。  </p><h2 id="TRY-2-逐个字符分析"><a href="#TRY-2-逐个字符分析" class="headerlink" title="TRY 2. 逐个字符分析"></a>TRY 2. 逐个字符分析</h2><p>分析按照大脑识别的过程，当遇到单引号时，根据之前的状态，是准备取字段，还是正在取字段中的值确定单引号用来结束或开始转义，还是结束或开始取值。  </p><p>于是,<strong>约定状态</strong>  </p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> mode = &#123;</div><div class="line">  <span class="attr">WILLINGCOLLECT</span>: <span class="number">1</span>, <span class="comment">// 准备收集value，默认起点。遇到null或者</span></div><div class="line">  COLLECTING: <span class="number">2</span>, <span class="comment">// 正在收集数据，</span></div><div class="line">  PREPARETOCHANGE: <span class="number">3</span>, <span class="comment">// 收集数据中，遇到了单引号，准备发生变化</span></div><div class="line">  WILLINGSPLIT: <span class="number">4</span> <span class="comment">// 准备遇到分割符</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><p>在不同状态下，读到的特殊符号，完成转义或结束取值行为，并更改到新状态。<br>状态发生变化时，是在后一个字符确定的，所有识别到变化时候，需要 i– 或者手动补上上一位的操作。</p><p>然后,<strong>收集错误</strong>  </p><p>解析完毕之后，临时取值池中的值应该为undefined，如果不为空，则判定为异常停止<br>遇到不预期的字符，可以跳出for循环，设置标示变量，ifBreakFor，用来在switch中跳出外部for  </p><h1 id="使用-mocha-chai"><a href="#使用-mocha-chai" class="headerlink" title="使用 mocha + chai"></a>使用 mocha + chai</h1><p>代码： <a href="https://github.com/songlairui/js-sql-parser-test/blob/master/test/VALUES.spec.js#L17" target="_blank" rel="noopener">mocha 测试 VALUES 解析</a>  </p><p>直接阅读mocha文档，不觉得有什么用途。<br>当写了这个解决其他包不能够的痛点时，用mocha让测试意图非常清晰+固定。  </p><p>执行结果<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">  err RETURN</div><div class="line">    ✓ should <span class="built_in">return</span> null <span class="keyword">in</span> result.err, and values <span class="keyword">in</span> values</div><div class="line"></div><div class="line">  VALUES <span class="keyword">in</span> some conditions</div><div class="line">    一般的VALUES : VALUES(<span class="string">'value1'</span>)</div><div class="line">      ✓ should <span class="built_in">return</span> `value1`</div><div class="line">    VALUES为null : VALUES(null)</div><div class="line">      ✓ should <span class="built_in">return</span> `null`</div><div class="line">    中间含有一个单引号转义: VALUES(<span class="string">'_'</span><span class="string">'_'</span>)</div><div class="line">      ✓ should <span class="built_in">return</span> `_<span class="string">'_`</span></div><div class="line">    开头含有一个单引号转义: VALUES('<span class="string">''</span>_<span class="string">')</span></div><div class="line">      ✓ should return `'_`</div><div class="line">    结尾含有一个单引号转义: VALUES(<span class="string">'_'</span><span class="string">''</span>)</div><div class="line">      ✓ should <span class="built_in">return</span> `_<span class="string">'`</span></div><div class="line">    结尾含有多个单引号转义: VALUES('<span class="string">''</span><span class="string">''</span>_<span class="string">''</span><span class="string">''</span><span class="string">')</span></div><div class="line">      ✓ should return `'<span class="string">'_'</span><span class="string">'`</span></div><div class="line">    有单引号转义，且含形如 ' , <span class="string">' 的字符片段: VALUES('</span><span class="string">''</span> , <span class="string">''</span><span class="string">')</span></div><div class="line"> 此种情况正则难以区分</div><div class="line">      ✓ should return `' , <span class="string">'`</span></div><div class="line">    有单引号转义，且含形如  ' ,null , <span class="string">' 的字符片段: VALUES('</span><span class="string">''</span> , null , <span class="string">''</span><span class="string">')</span></div><div class="line">此种情况正则难以区分</div><div class="line">      ✓ should return `' , null , <span class="string">'`</span></div><div class="line">    单引号转义前后有空格: VALUES('<span class="string">''</span> a <span class="string">''</span><span class="string">')</span></div><div class="line">      ✓ should return `' a <span class="string">'`</span></div><div class="line">  10 passing (10ms)</div></pre></td></tr></table></figure></p><p>这是一个感受到mocha必要的地方。</p>]]></content>
     
     <summary type="html">
     
@@ -111,33 +213,7 @@
     <published>2017-07-07T13:16:41.000Z</published>
     <updated>2017-07-29T05:38:13.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
-<p>尝试Socket，使用之中有很多问题。  </p>
-</blockquote>
-<p>首先，在图解HTTP一书中，知道http头部有个connection，能够用来将http协议升级到websocet。<br>然后，在node环境下，使用http模块启动web server，让能够直接处理http头部。    </p>
-<p>现在，要使用websocket了，那么，是不是将要接触将http 升级到 websocket的细节了？<br>不，倾向于使用下载量超级多的npm包。这些包之中，应该做了升级协议的细节。  </p>
-<a id="more"></a>
-<h2 id="‘君子性非异也，善假于物也’"><a href="#‘君子性非异也，善假于物也’" class="headerlink" title="‘君子性非异也，善假于物也’"></a>‘君子性非异也，善假于物也’</h2><p>筛选到的包有 <code>ws</code>,<code>faye-websocket</code>。 这两个包的下载量最多。<br>浏览了下包的首页介绍，其中前者可以像浏览器中一样，使用现成的WebSocket API。<br>后者，在web-dev-server中的hmr相关代码中发现有依赖到。浏览器介绍，能看出是在http模块上进行处理。  </p>
-<h2 id="ws-的-express-例子"><a href="#ws-的-express-例子" class="headerlink" title="ws 的 express 例子"></a><code>ws</code> 的 express 例子</h2><p>README中的express例子简短的展示了与express结合使用的基本法。<br>未能演示如何使用拿到的ws。<br>在github repo中的example中，<a href="https://github.com/websockets/ws/tree/master/examples/serverstats" target="_blank" rel="external">服务器状态</a> 这个例子，展示了前后端使用websokcet通讯的使用。</p>
-<h2 id="使用-ws-从前端发送指令，到后端执行"><a href="#使用-ws-从前端发送指令，到后端执行" class="headerlink" title="使用 ws 从前端发送指令，到后端执行"></a>使用 <code>ws</code> 从前端发送指令，到后端执行</h2><p>代码: <a href="https://github.com/songlairui/amarscfpack" target="_blank" rel="external">https://github.com/songlairui/amarscfpack</a>  中的 server.js (node后端) 与 static(前端)  </p>
-<p>前端先使用 (<code>connectWS</code> 方法)[<a href="https://github.com/songlairui/amarscfpack/blob/master/static/websocket.part.js]建立websokcet连接" target="_blank" rel="external">https://github.com/songlairui/amarscfpack/blob/master/static/websocket.part.js]建立websokcet连接</a>, 并做了断线重连的操作  </p>
-<p>然后使用 <code>sendCmd</code> 方法，按照格式发送JSON.stringify处理完成的指令。 </p>
-<pre><code class="javascript">...
-  ws.send(<span class="built_in">JSON</span>.stringify(<span class="built_in">Object</span>.assign(command, { taskid })))
-...
-</code></pre>
-<p>后端接受后，使用JSON.parse解析的到指令内容，进行判断并执行相应指令  </p>
-<pre><code class="javascript">...
-  ws.on(<span class="string">'message'</span>, <span class="function"><span class="keyword">function</span> <span class="title">incomint</span>(<span class="params">message</span>) </span>{
-    <span class="built_in">console</span>.info(<span class="string">`received: <span class="subst">${message}</span> `</span>)
-    dealWithMsg(ws, message)
-  })
-...
-</code></pre>
-<h3 id="其他细节"><a href="#其他细节" class="headerlink" title="其他细节"></a>其他细节</h3><p>发送数据时，添加任务id，异步事件处理完成后，通知前端时加上此标示id，执行前端回掉函数。<br>详细: <a href="/2017/07/29/js-promise-transform/" title="想了一下，Promise可以这样写">想了一下，Promise可以这样写</a></p>
-<p>前端通过<code>ws</code>发送String简便易行，在后端拿到buffer更为方便。后端往前端传输buffer时，想带上额外的标示信息怎么办？<br>使用了一种将buffer stringify，然后放在 {} 中再stringify以传输。降低了效率，完成了传输。<br>如果直接传输buffer，没有标示信息，需要在前端添加机制，约定好buffer的位置。这种机制未尝试，但尝试了前后端传输 buffer 的细节处理<br>详细: <a href="/2017/07/29/transfer-buffer-with-ws/" title="通过ws包前后端相互传输ArrayBuffer/Buffer">通过ws包前后端相互传输ArrayBuffer/Buffer</a></p>
-<h2 id="TO-LEARN"><a href="#TO-LEARN" class="headerlink" title="TO LEARN"></a>TO LEARN</h2><p>需要了解http请求头的字段，在websocket中解析的使用方式。</p>
-]]></content>
+    <content type="html"><![CDATA[<blockquote><p>尝试Socket，使用之中有很多问题。  </p></blockquote><p>首先，在图解HTTP一书中，知道http头部有个connection，能够用来将http协议升级到websocet。<br>然后，在node环境下，使用http模块启动web server，让能够直接处理http头部。    </p><p>现在，要使用websocket了，那么，是不是将要接触将http 升级到 websocket的细节了？<br>不，倾向于使用下载量超级多的npm包。这些包之中，应该做了升级协议的细节。  </p><a id="more"></a><h2 id="‘君子性非异也，善假于物也’"><a href="#‘君子性非异也，善假于物也’" class="headerlink" title="‘君子性非异也，善假于物也’"></a>‘君子性非异也，善假于物也’</h2><p>筛选到的包有 <code>ws</code>,<code>faye-websocket</code>。 这两个包的下载量最多。<br>浏览了下包的首页介绍，其中前者可以像浏览器中一样，使用现成的WebSocket API。<br>后者，在web-dev-server中的hmr相关代码中发现有依赖到。浏览器介绍，能看出是在http模块上进行处理。  </p><h2 id="ws-的-express-例子"><a href="#ws-的-express-例子" class="headerlink" title="ws 的 express 例子"></a><code>ws</code> 的 express 例子</h2><p>README中的express例子简短的展示了与express结合使用的基本法。<br>未能演示如何使用拿到的ws。<br>在github repo中的example中，<a href="https://github.com/websockets/ws/tree/master/examples/serverstats" target="_blank" rel="noopener">服务器状态</a> 这个例子，展示了前后端使用websokcet通讯的使用。</p><h2 id="使用-ws-从前端发送指令，到后端执行"><a href="#使用-ws-从前端发送指令，到后端执行" class="headerlink" title="使用 ws 从前端发送指令，到后端执行"></a>使用 <code>ws</code> 从前端发送指令，到后端执行</h2><p>代码: <a href="https://github.com/songlairui/amarscfpack" target="_blank" rel="noopener">https://github.com/songlairui/amarscfpack</a>  中的 server.js (node后端) 与 static(前端)  </p><p>前端先使用 (<code>connectWS</code> 方法)[<a href="https://github.com/songlairui/amarscfpack/blob/master/static/websocket.part.js]建立websokcet连接" target="_blank" rel="noopener">https://github.com/songlairui/amarscfpack/blob/master/static/websocket.part.js]建立websokcet连接</a>, 并做了断线重连的操作  </p><p>然后使用 <code>sendCmd</code> 方法，按照格式发送JSON.stringify处理完成的指令。 </p><pre><code class="javascript">...  ws.send(<span class="built_in">JSON</span>.stringify(<span class="built_in">Object</span>.assign(command, { taskid })))...</code></pre><p>后端接受后，使用JSON.parse解析的到指令内容，进行判断并执行相应指令  </p><pre><code class="javascript">...  ws.on(<span class="string">'message'</span>, <span class="function"><span class="keyword">function</span> <span class="title">incomint</span>(<span class="params">message</span>) </span>{    <span class="built_in">console</span>.info(<span class="string">`received: <span class="subst">${message}</span> `</span>)    dealWithMsg(ws, message)  })...</code></pre><h3 id="其他细节"><a href="#其他细节" class="headerlink" title="其他细节"></a>其他细节</h3><p>发送数据时，添加任务id，异步事件处理完成后，通知前端时加上此标示id，执行前端回掉函数。<br>详细: <a href="/2017/07/29/js-promise-transform/" title="想了一下，Promise可以这样写">想了一下，Promise可以这样写</a></p><p>前端通过<code>ws</code>发送String简便易行，在后端拿到buffer更为方便。后端往前端传输buffer时，想带上额外的标示信息怎么办？<br>使用了一种将buffer stringify，然后放在 {} 中再stringify以传输。降低了效率，完成了传输。<br>如果直接传输buffer，没有标示信息，需要在前端添加机制，约定好buffer的位置。这种机制未尝试，但尝试了前后端传输 buffer 的细节处理<br>详细: <a href="/2017/07/29/transfer-buffer-with-ws/" title="通过ws包前后端相互传输ArrayBuffer/Buffer">通过ws包前后端相互传输ArrayBuffer/Buffer</a></p><h2 id="TO-LEARN"><a href="#TO-LEARN" class="headerlink" title="TO LEARN"></a>TO LEARN</h2><p>需要了解http请求头的字段，在websocket中解析的使用方式。</p>]]></content>
     
     <summary type="html">
     
@@ -159,218 +235,7 @@
     <published>2017-06-27T01:27:18.000Z</published>
     <updated>2017-06-27T06:23:56.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
-<p>仿照网易云音乐播放界面的一个页面： <a href="https://songlairui.github.io/NeteaseMusic/static">https://songlairui.github.io/NeteaseMusic/static</a><br>跟随音乐显示歌词，用了两种方式实现：ontimeupdate事件、循环调用setTimeout。<br><strong>有gif，流量党慎点。</strong>   </p>
-</blockquote>
-<a id="more"></a>
-<h2 id="Step-0-前期操作"><a href="#Step-0-前期操作" class="headerlink" title="Step 0 前期操作"></a>Step 0 前期操作</h2><ul>
-<li>页面使用了动态REM，js代码中用了反引号（不支持UC）。</li>
-<li>图片素材取自网易云音乐手机版页面。  </li>
-<li>布局使用flex。</li>
-<li>旋转动画的暂停与播放使用animation-play-state属性控制。</li>
-<li>歌词存放在json中，使用fetch获取，并split成数组，然后遍历生成DOM并插入页面（使用-了document.createDocumentFragment小小优化）。</li>
-</ul>
-<p><strong>生成的歌词DOM结构</strong>  </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"lyric"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">style</span>=<span class="string">"transform: translateY(1px);"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:01.36"</span> <span class="attr">class</span>=<span class="string">"current"</span>&gt;</span>野子 (Live) - 苏运莹<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:02.787"</span>&gt;</span>词：苏运莹<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:04.86"</span>&gt;</span>曲：苏运莹<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:10.31"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:14.31"</span>&gt;</span>怎么大风越狠<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:17.31"</span>&gt;</span>我心越荡<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:20.231"</span>&gt;</span>幻如一丝尘土<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">...</div><div class="line">- .lyric 包裹ul，并且设置`overflow:hidden`，可显示区域容纳5行歌词</div><div class="line">- 前两个li是手动添加的空li，用于占位</div><div class="line">- 每一个li包裹一句歌词</div><div class="line">- data-stamp 是歌词中的时间</div><div class="line">- ul包裹所有的li</div></pre></td></tr></table></figure>
-<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>基本需求：跟随歌曲播放显示歌词<br>更多需求：歌词严格跟随播放进度</p>
-<h2 id="Step-1-完成基本需求"><a href="#Step-1-完成基本需求" class="headerlink" title="Step 1 完成基本需求"></a>Step 1 完成基本需求</h2><p>1<strong>. 歌词激活-样式逻辑</strong><br>当指定歌词激活后，为其添加标识样式 ‘.current’,CSS中为此样式设定显著的颜色和阴影。<br>计算当前歌词的相对父元素的高度，调节translateY使其在第三行位置（歌词显示区域中间位置）。<br><em>关键代码:</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// target 是获取的需要激活的歌词</span></div><div class="line"><span class="comment">// lrcEl 是包裹每一句歌词`li`的`ul`</span></div><div class="line">target.classList.add(<span class="string">'current'</span>)</div><div class="line"><span class="comment">// 令激活的歌词，位于第三行位置</span></div><div class="line">lrcEl.style.transform = <span class="string">`translateY(<span class="subst">$&#123;- target.offsetTop + <span class="number">2</span> * target.offsetHeight&#125;</span>px)`</span></div></pre></td></tr></table></figure></p>
-<p><em>显示效果:</em><br><img src="https://of87cyikt.qnssl.com/blog/hexo/activeLrcItem.gif" alt="激活指定歌词"></p>
-<p>2<strong>. 使用进度条常用方法</strong><br>为HTMLMediaElement制作自定义进度条时，会用到 timeupdate 事件。<a href="">//TODO:MDN</a></p>
-<table>
-<thead>
-<tr>
-<th>ontimeupdate</th>
-<th>-</th>
-<th>控制台</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="https://of87cyikt.qnssl.com/blog/hexo/ontimeupdate-1.png" alt="代码"></td>
-<td>-</td>
-<td><img src="https://of87cyikt.qnssl.com/blog/hexo/ontimeupdate.gif" alt="效果"></td>
-</tr>
-<tr>
-<td>为audio设置事件</td>
-<td>-</td>
-<td>点击播放后，控制台会按照audio的频率打印当前播放时间</td>
-</tr>
-</tbody>
-</table>
-<p>3<strong>. 筛选出当前应该激活的歌词</strong></p>
-<p>在updateLrc方法中，筛选出来当前激活的歌词。  </p>
-<p>updateLrc 代码1:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">updateLrc</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">//获取当前audio播放的时间</span></div><div class="line">  <span class="keyword">let</span> currentStamp = audio.currentTime</div><div class="line">  <span class="keyword">let</span> lastLrc = lrc.filter(<span class="function"><span class="params">v</span> =&gt;</span> v[<span class="number">0</span>]) <span class="comment">// 清空掉没有时间参数的歌词</span></div><div class="line">    .filter(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">let</span> tmp = v[<span class="number">0</span>].split(<span class="string">':'</span>)</div><div class="line">        <span class="comment">// 修复计算错误，添加括号，优先进行隐式类型转换</span></div><div class="line">      <span class="keyword">let</span> stamp = <span class="number">60</span> * (+tmp[<span class="number">0</span>]) + (+tmp[<span class="number">1</span>])</div><div class="line">      <span class="keyword">return</span> stamp &gt; currentStamp</div><div class="line">    &#125;)[<span class="number">0</span>]</div><div class="line">  <span class="built_in">console</span>.info(<span class="string">'当前要激活的歌词:'</span>, lastLrc)</div><div class="line">    <span class="comment">// 如果找到了指定歌词，就激活它</span></div><div class="line">  <span class="keyword">if</span> (lastLrc) activeLrcItem(lastLrc[<span class="number">0</span>])</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>显示效果:  </p>
-<table>
-<thead>
-<tr>
-<th>页面</th>
-<th>-</th>
-<th>控制台</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="https://of87cyikt.qnssl.com/blog/hexo/updateLrc-r1-1.gif" alt="歌词激活"></td>
-<td>-</td>
-<td><img src="https://of87cyikt.qnssl.com/blog/hexo/updateLrc-r1.gif" alt="控制台信息"></td>
-</tr>
-<tr>
-<td>选取到指定歌词，然后激活</td>
-<td>-</td>
-<td>控制台输出，每出发一次timeupdate，都更新一下要激活的歌词。</td>
-</tr>
-</tbody>
-</table>
-<p>这儿配合声音听的话，歌词早了一句，代码先修正，再分析。   </p>
-<p>updateLrc 代码2:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">updateLrc</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> currentStamp = audio.currentTime</div><div class="line">  <span class="keyword">let</span> lastLrc = lrc.filter(<span class="function"><span class="params">v</span> =&gt;</span> v[<span class="number">0</span>])  </div><div class="line">    .reverse()                        <span class="comment">// 这儿添加一行反向</span></div><div class="line">    .filter(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">let</span> tmp = v[<span class="number">0</span>].split(<span class="string">':'</span>)</div><div class="line">      <span class="keyword">let</span> stamp = <span class="number">60</span> * (+tmp[<span class="number">0</span>]) + (+tmp[<span class="number">1</span>])</div><div class="line">      <span class="keyword">return</span> stamp &lt; currentStamp     <span class="comment">// 这儿大于号变小于号</span></div><div class="line">    &#125;)[<span class="number">0</span>]</div><div class="line">  <span class="built_in">console</span>.info(<span class="string">'当前要激活的歌词:'</span>, lastLrc)</div><div class="line">  <span class="keyword">if</span> (lastLrc) activeLrcItem(lastLrc[<span class="number">0</span>])</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<ul>
-<li>当前激活的歌词，应该是已经激活过的最后一句歌词。</li>
-<li>添加了一行 reverse，更改了下filter中的对比条件。  </li>
-<li>逻辑从原来都取得第一个比当前时间大的歌词，变成了取最后一个比当前时间晚的歌词。  </li>
-<li>代码中，<code>filter</code>返回的是一个二维数组，末尾加<code>[0]</code>即取第一个值。  <ul>
-<li>末尾如果添加<code>[0][0]</code>，则在下边判<code>null</code>的时候，会报错。  </li>
-</ul>
-</li>
-<li><code>activeLrcItem</code> 设计这样的传参用法，能同时兼容另一种歌词策略。  </li>
-</ul>
-<p>updateLrc 代码3 【添加新方法，增加可读性】:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">updateLrc</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> currentStamp = audio.currentTime</div><div class="line">  <span class="keyword">let</span> lastLrc = lrc.filter(<span class="function"><span class="params">v</span> =&gt;</span> v[<span class="number">0</span>])</div><div class="line">    .reverse()</div><div class="line">    .filter(<span class="function"><span class="params">v</span> =&gt;</span> lrcTime2Second(v[<span class="number">0</span>]) &lt; currentStamp)[<span class="number">0</span>]</div><div class="line">  <span class="keyword">if</span> (lastLrc) activeLrcItem(lastLrc[<span class="number">0</span>])</div><div class="line">&#125;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * 【辅助函数】根据歌词中的时间戳，返回秒数</div><div class="line"> * @param &#123;lrc 歌词中的时间戳&#125; lrcTime </div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">lrcTime2Second</span>(<span class="params">lrcTime</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> tmp = lrcTime.split(<span class="string">':'</span>)</div><div class="line">    <span class="comment">// 修复计算错误，添加括号，优先进行隐式类型转换</span></div><div class="line">  <span class="keyword">return</span> <span class="number">60</span> * (+tmp[<span class="number">0</span>]) + (+tmp[<span class="number">1</span>])</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>在<code>filter</code>写了三行的代码逻辑被简化了。<br>为其创建额外方法之后，将<code>filter</code>变成了简写状态，私以为代码可读性提高了。</p>
-<h2 id="Step-2-更多需求-每个歌词都生效"><a href="#Step-2-更多需求-每个歌词都生效" class="headerlink" title="Step 2 更多需求: 每个歌词都生效"></a>Step 2 更多需求: 每个歌词都生效</h2><blockquote>
-<p>使用ontimeupdate，依赖audio元素自身事件的机制。如果ontimeupdate的频率太慢，两个事件间隔之间，更新了多个歌词的情况下，歌词的激活就会出现skip。  可以使用30倍速播放音乐，查看ontimeupdate方法等表现。  </p>
-</blockquote>
-<p><strong>30倍速播放</strong> <a href="https://songlairui.github.io/NeteaseMusic/static">DEMO</a>    </p>
-<table>
-<thead>
-<tr>
-<th>Step 1 方法</th>
-<th>-</th>
-<th>新方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="https://of87cyikt.qnssl.com/blog/hexo/ontimeupdatex30.gif" alt="timeupdate x30"></td>
-<td>-</td>
-<td><img src="https://of87cyikt.qnssl.com/blog/hexo/settimeoutx30.gif" alt="no-skip"></td>
-</tr>
-<tr>
-<td>会出现跳词</td>
-<td>-</td>
-<td>每句歌词都被激活</td>
-</tr>
-</tbody>
-</table>
-<p>另一个细节是，歌词中空行和下一句歌词的时间间隔很小。使用ontimeupdate方法，激活空行（令其显示在中间位置）的概率很小（是个概率事件）。<br>而使用settimeout方法，激活空行，是必然事件。  </p>
-<p><strong>实现细节:</strong>  </p>
-<p>准备全局变量(未进行组件化，粗鲁的使用全局变量了):<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> timer = <span class="literal">null</span> <span class="comment">// settimeout需要使用的timer</span></div></pre></td></tr></table></figure></p>
-<p>开始播放时，执行一个方法操作歌词:  </p>
-<pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">playLrc</span>(<span class="params"></span>) </span>{
-  <span class="keyword">if</span> (timer) <span class="keyword">return</span>
-  <span class="keyword">let</span> currentStamp = audio.currentTime
-  <span class="comment">// 获取当前激活的歌词，和下一个要激活的歌词， 此处正向获取。因为下一个歌词还没有播放，等待setTimeout延迟激活，</span>
-  <span class="keyword">let</span> nextLrc = lrc
-    .filter(<span class="function"><span class="params">v</span> =&gt;</span> v[<span class="number">0</span>]) <span class="comment">// 清空掉没有时间参数的歌词</span>
-    .filter(<span class="function"><span class="params">v</span> =&gt;</span> lrcTime2Second(v[<span class="number">0</span>]) &gt; currentStamp)[<span class="number">0</span>]
-  <span class="keyword">if</span> (nextLrc) {
-    <span class="built_in">console</span>.info(<span class="string">`下一歌词:<span class="subst">${nextLrc}</span>`</span>)
-    timer = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-      clearTimeout(timer), timer = <span class="literal">null</span>
-      activeLrcItem(nextLrc[<span class="number">0</span>])
-      playLrc() <span class="comment">// 尾调用自身</span>
-    }, (lrcTime2Second(nextLrc[<span class="number">0</span>]) - (+currentStamp)) * <span class="number">1000</span> / audio.playbackRate)
-  }
-}
-</code></pre>
-<ul>
-<li>取得需要歌词的逻辑，跟上一种实现方式中updateLrc类似。不过，playLrc自身实际操作是在setTimeout超时后，所以，传入的歌词参数应该是未来的一个歌词。恰好使用第一次想到的filter逻辑。  </li>
-<li>得到nextLrc之后，设置<code>timer</code>,并在setTimeout中函数真正执行时，clear掉，并置null。然后在尾部调用自身。  </li>
-<li>这样的setTimeout是一个套路，没什么可说的。 其中实际执行的是 <code>activeLrcItem(nextLrc[0])</code> 这句。  </li>
-<li>setTimeout 的超时时间，根据未来一句歌词，和音乐当前播放的时间求出。所以，每次setTimeout都是新鲜计算的，不会累计时间误差。  </li>
-<li>超时时间 除以 <code>audio.playbackRate</code>, 匹配不同播放速度下切换行为。  </li>
-<li>// 别设置<code>audio.playbackRate</code>为‘负’值，就gg了。。</li>
-<li>// 每次遍历读取DOM，需要优化吗？</li>
-</ul>
-<h2 id="伪END"><a href="#伪END" class="headerlink" title="伪END"></a>伪END</h2><p>好快就说完了，记得做的时候，来回调了特别多遍。<br>DEMO地址： <a href="https://songlairui.github.io/NeteaseMusic/static">https://songlairui.github.io/NeteaseMusic/static</a>  </p>
-<h2 id="附加"><a href="#附加" class="headerlink" title="附加"></a>附加</h2><p>上述两方法实现过程，还有很枝外细节，写在最后。</p>
-<h3 id="【缓存变量】激活歌词时，需要遍历去除其他歌词DOM上的激活状态"><a href="#【缓存变量】激活歌词时，需要遍历去除其他歌词DOM上的激活状态" class="headerlink" title="【缓存变量】激活歌词时，需要遍历去除其他歌词DOM上的激活状态"></a><strong>【缓存变量】激活歌词时，需要遍历去除其他歌词DOM上的激活状态</strong></h3><p>准备全局变量:  </p>
-<pre><code class="javascript"><span class="keyword">let</span> activedLrcEl = <span class="keyword">new</span> <span class="built_in">Set</span>() <span class="comment">// cache for 激活的歌词</span>
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>未使用缓存变量</th>
-<th>-</th>
-<th>使用了缓存变量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="https://of87cyikt.qnssl.com/blog/hexo/activeItemWithoutCache.png" alt="withoutCacheVar"></td>
-<td>-</td>
-<td><img src="https://of87cyikt.qnssl.com/blog/hexo/activeItemWithCacheVar.png" alt="WithCacheVar"></td>
-</tr>
-<tr>
-<td>使用filter方法对DOM遍历读取</td>
-<td>-</td>
-<td>每次激活li，都把其放到Set中，并在取消激活时删除掉</td>
-</tr>
-</tbody>
-</table>
-<p>使用缓存变量之后，很起来很骚的长行代码去掉了。<br>为什么用Set？因为不用考虑去重了。</p>
-<table>
-<thead>
-<tr>
-<th><strong>使用效果:</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="https://of87cyikt.qnssl.com/blog/hexo/withCache.png" alt="cache效果"></td>
-</tr>
-<tr>
-<td><strong>settimeout方法下，使用30倍速度播放，查看控制台。此时因为setTimeout的误差，造成超时时间取得过短，playLrc方法执行频次远超实际需要，造成额外尝试操作DOM。缓存变量的使用，会使得其在需要操作DOM时，真正去执行。</strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="【CSS动画控制】-播放结束歌词处理"><a href="#【CSS动画控制】-播放结束歌词处理" class="headerlink" title="【CSS动画控制】 播放结束歌词处理"></a><strong>【CSS动画控制】 播放结束歌词处理</strong></h3><p>歌词播放完之后，想让它跳回头部，而不是滚回头部。<br>这样处理的想法时，歌曲结束之后，.3s的时间滚回头部，如果看到觉得太黏腻，不利落。<br>这儿用到void el.clientWidth。算是一种黑魔法？</p>
-<table>
-<thead>
-<tr>
-<th>切换 visibility</th>
-<th>-</th>
-<th>切换 display</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="https://of87cyikt.qnssl.com/blog/hexo/onended1.png" alt="viaVisibility"></td>
-<td>-</td>
-<td><img src="https://of87cyikt.qnssl.com/blog/hexo/onended2.png" alt="viaDisplay"></td>
-</tr>
-<tr>
-<td>无效</td>
-<td>-</td>
-<td>生效</td>
-</tr>
-</tbody>
-</table>
-<p>使用display:none会达到想要的效果。猜测跟浏览器绘制过程有关。</p>
-<h3 id="【CSS】歌词空行的处理"><a href="#【CSS】歌词空行的处理" class="headerlink" title="【CSS】歌词空行的处理"></a><strong>【CSS】歌词空行的处理</strong></h3><p>默认情况，空的一行会有一个小的height，因为字体高度为0。<br>让空的一行也显示有内容，就可以获得正常的高度。为每个歌词添加伪元素，并设置<code>content: &#39; &#39;</code>,可令每一行都最少有一个空格。<br>如果有强迫症，可以前后各加一个空格，让歌词居中。<br><img src="https://of87cyikt.qnssl.com/blog/hexo/lrc-style.png" alt="歌词::after"></p>
-<h3 id="【reduce】-获取当前播放的歌词，和下一个歌词"><a href="#【reduce】-获取当前播放的歌词，和下一个歌词" class="headerlink" title="【reduce】 获取当前播放的歌词，和下一个歌词"></a><strong>【reduce】 获取当前播放的歌词，和下一个歌词</strong></h3><p>这是个人觉得正确使用reduce的一次了，虽然最后注释掉了。</p>
-<pre><code class="javascript"><span class="comment">//写的时候挺费脑子的，不舍得删，注释掉吧。</span>
-<span class="keyword">let</span> currentStamp = audio.currentTime
-<span class="keyword">let</span> { currentLrc, nextLrc } = lrc.filter(<span class="function"><span class="params">v</span> =&gt;</span> v[<span class="number">0</span>]).reduce(<span class="function">(<span class="params">prev, current</span>) =&gt;</span> {
-  <span class="comment">// 如果传入的值有了nextLrc，说明取到了想要的值</span>
-  <span class="comment">// console.info(`reduce 得到的上一个的返回值：${JSON.stringify(prev)}`)</span>
-  <span class="keyword">let</span> { currentLrc, nextLrc } = prev
-  <span class="keyword">if</span> (nextLrc) <span class="keyword">return</span> prev
-  <span class="keyword">return</span> lrcTime2Second(current[<span class="number">0</span>]) &gt; currentStamp ? { currentLrc, <span class="attr">nextLrc</span>: current[<span class="number">0</span>] } : { <span class="attr">currentLrc</span>: current[<span class="number">0</span>], <span class="attr">nextLrc</span>: <span class="string">''</span> }
-}, { <span class="attr">currentLrc</span>: <span class="string">''</span>, <span class="attr">nextLrc</span>: <span class="string">''</span> })
-</code></pre>
-<p>根据audio的当前时间，使用reduce取得当前歌词和下一条歌词。<br>最初没有使用缓存变量时，简单的把上一条歌词取消激活用到了这个方法。虽然这种取消非常不严谨。但这个reduce写起来很爽。</p>
-<h2 id="真·END"><a href="#真·END" class="headerlink" title="真·END"></a>真·END</h2><p>支持方法的切换，通过增加wrap函数和多处使用3元运算符，逗号运算符完成。//有点丧心病狂，就不截图了</p>
-]]></content>
+    <content type="html"><![CDATA[<blockquote><p>仿照网易云音乐播放界面的一个页面： <a href="https://songlairui.github.io/NeteaseMusic/static">https://songlairui.github.io/NeteaseMusic/static</a><br>跟随音乐显示歌词，用了两种方式实现：ontimeupdate事件、循环调用setTimeout。<br><strong>有gif，流量党慎点。</strong>   </p></blockquote><a id="more"></a><h2 id="Step-0-前期操作"><a href="#Step-0-前期操作" class="headerlink" title="Step 0 前期操作"></a>Step 0 前期操作</h2><ul><li>页面使用了动态REM，js代码中用了反引号（不支持UC）。</li><li>图片素材取自网易云音乐手机版页面。  </li><li>布局使用flex。</li><li>旋转动画的暂停与播放使用animation-play-state属性控制。</li><li>歌词存放在json中，使用fetch获取，并split成数组，然后遍历生成DOM并插入页面（使用-了document.createDocumentFragment小小优化）。</li></ul><p><strong>生成的歌词DOM结构</strong>  </p><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"lyric"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">style</span>=<span class="string">"transform: translateY(1px);"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:01.36"</span> <span class="attr">class</span>=<span class="string">"current"</span>&gt;</span>野子 (Live) - 苏运莹<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:02.787"</span>&gt;</span>词：苏运莹<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:04.86"</span>&gt;</span>曲：苏运莹<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:10.31"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:14.31"</span>&gt;</span>怎么大风越狠<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:17.31"</span>&gt;</span>我心越荡<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-stamp</span>=<span class="string">"00:20.231"</span>&gt;</span>幻如一丝尘土<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">...</div><div class="line">- .lyric 包裹ul，并且设置`overflow:hidden`，可显示区域容纳5行歌词</div><div class="line">- 前两个li是手动添加的空li，用于占位</div><div class="line">- 每一个li包裹一句歌词</div><div class="line">- data-stamp 是歌词中的时间</div><div class="line">- ul包裹所有的li</div></pre></td></tr></table></figure><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>基本需求：跟随歌曲播放显示歌词<br>更多需求：歌词严格跟随播放进度</p><h2 id="Step-1-完成基本需求"><a href="#Step-1-完成基本需求" class="headerlink" title="Step 1 完成基本需求"></a>Step 1 完成基本需求</h2><p>1<strong>. 歌词激活-样式逻辑</strong><br>当指定歌词激活后，为其添加标识样式 ‘.current’,CSS中为此样式设定显著的颜色和阴影。<br>计算当前歌词的相对父元素的高度，调节translateY使其在第三行位置（歌词显示区域中间位置）。<br><em>关键代码:</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// target 是获取的需要激活的歌词</span></div><div class="line"><span class="comment">// lrcEl 是包裹每一句歌词`li`的`ul`</span></div><div class="line">target.classList.add(<span class="string">'current'</span>)</div><div class="line"><span class="comment">// 令激活的歌词，位于第三行位置</span></div><div class="line">lrcEl.style.transform = <span class="string">`translateY(<span class="subst">$&#123;- target.offsetTop + <span class="number">2</span> * target.offsetHeight&#125;</span>px)`</span></div></pre></td></tr></table></figure></p><p><em>显示效果:</em><br><img src="https://of87cyikt.qnssl.com/blog/hexo/activeLrcItem.gif" alt="激活指定歌词"></p><p>2<strong>. 使用进度条常用方法</strong><br>为HTMLMediaElement制作自定义进度条时，会用到 timeupdate 事件。<a href="">//TODO:MDN</a></p><table><thead><tr><th>ontimeupdate</th><th>-</th><th>控制台</th></tr></thead><tbody><tr><td><img src="https://of87cyikt.qnssl.com/blog/hexo/ontimeupdate-1.png" alt="代码"></td><td>-</td><td><img src="https://of87cyikt.qnssl.com/blog/hexo/ontimeupdate.gif" alt="效果"></td></tr><tr><td>为audio设置事件</td><td>-</td><td>点击播放后，控制台会按照audio的频率打印当前播放时间</td></tr></tbody></table><p>3<strong>. 筛选出当前应该激活的歌词</strong></p><p>在updateLrc方法中，筛选出来当前激活的歌词。  </p><p>updateLrc 代码1:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">updateLrc</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">//获取当前audio播放的时间</span></div><div class="line">  <span class="keyword">let</span> currentStamp = audio.currentTime</div><div class="line">  <span class="keyword">let</span> lastLrc = lrc.filter(<span class="function"><span class="params">v</span> =&gt;</span> v[<span class="number">0</span>]) <span class="comment">// 清空掉没有时间参数的歌词</span></div><div class="line">    .filter(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">let</span> tmp = v[<span class="number">0</span>].split(<span class="string">':'</span>)</div><div class="line">        <span class="comment">// 修复计算错误，添加括号，优先进行隐式类型转换</span></div><div class="line">      <span class="keyword">let</span> stamp = <span class="number">60</span> * (+tmp[<span class="number">0</span>]) + (+tmp[<span class="number">1</span>])</div><div class="line">      <span class="keyword">return</span> stamp &gt; currentStamp</div><div class="line">    &#125;)[<span class="number">0</span>]</div><div class="line">  <span class="built_in">console</span>.info(<span class="string">'当前要激活的歌词:'</span>, lastLrc)</div><div class="line">    <span class="comment">// 如果找到了指定歌词，就激活它</span></div><div class="line">  <span class="keyword">if</span> (lastLrc) activeLrcItem(lastLrc[<span class="number">0</span>])</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>显示效果:  </p><table><thead><tr><th>页面</th><th>-</th><th>控制台</th></tr></thead><tbody><tr><td><img src="https://of87cyikt.qnssl.com/blog/hexo/updateLrc-r1-1.gif" alt="歌词激活"></td><td>-</td><td><img src="https://of87cyikt.qnssl.com/blog/hexo/updateLrc-r1.gif" alt="控制台信息"></td></tr><tr><td>选取到指定歌词，然后激活</td><td>-</td><td>控制台输出，每出发一次timeupdate，都更新一下要激活的歌词。</td></tr></tbody></table><p>这儿配合声音听的话，歌词早了一句，代码先修正，再分析。   </p><p>updateLrc 代码2:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">updateLrc</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> currentStamp = audio.currentTime</div><div class="line">  <span class="keyword">let</span> lastLrc = lrc.filter(<span class="function"><span class="params">v</span> =&gt;</span> v[<span class="number">0</span>])  </div><div class="line">    .reverse()                        <span class="comment">// 这儿添加一行反向</span></div><div class="line">    .filter(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">let</span> tmp = v[<span class="number">0</span>].split(<span class="string">':'</span>)</div><div class="line">      <span class="keyword">let</span> stamp = <span class="number">60</span> * (+tmp[<span class="number">0</span>]) + (+tmp[<span class="number">1</span>])</div><div class="line">      <span class="keyword">return</span> stamp &lt; currentStamp     <span class="comment">// 这儿大于号变小于号</span></div><div class="line">    &#125;)[<span class="number">0</span>]</div><div class="line">  <span class="built_in">console</span>.info(<span class="string">'当前要激活的歌词:'</span>, lastLrc)</div><div class="line">  <span class="keyword">if</span> (lastLrc) activeLrcItem(lastLrc[<span class="number">0</span>])</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><ul><li>当前激活的歌词，应该是已经激活过的最后一句歌词。</li><li>添加了一行 reverse，更改了下filter中的对比条件。  </li><li>逻辑从原来都取得第一个比当前时间大的歌词，变成了取最后一个比当前时间晚的歌词。  </li><li>代码中，<code>filter</code>返回的是一个二维数组，末尾加<code>[0]</code>即取第一个值。  <ul><li>末尾如果添加<code>[0][0]</code>，则在下边判<code>null</code>的时候，会报错。  </li></ul></li><li><code>activeLrcItem</code> 设计这样的传参用法，能同时兼容另一种歌词策略。  </li></ul><p>updateLrc 代码3 【添加新方法，增加可读性】:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">updateLrc</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> currentStamp = audio.currentTime</div><div class="line">  <span class="keyword">let</span> lastLrc = lrc.filter(<span class="function"><span class="params">v</span> =&gt;</span> v[<span class="number">0</span>])</div><div class="line">    .reverse()</div><div class="line">    .filter(<span class="function"><span class="params">v</span> =&gt;</span> lrcTime2Second(v[<span class="number">0</span>]) &lt; currentStamp)[<span class="number">0</span>]</div><div class="line">  <span class="keyword">if</span> (lastLrc) activeLrcItem(lastLrc[<span class="number">0</span>])</div><div class="line">&#125;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * 【辅助函数】根据歌词中的时间戳，返回秒数</div><div class="line"> * @param &#123;lrc 歌词中的时间戳&#125; lrcTime </div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">lrcTime2Second</span>(<span class="params">lrcTime</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> tmp = lrcTime.split(<span class="string">':'</span>)</div><div class="line">    <span class="comment">// 修复计算错误，添加括号，优先进行隐式类型转换</span></div><div class="line">  <span class="keyword">return</span> <span class="number">60</span> * (+tmp[<span class="number">0</span>]) + (+tmp[<span class="number">1</span>])</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>在<code>filter</code>写了三行的代码逻辑被简化了。<br>为其创建额外方法之后，将<code>filter</code>变成了简写状态，私以为代码可读性提高了。</p><h2 id="Step-2-更多需求-每个歌词都生效"><a href="#Step-2-更多需求-每个歌词都生效" class="headerlink" title="Step 2 更多需求: 每个歌词都生效"></a>Step 2 更多需求: 每个歌词都生效</h2><blockquote><p>使用ontimeupdate，依赖audio元素自身事件的机制。如果ontimeupdate的频率太慢，两个事件间隔之间，更新了多个歌词的情况下，歌词的激活就会出现skip。  可以使用30倍速播放音乐，查看ontimeupdate方法等表现。  </p></blockquote><p><strong>30倍速播放</strong> <a href="https://songlairui.github.io/NeteaseMusic/static">DEMO</a>    </p><table><thead><tr><th>Step 1 方法</th><th>-</th><th>新方法</th></tr></thead><tbody><tr><td><img src="https://of87cyikt.qnssl.com/blog/hexo/ontimeupdatex30.gif" alt="timeupdate x30"></td><td>-</td><td><img src="https://of87cyikt.qnssl.com/blog/hexo/settimeoutx30.gif" alt="no-skip"></td></tr><tr><td>会出现跳词</td><td>-</td><td>每句歌词都被激活</td></tr></tbody></table><p>另一个细节是，歌词中空行和下一句歌词的时间间隔很小。使用ontimeupdate方法，激活空行（令其显示在中间位置）的概率很小（是个概率事件）。<br>而使用settimeout方法，激活空行，是必然事件。  </p><p><strong>实现细节:</strong>  </p><p>准备全局变量(未进行组件化，粗鲁的使用全局变量了):<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> timer = <span class="literal">null</span> <span class="comment">// settimeout需要使用的timer</span></div></pre></td></tr></table></figure></p><p>开始播放时，执行一个方法操作歌词:  </p><pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">playLrc</span>(<span class="params"></span>) </span>{  <span class="keyword">if</span> (timer) <span class="keyword">return</span>  <span class="keyword">let</span> currentStamp = audio.currentTime  <span class="comment">// 获取当前激活的歌词，和下一个要激活的歌词， 此处正向获取。因为下一个歌词还没有播放，等待setTimeout延迟激活，</span>  <span class="keyword">let</span> nextLrc = lrc    .filter(<span class="function"><span class="params">v</span> =&gt;</span> v[<span class="number">0</span>]) <span class="comment">// 清空掉没有时间参数的歌词</span>    .filter(<span class="function"><span class="params">v</span> =&gt;</span> lrcTime2Second(v[<span class="number">0</span>]) &gt; currentStamp)[<span class="number">0</span>]  <span class="keyword">if</span> (nextLrc) {    <span class="built_in">console</span>.info(<span class="string">`下一歌词:<span class="subst">${nextLrc}</span>`</span>)    timer = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{      clearTimeout(timer), timer = <span class="literal">null</span>      activeLrcItem(nextLrc[<span class="number">0</span>])      playLrc() <span class="comment">// 尾调用自身</span>    }, (lrcTime2Second(nextLrc[<span class="number">0</span>]) - (+currentStamp)) * <span class="number">1000</span> / audio.playbackRate)  }}</code></pre><ul><li>取得需要歌词的逻辑，跟上一种实现方式中updateLrc类似。不过，playLrc自身实际操作是在setTimeout超时后，所以，传入的歌词参数应该是未来的一个歌词。恰好使用第一次想到的filter逻辑。  </li><li>得到nextLrc之后，设置<code>timer</code>,并在setTimeout中函数真正执行时，clear掉，并置null。然后在尾部调用自身。  </li><li>这样的setTimeout是一个套路，没什么可说的。 其中实际执行的是 <code>activeLrcItem(nextLrc[0])</code> 这句。  </li><li>setTimeout 的超时时间，根据未来一句歌词，和音乐当前播放的时间求出。所以，每次setTimeout都是新鲜计算的，不会累计时间误差。  </li><li>超时时间 除以 <code>audio.playbackRate</code>, 匹配不同播放速度下切换行为。  </li><li>// 别设置<code>audio.playbackRate</code>为‘负’值，就gg了。。</li><li>// 每次遍历读取DOM，需要优化吗？</li></ul><h2 id="伪END"><a href="#伪END" class="headerlink" title="伪END"></a>伪END</h2><p>好快就说完了，记得做的时候，来回调了特别多遍。<br>DEMO地址： <a href="https://songlairui.github.io/NeteaseMusic/static">https://songlairui.github.io/NeteaseMusic/static</a>  </p><h2 id="附加"><a href="#附加" class="headerlink" title="附加"></a>附加</h2><p>上述两方法实现过程，还有很枝外细节，写在最后。</p><h3 id="【缓存变量】激活歌词时，需要遍历去除其他歌词DOM上的激活状态"><a href="#【缓存变量】激活歌词时，需要遍历去除其他歌词DOM上的激活状态" class="headerlink" title="【缓存变量】激活歌词时，需要遍历去除其他歌词DOM上的激活状态"></a><strong>【缓存变量】激活歌词时，需要遍历去除其他歌词DOM上的激活状态</strong></h3><p>准备全局变量:  </p><pre><code class="javascript"><span class="keyword">let</span> activedLrcEl = <span class="keyword">new</span> <span class="built_in">Set</span>() <span class="comment">// cache for 激活的歌词</span></code></pre><table><thead><tr><th>未使用缓存变量</th><th>-</th><th>使用了缓存变量</th></tr></thead><tbody><tr><td><img src="https://of87cyikt.qnssl.com/blog/hexo/activeItemWithoutCache.png" alt="withoutCacheVar"></td><td>-</td><td><img src="https://of87cyikt.qnssl.com/blog/hexo/activeItemWithCacheVar.png" alt="WithCacheVar"></td></tr><tr><td>使用filter方法对DOM遍历读取</td><td>-</td><td>每次激活li，都把其放到Set中，并在取消激活时删除掉</td></tr></tbody></table><p>使用缓存变量之后，很起来很骚的长行代码去掉了。<br>为什么用Set？因为不用考虑去重了。</p><table><thead><tr><th><strong>使用效果:</strong></th></tr></thead><tbody><tr><td><img src="https://of87cyikt.qnssl.com/blog/hexo/withCache.png" alt="cache效果"></td></tr><tr><td><strong>settimeout方法下，使用30倍速度播放，查看控制台。此时因为setTimeout的误差，造成超时时间取得过短，playLrc方法执行频次远超实际需要，造成额外尝试操作DOM。缓存变量的使用，会使得其在需要操作DOM时，真正去执行。</strong></td></tr></tbody></table><h3 id="【CSS动画控制】-播放结束歌词处理"><a href="#【CSS动画控制】-播放结束歌词处理" class="headerlink" title="【CSS动画控制】 播放结束歌词处理"></a><strong>【CSS动画控制】 播放结束歌词处理</strong></h3><p>歌词播放完之后，想让它跳回头部，而不是滚回头部。<br>这样处理的想法时，歌曲结束之后，.3s的时间滚回头部，如果看到觉得太黏腻，不利落。<br>这儿用到void el.clientWidth。算是一种黑魔法？</p><table><thead><tr><th>切换 visibility</th><th>-</th><th>切换 display</th></tr></thead><tbody><tr><td><img src="https://of87cyikt.qnssl.com/blog/hexo/onended1.png" alt="viaVisibility"></td><td>-</td><td><img src="https://of87cyikt.qnssl.com/blog/hexo/onended2.png" alt="viaDisplay"></td></tr><tr><td>无效</td><td>-</td><td>生效</td></tr></tbody></table><p>使用display:none会达到想要的效果。猜测跟浏览器绘制过程有关。</p><h3 id="【CSS】歌词空行的处理"><a href="#【CSS】歌词空行的处理" class="headerlink" title="【CSS】歌词空行的处理"></a><strong>【CSS】歌词空行的处理</strong></h3><p>默认情况，空的一行会有一个小的height，因为字体高度为0。<br>让空的一行也显示有内容，就可以获得正常的高度。为每个歌词添加伪元素，并设置<code>content: &#39; &#39;</code>,可令每一行都最少有一个空格。<br>如果有强迫症，可以前后各加一个空格，让歌词居中。<br><img src="https://of87cyikt.qnssl.com/blog/hexo/lrc-style.png" alt="歌词::after"></p><h3 id="【reduce】-获取当前播放的歌词，和下一个歌词"><a href="#【reduce】-获取当前播放的歌词，和下一个歌词" class="headerlink" title="【reduce】 获取当前播放的歌词，和下一个歌词"></a><strong>【reduce】 获取当前播放的歌词，和下一个歌词</strong></h3><p>这是个人觉得正确使用reduce的一次了，虽然最后注释掉了。</p><pre><code class="javascript"><span class="comment">//写的时候挺费脑子的，不舍得删，注释掉吧。</span><span class="keyword">let</span> currentStamp = audio.currentTime<span class="keyword">let</span> { currentLrc, nextLrc } = lrc.filter(<span class="function"><span class="params">v</span> =&gt;</span> v[<span class="number">0</span>]).reduce(<span class="function">(<span class="params">prev, current</span>) =&gt;</span> {  <span class="comment">// 如果传入的值有了nextLrc，说明取到了想要的值</span>  <span class="comment">// console.info(`reduce 得到的上一个的返回值：${JSON.stringify(prev)}`)</span>  <span class="keyword">let</span> { currentLrc, nextLrc } = prev  <span class="keyword">if</span> (nextLrc) <span class="keyword">return</span> prev  <span class="keyword">return</span> lrcTime2Second(current[<span class="number">0</span>]) &gt; currentStamp ? { currentLrc, <span class="attr">nextLrc</span>: current[<span class="number">0</span>] } : { <span class="attr">currentLrc</span>: current[<span class="number">0</span>], <span class="attr">nextLrc</span>: <span class="string">''</span> }}, { <span class="attr">currentLrc</span>: <span class="string">''</span>, <span class="attr">nextLrc</span>: <span class="string">''</span> })</code></pre><p>根据audio的当前时间，使用reduce取得当前歌词和下一条歌词。<br>最初没有使用缓存变量时，简单的把上一条歌词取消激活用到了这个方法。虽然这种取消非常不严谨。但这个reduce写起来很爽。</p><h2 id="真·END"><a href="#真·END" class="headerlink" title="真·END"></a>真·END</h2><p>支持方法的切换，通过增加wrap函数和多处使用3元运算符，逗号运算符完成。//有点丧心病狂，就不截图了</p>]]></content>
     
     <summary type="html">
     
@@ -390,117 +255,14 @@
     <published>2017-06-22T05:12:43.000Z</published>
     <updated>2017-06-22T08:43:28.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
-<p>上一篇<a href="/2017/06/21/vue-ssr-step-1/" title="Vue SSR 官方文档实践·一：从零到粗暴混合前后端">Vue SSR 官方文档实践·一：从零到粗暴混合前后端</a>之后，运行<a href="http://ssr.vuejs.org/en/build-config.html" target="_blank" rel="external">Build Configuration</a> 章节示例代码，比较快了。<br>不过多加了几个webpack选项，混合起来变得更加简单。大神铺路铺得就是好。。  </p>
-</blockquote>
-<p><strong>实践Target:</strong> <a href="http://ssr.vuejs.org/en/build-config.html" target="_blank" rel="external">Build Configuration</a><br><a id="more"></a></p>
-<h3 id="Server端-启用vue-ssr-plugin"><a href="#Server端-启用vue-ssr-plugin" class="headerlink" title="Server端 启用vue-ssr plugin"></a>Server端 启用vue-ssr plugin</h3><table>
-<thead>
-<tr>
-<th>启用前</th>
-<th>-</th>
-<th>启用后</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="https://ooo.0o0.ooo/2017/06/22/594b584a3e1e8.png" alt="server1.png"></td>
-<td>-</td>
-<td><img src="https://ooo.0o0.ooo/2017/06/22/594b5849e0aad.png" alt="server2.png"></td>
-</tr>
-<tr>
-<td>启用前，异步加载的组件，被分割开来</td>
-<td>-</td>
-<td>启用后Server端打包不再进行分割，只输出一个文件</td>
-</tr>
-</tbody>
-</table>
-<p>客户端打包，对文件分割实现懒加载，可以令浏览器只加载需要的内容，有体验提升。<br>但服务端打包的文件，给后端程序使用，不通过网络请求获取，分割代码意义不大甚至降低性能，所以打包成一个文件更好。</p>
-<h3 id="Client端-启用-manifest，启用vue-ssr-plugin"><a href="#Client端-启用-manifest，启用vue-ssr-plugin" class="headerlink" title="Client端 启用 manifest，启用vue-ssr plugin"></a>Client端 启用 manifest，启用vue-ssr plugin</h3><p><strong>相关配置文件</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">plugins: [</div><div class="line">    <span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(&#123;</div><div class="line">      <span class="attr">name</span>: <span class="string">'mainfest'</span>,</div><div class="line">      <span class="attr">minChunks</span>: <span class="literal">Infinity</span></div><div class="line">    &#125;),</div><div class="line">    <span class="keyword">new</span> VueSSRClientPlugin()</div><div class="line">  ]</div></pre></td></tr></table></figure></p>
-<p><strong>对比</strong> </p>
-<table>
-<thead>
-<tr>
-<th>启用前</th>
-<th>-</th>
-<th>启用后</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="https://ooo.0o0.ooo/2017/06/22/594b5c09924cb.png" alt="client1.png"></td>
-<td>-</td>
-<td><img src="https://ooo.0o0.ooo/2017/06/22/594b5c0a7353b.png" alt="client2.png"></td>
-</tr>
-<tr>
-<td>启用前，前后端输出文件名称一致，会造成覆盖</td>
-<td>-</td>
-<td>启用后，生成 manifest, 可以使用vue-ssr插件自动注入js</td>
-</tr>
-</tbody>
-</table>
-<p>启用前，在页面注入JS，需要手动在 index.template.html 作如下添加<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--vue-ssr-outlet--&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./dist/bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> <span class="comment">&lt;!-- 手动添加，启用后不需要添加这一行--&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h2 id="修改server-js"><a href="#修改server-js" class="headerlink" title="修改server.js"></a>修改server.js</h2><p><strong>1. 更改renderer</strong>  </p>
-<table>
-<thead>
-<tr>
-<th>前</th>
-<th>-</th>
-<th>后</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="https://ooo.0o0.ooo/2017/06/22/594b6c340b19b.png" alt="render1.png"></td>
-<td>-</td>
-<td><img src="https://ooo.0o0.ooo/2017/06/22/594b6c375263e.png" alt="render2.png"></td>
-</tr>
-<tr>
-<td>createRender</td>
-<td>-</td>
-<td>更改为 createBundleRenderer，并由打包生成的单文件创建</td>
-</tr>
-</tbody>
-</table>
-<p><strong>2. 更改express配置</strong> </p>
-<table>
-<thead>
-<tr>
-<th>前</th>
-<th>-</th>
-<th>后</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="https://ooo.0o0.ooo/2017/06/22/594b6e36a7ecf.png" alt="app1.png"></td>
-<td>-</td>
-<td><img src="https://ooo.0o0.ooo/2017/06/22/594b6e3622523.png" alt="app2.png"></td>
-</tr>
-<tr>
-<td>从打包得到的文件引入createApp</td>
-<td>-</td>
-<td>render中自动包含app内容，不需要引入。只需要传入context</td>
-</tr>
-</tbody>
-</table>
-<h2 id="更改路径，撤销粗暴"><a href="#更改路径，撤销粗暴" class="headerlink" title="更改路径，撤销粗暴"></a>更改路径，撤销粗暴</h2><p><strong>添加webpack关键配置</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">output:&#123;</div><div class="line">  <span class="attr">publicPath</span>: <span class="string">'/dist/'</span>,</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>自动注入的script.src 都指向 dist 目录下文件，server.js中强制redirect的中间件逻辑可以删除了。</p>
-<h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2><p>回顾一下，完成服务端渲染的配置，大部分靠webpack的熟练度。  </p>
-<p>代码地址： <a href="https://github.com/songlairui/vue-playground/tree/master/demo/chapter5" target="_blank" rel="external">songlairui/vue-playground/demo/chapter5</a>  </p>
-<pre><code class="shell">├── webpack.base.conf.js     # 创建baseConfig，方便使用webpack-merge
-├── webpack.client2.conf.js  # 启用vue-ssr-client-bundle 插件，这是个子插件。启用manifest插件。
-├── webpack.server2.conf.js  # 启用vue-ssr-server-plugin 插件，这是个子插件。打包只出一个文件。
-├── server2.js               # 简化 server.js 逻辑。去掉强制redirect逻辑。
-</code></pre>
-]]></content>
+    <content type="html"><![CDATA[<blockquote><p>上一篇<a href="/2017/06/21/vue-ssr-step-1/" title="Vue SSR 官方文档实践·一：从零到粗暴混合前后端">Vue SSR 官方文档实践·一：从零到粗暴混合前后端</a>之后，运行<a href="http://ssr.vuejs.org/en/build-config.html" target="_blank" rel="noopener">Build Configuration</a> 章节示例代码，比较快了。<br>不过多加了几个webpack选项，混合起来变得更加简单。大神铺路铺得就是好。。  </p></blockquote><p><strong>实践Target:</strong> <a href="http://ssr.vuejs.org/en/build-config.html" target="_blank" rel="noopener">Build Configuration</a><br><a id="more"></a></p><h3 id="Server端-启用vue-ssr-plugin"><a href="#Server端-启用vue-ssr-plugin" class="headerlink" title="Server端 启用vue-ssr plugin"></a>Server端 启用vue-ssr plugin</h3><table><thead><tr><th>启用前</th><th>-</th><th>启用后</th></tr></thead><tbody><tr><td><img src="https://ooo.0o0.ooo/2017/06/22/594b584a3e1e8.png" alt="server1.png"></td><td>-</td><td><img src="https://ooo.0o0.ooo/2017/06/22/594b5849e0aad.png" alt="server2.png"></td></tr><tr><td>启用前，异步加载的组件，被分割开来</td><td>-</td><td>启用后Server端打包不再进行分割，只输出一个文件</td></tr></tbody></table><p>客户端打包，对文件分割实现懒加载，可以令浏览器只加载需要的内容，有体验提升。<br>但服务端打包的文件，给后端程序使用，不通过网络请求获取，分割代码意义不大甚至降低性能，所以打包成一个文件更好。</p><h3 id="Client端-启用-manifest，启用vue-ssr-plugin"><a href="#Client端-启用-manifest，启用vue-ssr-plugin" class="headerlink" title="Client端 启用 manifest，启用vue-ssr plugin"></a>Client端 启用 manifest，启用vue-ssr plugin</h3><p><strong>相关配置文件</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">plugins: [</div><div class="line">    <span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(&#123;</div><div class="line">      <span class="attr">name</span>: <span class="string">'mainfest'</span>,</div><div class="line">      <span class="attr">minChunks</span>: <span class="literal">Infinity</span></div><div class="line">    &#125;),</div><div class="line">    <span class="keyword">new</span> VueSSRClientPlugin()</div><div class="line">  ]</div></pre></td></tr></table></figure></p><p><strong>对比</strong> </p><table><thead><tr><th>启用前</th><th>-</th><th>启用后</th></tr></thead><tbody><tr><td><img src="https://ooo.0o0.ooo/2017/06/22/594b5c09924cb.png" alt="client1.png"></td><td>-</td><td><img src="https://ooo.0o0.ooo/2017/06/22/594b5c0a7353b.png" alt="client2.png"></td></tr><tr><td>启用前，前后端输出文件名称一致，会造成覆盖</td><td>-</td><td>启用后，生成 manifest, 可以使用vue-ssr插件自动注入js</td></tr></tbody></table><p>启用前，在页面注入JS，需要手动在 index.template.html 作如下添加<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--vue-ssr-outlet--&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./dist/bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> <span class="comment">&lt;!-- 手动添加，启用后不需要添加这一行--&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p><h2 id="修改server-js"><a href="#修改server-js" class="headerlink" title="修改server.js"></a>修改server.js</h2><p><strong>1. 更改renderer</strong>  </p><table><thead><tr><th>前</th><th>-</th><th>后</th></tr></thead><tbody><tr><td><img src="https://ooo.0o0.ooo/2017/06/22/594b6c340b19b.png" alt="render1.png"></td><td>-</td><td><img src="https://ooo.0o0.ooo/2017/06/22/594b6c375263e.png" alt="render2.png"></td></tr><tr><td>createRender</td><td>-</td><td>更改为 createBundleRenderer，并由打包生成的单文件创建</td></tr></tbody></table><p><strong>2. 更改express配置</strong> </p><table><thead><tr><th>前</th><th>-</th><th>后</th></tr></thead><tbody><tr><td><img src="https://ooo.0o0.ooo/2017/06/22/594b6e36a7ecf.png" alt="app1.png"></td><td>-</td><td><img src="https://ooo.0o0.ooo/2017/06/22/594b6e3622523.png" alt="app2.png"></td></tr><tr><td>从打包得到的文件引入createApp</td><td>-</td><td>render中自动包含app内容，不需要引入。只需要传入context</td></tr></tbody></table><h2 id="更改路径，撤销粗暴"><a href="#更改路径，撤销粗暴" class="headerlink" title="更改路径，撤销粗暴"></a>更改路径，撤销粗暴</h2><p><strong>添加webpack关键配置</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">output:&#123;</div><div class="line">  <span class="attr">publicPath</span>: <span class="string">'/dist/'</span>,</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>自动注入的script.src 都指向 dist 目录下文件，server.js中强制redirect的中间件逻辑可以删除了。</p><h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2><p>回顾一下，完成服务端渲染的配置，大部分靠webpack的熟练度。  </p><p>代码地址： <a href="https://github.com/songlairui/vue-playground/tree/master/demo/chapter5" target="_blank" rel="noopener">songlairui/vue-playground/demo/chapter5</a>  </p><pre><code class="shell">├── webpack.base.conf.js     # 创建baseConfig，方便使用webpack-merge├── webpack.client2.conf.js  # 启用vue-ssr-client-bundle 插件，这是个子插件。启用manifest插件。├── webpack.server2.conf.js  # 启用vue-ssr-server-plugin 插件，这是个子插件。打包只出一个文件。├── server2.js               # 简化 server.js 逻辑。去掉强制redirect逻辑。</code></pre>]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;上一篇&lt;a href=&quot;/2017/06/21/vue-ssr-step-1/&quot; title=&quot;Vue SSR 官方文档实践·一：从零到粗暴混合前后端&quot;&gt;Vue SSR 官方文档实践·一：从零到粗暴混合前后端&lt;/a&gt;之后，运行&lt;a href=&quot;http://ssr.vuejs.org/en/build-config.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Build Configuration&lt;/a&gt; 章节示例代码，比较快了。&lt;br&gt;不过多加了几个webpack选项，混合起来变得更加简单。大神铺路铺得就是好。。  &lt;/p&gt;
+&lt;p&gt;上一篇&lt;a href=&quot;/2017/06/21/vue-ssr-step-1/&quot; title=&quot;Vue SSR 官方文档实践·一：从零到粗暴混合前后端&quot;&gt;Vue SSR 官方文档实践·一：从零到粗暴混合前后端&lt;/a&gt;之后，运行&lt;a href=&quot;http://ssr.vuejs.org/en/build-config.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Build Configuration&lt;/a&gt; 章节示例代码，比较快了。&lt;br&gt;不过多加了几个webpack选项，混合起来变得更加简单。大神铺路铺得就是好。。  &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;实践Target:&lt;/strong&gt; &lt;a href=&quot;http://ssr.vuejs.org/en/build-config.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Build Configuration&lt;/a&gt;&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;实践Target:&lt;/strong&gt; &lt;a href=&quot;http://ssr.vuejs.org/en/build-config.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Build Configuration&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
@@ -514,85 +276,14 @@
     <published>2017-06-21T04:22:34.000Z</published>
     <updated>2017-06-22T08:22:17.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
-<p>Vue 2.3 发布很久了，距离第一次打开<a href="http://ssr.vuejs.org/en/" target="_blank" rel="external">ssr.vuejs</a>也很久了。<br>现在我终于把其中的代码片段运行起来了。  </p>
-</blockquote>
-<p>Github Repo: <a href="https://github.com/songlairui/vue-playground" target="_blank" rel="external">https://github.com/songlairui/vue-playground</a><br><a id="more"></a></p>
-<h2 id="1-尝试-vue-server-renderer"><a href="#1-尝试-vue-server-renderer" class="headerlink" title="1. 尝试 vue-server-renderer"></a>1. 尝试 <code>vue-server-renderer</code></h2><p>实现使用 <code>console.log(html)</code> 将渲染过后的html打印到屏幕上。<br>即，将 new Vue({…}) 变成输出结果。跳过从浏览器获得结果。  </p>
-<h2 id="2-使用-import-、-export-关键字"><a href="#2-使用-import-、-export-关键字" class="headerlink" title="2. 使用 import 、 export 关键字"></a>2. 使用 import 、 export 关键字</h2><p>文档第四章<a href="http://ssr.vuejs.org/en/structure.html" target="_blank" rel="external">Source Code Structure</a> 出现了目录结构，而且js文件中有了import关键字。<br>这里无法像前面的代码片段一样，直接在node里粘贴代码可执行。这里需要使用webpack。  </p>
-<blockquote>
-<p>这时的我：使用vue-cli创建vue项目脚手架是唯一的webpack使用经验。<br>然后我去 <a href="/2017/06/18/learn-webpack/" title="学习webpack">学习webpack</a></p>
-</blockquote>
-<p>代码示例： <a href="https://github.com/songlairui/vue-playground/tree/master/demo/chapter4" target="_blank" rel="external">songlairui/vue-playground/demo/chapter4</a>  </p>
-<p><strong>目标:</strong> 让这样的目录能够执行</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">src</div><div class="line">├── components</div><div class="line">│   ├── Foo.vue</div><div class="line">│   ├── Bar.vue</div><div class="line">│   └── Baz.vue</div><div class="line">├── App.vue</div><div class="line">├── main.js # universal entry 我在实践时换了个名字</div><div class="line">├── entry-client.js # runs in browser only</div><div class="line">└── entry-server.js # runs on server only</div></pre></td></tr></table></figure>
-<p>main.js、entry-client.js、entry-server.js 代码从文档中复制来。<br>*.vue 文件内容自己补充。</p>
-<p>这里需要webpack的概念： 入口文件、输出文件、模块、插件、打包目标平台。  </p>
-<h4 id="创建webpack配置文件"><a href="#创建webpack配置文件" class="headerlink" title="创建webpack配置文件"></a>创建webpack配置文件</h4><blockquote>
-<p>啃了webpack文档后 <a href="/2017/06/18/learn-webpack/#基本配置文件">[跳转…]</a>  </p>
-</blockquote>
-<p><strong>deal with 新出现的 import</strong></p>
-<p>在基本的配置文件上增加<code>babel-loader</code>配置即可将import转译为node和浏览器可以支持引入方式了。<br>这里需要将 <code>import</code> 转译为 <code>commonjs</code>方式，设置babel-loader的query为<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">... <span class="comment">// 假装其他代码</span></div><div class="line"><span class="built_in">module</span>: &#123;</div><div class="line">  <span class="attr">rules</span>:[</div><div class="line">    &#123;</div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</div><div class="line">      <span class="attr">loader</span>: <span class="string">'babel-loader'</span>,</div><div class="line">      <span class="attr">query</span>: [</div><div class="line">        <span class="string">"presets"</span>: [</div><div class="line">          <span class="string">"env"</span>, &#123; <span class="string">"modules"</span>: <span class="string">"commonjs"</span> &#125;</div><div class="line">        ]</div><div class="line">      ]</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125; </div><div class="line">... <span class="comment">// 假装其他代码</span></div></pre></td></tr></table></figure></p>
-<p>modules 默认为commonjs，可以省略。其他可选umd,amd等。  </p>
-<blockquote>
-<p>// TODO 如果可能，会写一篇初试requirejs，commonjs.</p>
-</blockquote>
-<p><strong>deal with vue单文件组件</strong>  </p>
-<p><code>*.vue</code>单文件组件通过import引入，为其添加<code>vue-loader</code>,即可正确引入。</p>
-<p><strong>module.target</strong>  </p>
-<p>webpack module默认的target是 web，为服务端代码进行打包时，需要设置target为 node 或 aysnc-node。  </p>
-<h2 id="3-使用-VueRouter"><a href="#3-使用-VueRouter" class="headerlink" title="3. 使用 VueRouter"></a>3. 使用 VueRouter</h2><blockquote>
-<p>我已有的vue使用经验中，在router中，使用ensure即可轻松实现懒加载。  </p>
-</blockquote>
-<p>动态引入模块，可以完成懒加载文件的打包<br><strong>改写router.js</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// import About from './About.vue'</span></div><div class="line"><span class="keyword">const</span> About = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./About.vue'</span>)</div></pre></td></tr></table></figure></p>
-<p>使用vscode中js formatter插件保存时自动格式化代码时，会将import的格式强行换行。可以停用自动格式化。  </p>
-<p><strong>启用动态加载</strong><br>webpack配置rules中，为babel-loader启用动态引入插件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">&#123;</div><div class="line">  <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</div><div class="line">  <span class="attr">loader</span>: <span class="string">'babel-loader'</span>,</div><div class="line">  <span class="attr">query</span>: &#123;</div><div class="line">    <span class="attr">presets</span>: [</div><div class="line">      [<span class="string">'env'</span>, &#123; <span class="attr">modules</span>: <span class="literal">false</span> &#125;]</div><div class="line">    ],</div><div class="line">    <span class="attr">plugins</span>: [</div><div class="line">      <span class="string">"syntax-dynamic-import"</span></div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">...</div></pre></td></tr></table></figure></p>
-<p>dist目录下打包结果如下：  </p>
-<table>
-<thead>
-<tr>
-<th>client.conf</th>
-<th>-</th>
-<th>server.conf</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0.js</td>
-<td>-</td>
-<td>0.js</td>
-</tr>
-<tr>
-<td>client.bundle.js</td>
-<td>-</td>
-<td>server.bundle.js</td>
-</tr>
-</tbody>
-</table>
-<p>client和server配置文件都会生成0.js,1.js….<br>在未使用manifest情况下，两个配置文件生成内容不一样（server配置文件中 module.target为’node‘）。<br>如果同时使用，需要调整输出位置，避免代码覆盖。</p>
-<h2 id="4-粗暴的融合前后端"><a href="#4-粗暴的融合前后端" class="headerlink" title="4. 粗暴的融合前后端"></a>4. 粗暴的融合前后端</h2><p>我对需求服务端渲染的理解是，使用爬虫获取指定url时，得到的是该url渲染好的html内容。<br>在浏览器上第一次打开此页面时，请求到的html内容是已渲染好的。<br>在浏览器上进行后续的交互时，用的是vue框架的交互逻辑，而不重新发起url请求。  </p>
-<p><strong>客户端使用场景</strong>：<br>客户端build之后，使用方式是在一个body只包含<code>div#app</code>元素的index.html底部注入<code>script:src</code>引入build好的client.bundle.js。<br>然后使用http server提供对这个index.html的访问。</p>
-<p><strong>服务端使用场景</strong>：<br>在server.js中 配置express，并require 打包好的entry-server.js，填充逻辑。<br>然后运行<code>node server.js</code>, 就能像使用nginx 托管静态html文件夹那样按照url访问指定html页面。</p>
-<p>现在，在App.vue文件中根元素上添加 <code>id=&#39;app&#39;</code>, 渲染的到的html中包含此 <code>id=&#39;app&#39;</code>. 对此#app挂载Vue即常规的Vue使用方法。<br>在2.3版本中对服务端渲染进行了支持，会自动辨识服务端渲染好的dom。  </p>
-<p>使用服务端生成的内容，替换客户端使用场景中index.html 就是简易的融合前后端。<br>即，在服务端所使用的index.template.html页面中，添加 <code>script:src</code> 引入客户端build的client.bundle.js。</p>
-<p><strong>融合细节</strong>：  </p>
-<ol>
-<li>区分服务端与客户端打包代码<br>为 server.conf, client.conf  设置不同的output.path  </li>
-<li>修改index.template.html<br>添加 <code>&lt;script src=&quot;./dist/bundle.js&quot;&gt;&lt;/script&gt;</code>  </li>
-<li>server.js中为express添加中间件处理逻辑<br>请求0.js时，会直接请求根目录，这里redirect一下，让它取到正确的0.js  </li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">req,res,next</span>)</span>&#123;</div><div class="line">  <span class="comment">// 使用bunlde懒加载0.js时，引用路径是不正确的，我不知道怎么配置，这儿强行改一下</span></div><div class="line">  <span class="keyword">if</span>(<span class="regexp">/\.js$/</span>.test(req.url))&#123;</div><div class="line">    res.redirect(<span class="string">'/dist'</span> + req.url)</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    next()</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>代码示例： <a href="https://github.com/songlairui/vue-playground/tree/master/demo/chapter5" target="_blank" rel="external">songlairui/vue-playground/demo/chapter5</a>  </p>
-<h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2><p>按照个人理解，成功使用了下服务端渲染的结果。<br>过程虽然很粗糙，也是使出了浑身解数。  </p>
-<p>第二篇实践：<a href="/2017/06/22/vue-ssr-step-2/" title="Vue SSR 官方文档实践·二：前后端混合从粗暴到正常">Vue SSR 官方文档实践·二：前后端混合从粗暴到正常</a></p>
-]]></content>
+    <content type="html"><![CDATA[<blockquote><p>Vue 2.3 发布很久了，距离第一次打开<a href="http://ssr.vuejs.org/en/" target="_blank" rel="noopener">ssr.vuejs</a>也很久了。<br>现在我终于把其中的代码片段运行起来了。  </p></blockquote><p>Github Repo: <a href="https://github.com/songlairui/vue-playground" target="_blank" rel="noopener">https://github.com/songlairui/vue-playground</a><br><a id="more"></a></p><h2 id="1-尝试-vue-server-renderer"><a href="#1-尝试-vue-server-renderer" class="headerlink" title="1. 尝试 vue-server-renderer"></a>1. 尝试 <code>vue-server-renderer</code></h2><p>实现使用 <code>console.log(html)</code> 将渲染过后的html打印到屏幕上。<br>即，将 new Vue({…}) 变成输出结果。跳过从浏览器获得结果。  </p><h2 id="2-使用-import-、-export-关键字"><a href="#2-使用-import-、-export-关键字" class="headerlink" title="2. 使用 import 、 export 关键字"></a>2. 使用 import 、 export 关键字</h2><p>文档第四章<a href="http://ssr.vuejs.org/en/structure.html" target="_blank" rel="noopener">Source Code Structure</a> 出现了目录结构，而且js文件中有了import关键字。<br>这里无法像前面的代码片段一样，直接在node里粘贴代码可执行。这里需要使用webpack。  </p><blockquote><p>这时的我：使用vue-cli创建vue项目脚手架是唯一的webpack使用经验。<br>然后我去 <a href="/2017/06/18/learn-webpack/" title="学习webpack">学习webpack</a></p></blockquote><p>代码示例： <a href="https://github.com/songlairui/vue-playground/tree/master/demo/chapter4" target="_blank" rel="noopener">songlairui/vue-playground/demo/chapter4</a>  </p><p><strong>目标:</strong> 让这样的目录能够执行</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">src</div><div class="line">├── components</div><div class="line">│   ├── Foo.vue</div><div class="line">│   ├── Bar.vue</div><div class="line">│   └── Baz.vue</div><div class="line">├── App.vue</div><div class="line">├── main.js # universal entry 我在实践时换了个名字</div><div class="line">├── entry-client.js # runs in browser only</div><div class="line">└── entry-server.js # runs on server only</div></pre></td></tr></table></figure><p>main.js、entry-client.js、entry-server.js 代码从文档中复制来。<br>*.vue 文件内容自己补充。</p><p>这里需要webpack的概念： 入口文件、输出文件、模块、插件、打包目标平台。  </p><h4 id="创建webpack配置文件"><a href="#创建webpack配置文件" class="headerlink" title="创建webpack配置文件"></a>创建webpack配置文件</h4><blockquote><p>啃了webpack文档后 <a href="/2017/06/18/learn-webpack/#基本配置文件">[跳转…]</a>  </p></blockquote><p><strong>deal with 新出现的 import</strong></p><p>在基本的配置文件上增加<code>babel-loader</code>配置即可将import转译为node和浏览器可以支持引入方式了。<br>这里需要将 <code>import</code> 转译为 <code>commonjs</code>方式，设置babel-loader的query为<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">... <span class="comment">// 假装其他代码</span></div><div class="line"><span class="built_in">module</span>: &#123;</div><div class="line">  <span class="attr">rules</span>:[</div><div class="line">    &#123;</div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</div><div class="line">      <span class="attr">loader</span>: <span class="string">'babel-loader'</span>,</div><div class="line">      <span class="attr">query</span>: [</div><div class="line">        <span class="string">"presets"</span>: [</div><div class="line">          <span class="string">"env"</span>, &#123; <span class="string">"modules"</span>: <span class="string">"commonjs"</span> &#125;</div><div class="line">        ]</div><div class="line">      ]</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125; </div><div class="line">... <span class="comment">// 假装其他代码</span></div></pre></td></tr></table></figure></p><p>modules 默认为commonjs，可以省略。其他可选umd,amd等。  </p><blockquote><p>// TODO 如果可能，会写一篇初试requirejs，commonjs.</p></blockquote><p><strong>deal with vue单文件组件</strong>  </p><p><code>*.vue</code>单文件组件通过import引入，为其添加<code>vue-loader</code>,即可正确引入。</p><p><strong>module.target</strong>  </p><p>webpack module默认的target是 web，为服务端代码进行打包时，需要设置target为 node 或 aysnc-node。  </p><h2 id="3-使用-VueRouter"><a href="#3-使用-VueRouter" class="headerlink" title="3. 使用 VueRouter"></a>3. 使用 VueRouter</h2><blockquote><p>我已有的vue使用经验中，在router中，使用ensure即可轻松实现懒加载。  </p></blockquote><p>动态引入模块，可以完成懒加载文件的打包<br><strong>改写router.js</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// import About from './About.vue'</span></div><div class="line"><span class="keyword">const</span> About = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./About.vue'</span>)</div></pre></td></tr></table></figure></p><p>使用vscode中js formatter插件保存时自动格式化代码时，会将import的格式强行换行。可以停用自动格式化。  </p><p><strong>启用动态加载</strong><br>webpack配置rules中，为babel-loader启用动态引入插件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">&#123;</div><div class="line">  <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</div><div class="line">  <span class="attr">loader</span>: <span class="string">'babel-loader'</span>,</div><div class="line">  <span class="attr">query</span>: &#123;</div><div class="line">    <span class="attr">presets</span>: [</div><div class="line">      [<span class="string">'env'</span>, &#123; <span class="attr">modules</span>: <span class="literal">false</span> &#125;]</div><div class="line">    ],</div><div class="line">    <span class="attr">plugins</span>: [</div><div class="line">      <span class="string">"syntax-dynamic-import"</span></div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">...</div></pre></td></tr></table></figure></p><p>dist目录下打包结果如下：  </p><table><thead><tr><th>client.conf</th><th>-</th><th>server.conf</th></tr></thead><tbody><tr><td>0.js</td><td>-</td><td>0.js</td></tr><tr><td>client.bundle.js</td><td>-</td><td>server.bundle.js</td></tr></tbody></table><p>client和server配置文件都会生成0.js,1.js….<br>在未使用manifest情况下，两个配置文件生成内容不一样（server配置文件中 module.target为’node‘）。<br>如果同时使用，需要调整输出位置，避免代码覆盖。</p><h2 id="4-粗暴的融合前后端"><a href="#4-粗暴的融合前后端" class="headerlink" title="4. 粗暴的融合前后端"></a>4. 粗暴的融合前后端</h2><p>我对需求服务端渲染的理解是，使用爬虫获取指定url时，得到的是该url渲染好的html内容。<br>在浏览器上第一次打开此页面时，请求到的html内容是已渲染好的。<br>在浏览器上进行后续的交互时，用的是vue框架的交互逻辑，而不重新发起url请求。  </p><p><strong>客户端使用场景</strong>：<br>客户端build之后，使用方式是在一个body只包含<code>div#app</code>元素的index.html底部注入<code>script:src</code>引入build好的client.bundle.js。<br>然后使用http server提供对这个index.html的访问。</p><p><strong>服务端使用场景</strong>：<br>在server.js中 配置express，并require 打包好的entry-server.js，填充逻辑。<br>然后运行<code>node server.js</code>, 就能像使用nginx 托管静态html文件夹那样按照url访问指定html页面。</p><p>现在，在App.vue文件中根元素上添加 <code>id=&#39;app&#39;</code>, 渲染的到的html中包含此 <code>id=&#39;app&#39;</code>. 对此#app挂载Vue即常规的Vue使用方法。<br>在2.3版本中对服务端渲染进行了支持，会自动辨识服务端渲染好的dom。  </p><p>使用服务端生成的内容，替换客户端使用场景中index.html 就是简易的融合前后端。<br>即，在服务端所使用的index.template.html页面中，添加 <code>script:src</code> 引入客户端build的client.bundle.js。</p><p><strong>融合细节</strong>：  </p><ol><li>区分服务端与客户端打包代码<br>为 server.conf, client.conf  设置不同的output.path  </li><li>修改index.template.html<br>添加 <code>&lt;script src=&quot;./dist/bundle.js&quot;&gt;&lt;/script&gt;</code>  </li><li>server.js中为express添加中间件处理逻辑<br>请求0.js时，会直接请求根目录，这里redirect一下，让它取到正确的0.js  </li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">req,res,next</span>)</span>&#123;</div><div class="line">  <span class="comment">// 使用bunlde懒加载0.js时，引用路径是不正确的，我不知道怎么配置，这儿强行改一下</span></div><div class="line">  <span class="keyword">if</span>(<span class="regexp">/\.js$/</span>.test(req.url))&#123;</div><div class="line">    res.redirect(<span class="string">'/dist'</span> + req.url)</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    next()</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure><p>代码示例： <a href="https://github.com/songlairui/vue-playground/tree/master/demo/chapter5" target="_blank" rel="noopener">songlairui/vue-playground/demo/chapter5</a>  </p><h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2><p>按照个人理解，成功使用了下服务端渲染的结果。<br>过程虽然很粗糙，也是使出了浑身解数。  </p><p>第二篇实践：<a href="/2017/06/22/vue-ssr-step-2/" title="Vue SSR 官方文档实践·二：前后端混合从粗暴到正常">Vue SSR 官方文档实践·二：前后端混合从粗暴到正常</a></p>]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;Vue 2.3 发布很久了，距离第一次打开&lt;a href=&quot;http://ssr.vuejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ssr.vuejs&lt;/a&gt;也很久了。&lt;br&gt;现在我终于把其中的代码片段运行起来了。  &lt;/p&gt;
+&lt;p&gt;Vue 2.3 发布很久了，距离第一次打开&lt;a href=&quot;http://ssr.vuejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ssr.vuejs&lt;/a&gt;也很久了。&lt;br&gt;现在我终于把其中的代码片段运行起来了。  &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Github Repo: &lt;a href=&quot;https://github.com/songlairui/vue-playground&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/songlairui/vue-playground&lt;/a&gt;&lt;br&gt;
+&lt;p&gt;Github Repo: &lt;a href=&quot;https://github.com/songlairui/vue-playground&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/songlairui/vue-playground&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
@@ -606,42 +297,7 @@
     <published>2017-06-18T05:58:32.000Z</published>
     <updated>2017-06-22T08:24:23.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
-<p> 我想要从零开始构建自己的应用，比如使用ssr-vue。而官方vue-cli没有类似原有template的ssr版。<br> 看来，我需要学会webpack了  </p>
-</blockquote>
-<h4 id="已有的学习经历"><a href="#已有的学习经历" class="headerlink" title="已有的学习经历"></a>已有的学习经历</h4><p>vue-cli自带的webpack配置，看过好几次。自己添加一些chunk，自动生成多个页面，觉得自己做了很大一件事情，而客观上并不大。<br>webpack文档尝试看了好几次，从来觉得太长没看完。<br><a id="more"></a></p>
-<h3 id="Current"><a href="#Current" class="headerlink" title="Current"></a>Current</h3><p>链接地址：  <a href="http://www.css88.com/doc/webpack2/concepts/module-resolution/" target="_blank" rel="external">http://www.css88.com/doc/webpack2/concepts/module-resolution/</a><br>我还是从头开始看了入口文件，配置方法。<br>目前看来，概念部分，应该是一口气看完的。然后再在指南不烦，联系代码片段。<br>这儿，我联想到了vimtutor中的练习方式。</p>
-<h3 id="基本配置文件"><a href="#基本配置文件" class="headerlink" title="基本配置文件"></a>基本配置文件</h3><blockquote>
-<p>啃了webpack文档后，能快速手打webpack的最简单配置文件。所有的配置都在此基础上添加。  </p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: <span class="string">'/path/to/entry/file'</span>,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'output.js'</span>,</div><div class="line">    <span class="attr">path</span>: __dirname</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">module</span>:&#123;</div><div class="line">    <span class="attr">rules</span>:[</div><div class="line">      ...</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>常见选项</strong>  </p>
-<ol>
-<li>resolve<br>webpack 解析。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">resolve: &#123;</div><div class="line">    <span class="attr">alias</span>: &#123;</div><div class="line">      <span class="string">'vue'</span>: <span class="string">'vue/dist/vue.common.js'</span></div><div class="line">    &#125;</div><div class="line">    <span class="comment">// extensions: ['.ts', '.vue', '.js']</span></div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>默认逻辑不够准确时，需要手动添加alias。<br>需要为vue使用 vue.esm.js时，可以通过添加alias更改。  </p>
-<ol>
-<li>devtool  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">devtool: <span class="string">'source-map'</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>用来生成source-map文件  </p>
-<ol>
-<li><p>entry<br>可由基本的 值 变成 键-值。  </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">entry: &#123;</div><div class="line">  <span class="attr">main</span>: <span class="string">'./main.js'</span>,</div><div class="line">  <span class="attr">server</span>: <span class="string">'./server.js'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>output  </p>
-<pre><code class="javascript">output: {
-<span class="attr">filename</span>: <span class="string">'[chunk].bundle.js'</span>,
-<span class="attr">path</span>: path.resolve(__dirname, <span class="string">'dist'</span>)
-}
-</code></pre>
-<p>需要先 <code>const path = require(&#39;path&#39;)</code>, 这里path属性的写法即使用兼容全平台的方式指定当前目录下的dist目录为输出目录。<br><code>filename</code>属性的<code>[chunk]</code>能让entry中的main.js 输出为 main.bundle.js ，类似的还有<code>[name]</code>、<code>[chunkhash]</code>、<code>[hash]</code>。  </p>
-</li>
-<li><p>rules<br>指定loader。webpack2兼容webpack1等loader写法。</p>
-</li>
-</ol>
-]]></content>
+    <content type="html"><![CDATA[<blockquote><p> 我想要从零开始构建自己的应用，比如使用ssr-vue。而官方vue-cli没有类似原有template的ssr版。<br> 看来，我需要学会webpack了  </p></blockquote><h4 id="已有的学习经历"><a href="#已有的学习经历" class="headerlink" title="已有的学习经历"></a>已有的学习经历</h4><p>vue-cli自带的webpack配置，看过好几次。自己添加一些chunk，自动生成多个页面，觉得自己做了很大一件事情，而客观上并不大。<br>webpack文档尝试看了好几次，从来觉得太长没看完。<br><a id="more"></a></p><h3 id="Current"><a href="#Current" class="headerlink" title="Current"></a>Current</h3><p>链接地址：  <a href="http://www.css88.com/doc/webpack2/concepts/module-resolution/" target="_blank" rel="noopener">http://www.css88.com/doc/webpack2/concepts/module-resolution/</a><br>我还是从头开始看了入口文件，配置方法。<br>目前看来，概念部分，应该是一口气看完的。然后再在指南不烦，联系代码片段。<br>这儿，我联想到了vimtutor中的练习方式。</p><h3 id="基本配置文件"><a href="#基本配置文件" class="headerlink" title="基本配置文件"></a>基本配置文件</h3><blockquote><p>啃了webpack文档后，能快速手打webpack的最简单配置文件。所有的配置都在此基础上添加。  </p></blockquote><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: <span class="string">'/path/to/entry/file'</span>,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'output.js'</span>,</div><div class="line">    <span class="attr">path</span>: __dirname</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">module</span>:&#123;</div><div class="line">    <span class="attr">rules</span>:[</div><div class="line">      ...</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p><strong>常见选项</strong>  </p><ol><li>resolve<br>webpack 解析。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">resolve: &#123;</div><div class="line">    <span class="attr">alias</span>: &#123;</div><div class="line">      <span class="string">'vue'</span>: <span class="string">'vue/dist/vue.common.js'</span></div><div class="line">    &#125;</div><div class="line">    <span class="comment">// extensions: ['.ts', '.vue', '.js']</span></div><div class="line">  &#125;</div></pre></td></tr></table></figure></li></ol><p>默认逻辑不够准确时，需要手动添加alias。<br>需要为vue使用 vue.esm.js时，可以通过添加alias更改。  </p><ol><li>devtool  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">devtool: <span class="string">'source-map'</span></div></pre></td></tr></table></figure></li></ol><p>用来生成source-map文件  </p><ol><li><p>entry<br>可由基本的 值 变成 键-值。  </p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">entry: &#123;</div><div class="line">  <span class="attr">main</span>: <span class="string">'./main.js'</span>,</div><div class="line">  <span class="attr">server</span>: <span class="string">'./server.js'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>output  </p><pre><code class="javascript">output: {<span class="attr">filename</span>: <span class="string">'[chunk].bundle.js'</span>,<span class="attr">path</span>: path.resolve(__dirname, <span class="string">'dist'</span>)}</code></pre><p>需要先 <code>const path = require(&#39;path&#39;)</code>, 这里path属性的写法即使用兼容全平台的方式指定当前目录下的dist目录为输出目录。<br><code>filename</code>属性的<code>[chunk]</code>能让entry中的main.js 输出为 main.bundle.js ，类似的还有<code>[name]</code>、<code>[chunkhash]</code>、<code>[hash]</code>。  </p></li><li><p>rules<br>指定loader。webpack2兼容webpack1等loader写法。</p></li></ol>]]></content>
     
     <summary type="html">
     
@@ -662,19 +318,18 @@
     <published>2017-06-10T08:33:57.000Z</published>
     <updated>2017-06-11T15:27:38.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
-<p>我的Login form存在一多bug。在CSS动画的控制上欠缺。</p>
-</blockquote>
-<p>使用 element.offsetWidth 解决了我的CSS动画重绘问题。<br>而且效果很稳定。  </p>
-]]></content>
+    <content type="html"><![CDATA[<blockquote><p>我的Login form存在一多bug。在CSS动画的控制上欠缺。</p></blockquote><p>使用 element.offsetWidth 解决了我的CSS动画重绘问题。<br>而且效果很稳定。  </p>]]></content>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
+      
+      
+        &lt;blockquote&gt;
 &lt;p&gt;我的Login form存在一多bug。在CSS动画的控制上欠缺。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;使用 element.offsetWidth 解决了我的CSS动画重绘问题。&lt;br&gt;而且效果很稳定。  &lt;/p&gt;
 
+      
     
     </summary>
     
@@ -688,13 +343,15 @@
     <published>2017-06-08T05:36:25.000Z</published>
     <updated>2017-06-21T04:49:55.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Pure Writing</p>
-]]></content>
+    <content type="html"><![CDATA[<p>Pure Writing</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Pure Writing&lt;/p&gt;
+      
+      
+        &lt;p&gt;Pure Writing&lt;/p&gt;
 
+      
     
     </summary>
     
